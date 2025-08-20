@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Tickets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    :root {
+      --ink:#0b1f33; --bg:#f4f6f8; --brand:#003366; --muted:#6a7b8c; --ok:#0a7f2e; --warn:#b58900; --bad:#b00020;
+      --card:#fff; --tableBorder:#e1e5ea;
+    }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:var(--bg); color:var(--ink); }
+    header { background:var(--brand); color:#fff; padding:14px 18px; display:flex; align-items:center; gap:10px; }
+    header h1 { margin:0; font-size:18px; }
+    header .spacer { flex:1 }
+    header a, header button { appearance:none; border:none; border-radius:10px; padding:8px 12px; color:#fff; cursor:pointer; text-decoration:none; }
+    .btn { background:#0066cc } .btn:hover{filter:brightness(1.1)}
+    .btn-red { background:#c00 } .btn-gray{ background:#2a3b4f }
+    .wrap { max-width:1200px; margin:18px auto; background:var(--card); border:1px solid var(--tableBorder); border-radius:12px; box-shadow:0 10px 28px rgba(10,25,41,.08) }
+    .controls { display:flex; gap:10px; padding:12px; border-bottom:1px solid var(--tableBorder); align-items:center; flex-wrap:wrap }
+    input, select { padding:8px 10px; border:1px solid #ccd3da; border-radius:10px; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { border-top:1px solid var(--tableBorder); padding:10px; text-align:left; vertical-align:top; }
+    thead th { position:sticky; top:0; background:#0f335a; color:#fff; z-index:2; }
+    tr:nth-child(even) { background:#fafbfd; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; }
+    .b-high { background:#e8f5e9; color:#0a7f2e; }
+    .b-med  { background:#fff8e1; color:#b58900; }
+    .b-low  { background:#fdecea; color:#b00020; }
+    .status { min-width:140px }
+    .actions { white-space:nowrap }
+    @media print {
+      header, .controls, .actions, .logout, .export { display:none !important; }
+      .wrap { box-shadow:none; border:none }
+      body { background:white }
+      thead th { background:#eee; color:#000 }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📋 IT Tickets Dashboard</h1>
+    <div class="spacer"></div>
+    <a class="btn export" href="/admin/export.csv">⬇️ Export CSV</a>
+    <button class="btn" onclick="window.print()">🖨️ Print</button>
+    <button class="btn-red logout" onclick="logout()">Logout</button>
+  </header>
+
+  <div class="wrap">
+    <div class="controls">
+      <input type="text" id="searchBox" placeholder="🔍 Search user, email, issue" />
+      <select id="departmentFilter"><option value="">All Departments</option></select>
+      <select id="dateFilter">
+        <option value="">All Dates</option>
+        <option value="today">Today</option>
+        <option value="week">This Week</option>
+        <option value="month">This Month</option>
+      </select>
+      <select id="statusFilter">
+        <option value="">All Statuses</option>
+        <option>New</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+        <option>AI Suggested</option>
+        <option>Dismissed by AI</option>
+      </select>
+    </div>
+
+    <div style="overflow:auto; max-height: calc(100vh - 200px);">
+      <table id="ticketsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Submitted</th>
+            <th>User</th>
+            <th>Email</th>
+            <th>Ext</th>
+            <th>Dept</th>
+            <th>Issue</th>
+            <th>Client</th>
+            <th>AI Suggestion</th>
+            <th>Confidence</th>
+            <th>Status</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="creator">&copy; 2025 Nasser Dawood. All rights reserved.</div>
+  </div>
+
+  <script>
+    let allTickets = [];
+
+    function confBadge(c) {
+      if (c == null || isNaN(c)) return '<span class="badge b-low">-</span>';
+      if (c >= 0.75) return `<span class="badge b-high">${c}</span>`;
+      if (c >= 0.4)  return `<span class="badge b-med">${c}</span>`;
+      return `<span class="badge b-low">${c}</span>`;
+    }
+
+    async function loadTickets() {
+      const res = await fetch('/api/tickets');
+      const data = await res.json();
+      if (!data.ok) {
+        alert(data.error || "Not authorized. Please login again.");
+        location.href = "/admin/login"; return;
+      }
+      allTickets = data.tickets || [];
+      populateDepartments();
+      renderTickets(applyFilters(allTickets));
+    }
+
+    function populateDepartments() {
+      const departments = [...new Set(allTickets.map(t => t.department))].filter(Boolean).sort();
+      const select = document.getElementById("departmentFilter");
+      select.innerHTML = `<option value="">All Departments</option>`;
+      for (const dep of departments) {
+        const opt = document.createElement("option");
+        opt.value = dep; opt.textContent = dep; select.appendChild(opt);
+      }
+    }
+
+    function applyFilters(list) {
+      const search = document.getElementById("searchBox").value.toLowerCase();
+      const dep = document.getElementById("departmentFilter").value;
+      const date = document.getElementById("dateFilter").value;
+      const status = document.getElementById("statusFilter").value;
+
+      let filtered = list;
+
+      if (search) {
+        filtered = filtered.filter(t =>
+          (t.issue||'').toLowerCase().includes(search) ||
+          (t.username||'').toLowerCase().includes(search) ||
+          (t.email||'').toLowerCase().includes(search)
+        );
+      }
+
+      if (dep) filtered = filtered.filter(t => t.department === dep);
+      if (status) filtered = filtered.filter(t => (t.status||'') === status);
+
+      if (date) {
+        const now = new Date();
+        filtered = filtered.filter(t => {
+          const ts = new Date(t.ts_iso || t.ts_local || 0);
+          if (date === "today") return ts.toDateString() === now.toDateString();
+          if (date === "week")  { const d=new Date(); d.setDate(now.getDate()-7); return ts >= d; }
+          if (date === "month") { const d=new Date(); d.setMonth(now.getMonth()-1); return ts >= d; }
+          return true;
+        });
+      }
+      return filtered;
+    }
+
+    function renderTickets(list) {
+      const tbody = document.querySelector("#ticketsTable tbody");
+      tbody.innerHTML = "";
+      for (const t of list) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${t.id}</td>
+          <td>${t.ts_local || t.ts_iso || ''}</td>
+          <td>${t.username || ''}</td>
+          <td>${t.email || ''}</td>
+          <td>${t.extension || ''}</td>
+          <td>${t.department || ''}</td>
+          <td>${t.issue || ''}</td>
+          <td>${t.client_name || t.client_ip || ''}</td>
+          <td>${t.ai?.title || '-'}</td>
+          <td>${confBadge(t.ai?.confidence)}</td>
+          <td>
+            <select class="status" data-id="${t.id}">
+              ${['New','In Progress','Resolved','AI Suggested','Dismissed by AI']
+                .map(s => `<option ${t.status===s?'selected':''}>${s}</option>`).join('')}
+            </select>
+          </td>
+          <td class="actions">
+            <button onclick="saveStatus(${t.id})">Save</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    async function saveStatus(id) {
+      const sel = document.querySelector(`select.status[data-id="${id}"]`);
+      if (!sel) return;
+      const status = sel.value;
+      const res = await fetch(`/api/tickets/${id}/status`, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify({ status })
+      });
+      const data = await res.json();
+      if (!data.ok) return alert(data.error || 'Update failed');
+      // refresh local copy & re-render with filters preserved
+      const idx = allTickets.findIndex(t => Number(t.id) === Number(id));
+      if (idx !== -1) allTickets[idx] = data.ticket;
+      renderTickets(applyFilters(allTickets));
+    }
+
+    async function logout() {
+      await fetch('/admin/logout', { method: 'POST' });
+      location.href = '/admin/login';
+    }
+
+    // events
+    document.getElementById("searchBox").addEventListener("input", () => renderTickets(applyFilters(allTickets)));
+    document.getElementById("departmentFilter").addEventListener("change", () => renderTickets(applyFilters(allTickets)));
+    document.getElementById("dateFilter").addEventListener("change", () => renderTickets(applyFilters(allTickets)));
+    document.getElementById("statusFilter").addEventListener("change", () => renderTickets(applyFilters(allTickets)));
+
+    loadTickets();
+  </script>
+</body>
+</html>

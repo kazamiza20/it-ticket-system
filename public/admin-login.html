@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>IT Admin — Sign in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --ink:#0b1f33; --bg:#0f1d2b; --card:#0f2640; --muted:#8aa0b2; --brand:#0a66c2; --accent:#00b894;
+      --ring:rgba(10,102,194,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f5f7fb; --card:#ffffff; --ink:#0b1f33; --muted:#5c6b7a; }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+      color:var(--ink); background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(10,102,194,.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 100%, rgba(0,184,148,.18), transparent 60%),
+      var(--bg);
+      min-height:100vh; display:grid; place-items:center;
+    }
+    .wrap{ width:min(420px, 92vw); }
+    .card{
+      background:var(--card); padding:28px; border-radius:16px;
+      box-shadow:0 18px 50px rgba(7, 23, 44, .25), 0 2px 8px rgba(7, 23, 44, .15);
+      border:1px solid rgba(255,255,255,.06);
+      backdrop-filter: blur(6px);
+    }
+    h1{ margin:0 0 6px 0; font-size:1.35rem; letter-spacing:.2px }
+    p.sub{ margin:0 0 18px 0; color:var(--muted) }
+    .brand{ display:flex; align-items:center; gap:10px; margin-bottom:16px }
+    .logo{
+      width:42px; height:42px; border-radius:12px;
+      background: linear-gradient(135deg, #0a66c2, #00b894);
+      box-shadow:inset 0 0 10px rgba(255,255,255,.25);
+    }
+    label{ display:block; font-size:.9rem; margin:12px 0 6px 4px }
+    .field{
+      position:relative;
+    }
+    input[type="password"], input[type="text"]{
+      width:100%; padding:12px 40px 12px 12px; border-radius:12px;
+      border:1px solid rgba(102,119,136,.25); outline:none; font-size:1rem;
+      background:rgba(255,255,255,.9);
+    }
+    input:focus{ border-color: var(--brand); box-shadow:0 0 0 4px var(--ring) }
+    .toggle{
+      position:absolute; right:10px; top:50%; transform:translateY(-50%);
+      border:none; background:transparent; cursor:pointer; font-size:.9rem; color:#335;
+    }
+    .caps{ font-size:.8rem; color:#b00020; min-height:18px; margin:6px 4px 0 }
+    .cta{
+      margin-top:12px; width:100%; padding:12px 14px; border:none; border-radius:12px;
+      background: linear-gradient(135deg, #0a66c2, #00b894); color:white; font-weight:700; cursor:pointer;
+      box-shadow:0 10px 20px rgba(10,102,194,.25);
+    }
+    .meta{ display:flex; align-items:center; justify-content:space-between; margin-top:10px; color:var(--muted); font-size:.85rem }
+    .hint{ margin-top:16px; color:var(--muted); font-size:.85rem }
+    .err{ color:#b00020; min-height:18px; margin-top:8px }
+    footer{ margin-top:14px; text-align:center; color:var(--muted); font-size:.8rem }
+    @media (max-width:420px){ .brand{justify-content:center} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>IT Admin</h1>
+          <p class="sub">Secure access to the ticket dashboard</p>
+        </div>
+      </div>
+
+      <label for="password">Password / كلمة المرور</label>
+      <div class="field">
+        <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+        <button class="toggle" type="button" aria-label="Show/Hide password" onclick="togglePw()">👁</button>
+      </div>
+      <div class="caps" id="caps"></div>
+
+      <button class="cta" onclick="login()">Sign in</button>
+      <div class="err" id="msg"></div>
+
+      <div class="hint">Tip: set <code>ADMIN_PASS</code> in <code>.env</code>. You’ll be redirected to the dashboard if successful.</div>
+      <footer>© IT Support</footer>
+    </div>
+    <div class="creator">&copy; 2025 Nasser Dawood. All rights reserved.</div>
+  </div>
+
+  <script>
+    const pw = document.getElementById('password');
+    const msg = document.getElementById('msg');
+    const caps = document.getElementById('caps');
+
+    function togglePw(){
+      pw.type = pw.type === 'password' ? 'text' : 'password';
+      pw.focus();
+    }
+
+    pw.addEventListener('keyup', e => { if (e.key === 'Enter') login(); });
+    pw.addEventListener('keydown', e => { caps.textContent = e.getModifierState && e.getModifierState('CapsLock') ? 'Caps Lock is ON' : ''; });
+    pw.addEventListener('keyup',   e => { caps.textContent = e.getModifierState && e.getModifierState('CapsLock') ? 'Caps Lock is ON' : ''; });
+
+    async function login(){
+      msg.textContent = '';
+      const password = pw.value.trim();
+      if (!password) { msg.textContent = 'Please enter the password.'; pw.focus(); return; }
+
+      try{
+        const res = await fetch('/admin/login', {
+          method:'POST',
+          headers:{ 'Content-Type':'application/json' },
+          body: JSON.stringify({ password })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          // forward to smart landing: /admin → will redirect to /admin/tickets
+          location.href = '/admin';
+        } else {
+          msg.textContent = data.error || 'Invalid password';
+        }
+      }catch(err){
+        msg.textContent = 'Network error. Try again.';
+      }
+    }
+  </script>
+</body>
+</html>

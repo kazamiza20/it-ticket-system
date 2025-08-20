@@ -1,0 +1,2426 @@
+module.exports = [
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "crash",
+      "word",
+      "opening file",
+      "يتعطل عند فتح ملف",
+      "intermittently",
+      "for one user only"
+    ],
+    "title": "Word crashes when opening file (all cases) / يتعطل عند فتح ملف (جميع الحالات)",
+    "steps": [
+      "1. Check file format compatibility / تحقق من توافق تنسيق الملف",
+      "2. Start Word in Safe Mode / تشغيل وورد في الوضع الآمن",
+      "3. Disable add-ins / تعطيل الإضافات",
+      "4. Repair Office installation / إصلاح تثبيت أوفيس",
+      "5. Try opening on another PC / جرب الفتح على جهاز آخر"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "cannot open",
+      "corrupt",
+      "ملف تالف"
+    ],
+    "title": "Word file won't open (possibly corrupted) / تعذر فتح ملف وورد (ربما تالف)",
+    "steps": [
+      "1. Open via Word Online or Google Docs / الفتح عبر وورد أونلاين أو جوجل دوكس",
+      "2. Use 'Open and Repair' in File → Open / استخدام 'فتح وإصلاح' من ملف → فتح",
+      "3. Recover text from any file (Open dialog) / استعادة النص من أي ملف من نافذة الفتح",
+      "4. Restore from backup or previous version / الاستعادة من النسخة الاحتياطية أو إصدار سابق",
+      "5. Run SFC/DISM if crashes persist / تشغيل SFC/DISM إذا استمرت الأعطال"
+    ],
+    "severity": "High",
+    "confidence": 0.95,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "track changes",
+      "review",
+      "تعقب التغييرات"
+    ],
+    "title": "Track Changes confusion (markup won't hide) / ارتباك في تعقب التغييرات (الملاحظات لا تختفي)",
+    "steps": [
+      "1. Switch to 'No Markup' view / التبديل إلى عرض 'بدون تعليقات'",
+      "2. Accept/Reject all changes after review / قبول/رفض جميع التغييرات بعد المراجعة",
+      "3. Ensure balloons and markup options set correctly / التأكد من ضبط البالونات وخيارات التعليق",
+      "4. Remove protection if document is restricted / إزالة الحماية إذا كان المستند مقيّدًا",
+      "5. Save a clean copy as new file / حفظ نسخة نظيفة كملف جديد"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "template",
+      "normal.dotm",
+      "قالب"
+    ],
+    "title": "Normal.dotm template issues (styles/macros) / مشاكل قالب Normal.dotm (أنماط/ماكرو)",
+    "steps": [
+      "1. Close Word completely / إغلاق وورد بالكامل",
+      "2. Rename Normal.dotm to force regeneration / إعادة تسمية Normal.dotm لإعادة إنشائه",
+      "3. Check Startup/Add-ins folders for conflicts / فحص مجلدات بدء التشغيل/الإضافات للتعارضات",
+      "4. Repair Office installation / إصلاح تثبيت أوفيس",
+      "5. Recreate custom templates in steps / إعادة إنشاء القوالب المخصصة تدريجيًا"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "printing",
+      "page layout",
+      "طباعة"
+    ],
+    "title": "Word prints incorrectly (margins/scale) / طباعة وورد غير صحيحة (هوامش/مقياس)",
+    "steps": [
+      "1. Set printer to 'Actual size' / A4 or Letter / ضبط الطابعة على الحجم الفعلي / A4 أو Letter",
+      "2. Check section/page setup and margins / فحص إعداد الصفحة والأقسام والهوامش",
+      "3. Update printer driver/firmware / تحديث تعريف/برمجيات الطابعة",
+      "4. Export to PDF and test print / التصدير إلى PDF واختبار الطباعة",
+      "5. Reset print options in Word / إعادة ضبط خيارات الطباعة في وورد"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "language",
+      "arabic",
+      "rtl",
+      "اللغة",
+      "يمين لليسار",
+      "intermittently",
+      "after update"
+    ],
+    "title": "Mixed RTL/LTR layout issues (all cases) / مشاكل تنسيق اتجاه يمين-يسار/يسار-يمين (جميع الحالات)",
+    "steps": [
+      "1. Enable 'Arabic' editing language / تفعيل لغة التحرير العربية",
+      "2. Turn on 'Right-to-left' layout / تفعيل تخطيط 'من اليمين إلى اليسار'",
+      "3. Use appropriate fonts that support Arabic / استخدام خطوط تدعم العربية",
+      "4. Avoid manual spacing; use paragraph styles / تجنب المسافات اليدوية؛ استخدم أنماط الفقرات",
+      "5. Convert legacy files to .docx / تحويل الملفات القديمة إلى .docx"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "images",
+      "wrap text",
+      "الصور",
+      "with large files",
+      "for one user only",
+      "intermittently",
+      "on shared computer"
+    ],
+    "title": "Images jump or move when editing (all cases) / الصور تتحرك أثناء التحرير (جميع الحالات)",
+    "steps": [
+      "1. Set wrapping to 'In line with text' to fix position / ضبط الالتفاف على 'ضمن النص' لتثبيت الموضع",
+      "2. Use 'Fix position on page' for floating objects / استخدام 'تثبيت الموضع على الصفحة'",
+      "3. Anchor images to paragraphs properly / تثبيت الصور على الفقرات بالشكل الصحيح",
+      "4. Disable 'Allow overlap' if needed / تعطيل 'السماح بالتداخل' إذا لزم",
+      "5. Update to latest Office build / التحديث لآخر إصدار أوفيس"
+    ],
+    "severity": "Low",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "footnotes",
+      "endnotes",
+      "حواشي",
+      "on one specific file",
+      "on shared computer",
+      "after update"
+    ],
+    "title": "Footnotes/endnotes misnumbered or missing (all cases) / ترقيم الحواشي غير صحيح أو مفقود (جميع الحالات)",
+    "steps": [
+      "1. Convert between footnotes/endnotes / التحويل بين الحاشية السفلية والنهائية",
+      "2. Restart numbering per section if required / إعادة ترقيم حسب القسم عند الحاجة",
+      "3. Check for hidden sections or breaks / فحص الأقسام أو الفواصل المخفية",
+      "4. Update field codes (Ctrl+A then F9) / تحديث الحقول (Ctrl+A ثم F9)",
+      "5. Repair document structure via copy to new file / إصلاح بنية المستند بنسخه لملف جديد"
+    ],
+    "severity": "Low",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "mail merge",
+      "mergefields",
+      "دمج المراسلات"
+    ],
+    "title": "Mail Merge fields show codes instead of values / حقول دمج المراسلات تعرض أكواد بدل القيم",
+    "steps": [
+      "1. Press Alt+F9 to toggle field codes / اضغط Alt+F9 للتبديل بين الأكواد والقيم",
+      "2. Update fields (Select all → F9) / تحديث الحقول (تحديد الكل → F9)",
+      "3. Confirm data source connection/encoding / تأكيد اتصال/ترميز مصدر البيانات",
+      "4. Set correct number/date formats in switches / ضبط تنسيقات الرقم/التاريخ في المفاتيح",
+      "5. Finish & Merge to new document / إنهاء ودمج إلى مستند جديد"
+    ],
+    "severity": "Low",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "table of contents",
+      "toc",
+      "فهرس",
+      "for one user only"
+    ],
+    "title": "TOC not updating correctly (all cases) / فهرس المحتويات لا يتحدث بشكل صحيح (جميع الحالات)",
+    "steps": [
+      "1. Mark headings with built-in styles / تمييز العناوين بأنماط مدمجة",
+      "2. Update entire table (references) / تحديث الجدول بالكامل (مراجع)",
+      "3. Remove manual tabs and spacing / إزالة علامات الجدولة والمسافات اليدوية",
+      "4. Toggle field codes and refresh / التبديل بين أكواد الحقول والتحديث",
+      "5. Rebuild TOC in a clean copy / إعادة إنشاء الفهرس في نسخة نظيفة"
+    ],
+    "severity": "Low",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "excel",
+      "formula",
+      "calculation",
+      "معادلة لا تعمل"
+    ],
+    "title": "Formulas not calculating / معادلات إكسل لا تعمل",
+    "steps": [
+      "1. Set calculation mode to Automatic / تعيين وضع الحساب إلى تلقائي",
+      "2. Press F9 to force recalculation / الضغط على F9 لإعادة الحساب",
+      "3. Check for circular references / التحقق من المراجع الدائرية",
+      "4. Verify cell format and apostrophes / فحص تنسيق الخلية وعلامة الاقتباس",
+      "5. Reopen workbook and test / إعادة فتح المصنف والاختبار"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "pivot table",
+      "refresh",
+      "Pivot",
+      "جدول محوري"
+    ],
+    "title": "PivotTable not refreshing or wrong totals / الجدول المحوري لا يتحدث أو المجاميع خاطئة",
+    "steps": [
+      "1. Refresh all connections / تحديث جميع الاتصالات",
+      "2. Check source range and headers / فحص نطاق المصدر والعناوين",
+      "3. Clear filters and slicers / مسح المرشحات والمحددات",
+      "4. Rebuild cache by recreating PivotTable / إعادة إنشاء الجدول المحوري لبناء ذاكرة جديدة",
+      "5. Check for hidden blanks/merged cells / التحقق من خلايا مخفية/مُدمجة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "external links",
+      "#REF!",
+      "روابط خارجية"
+    ],
+    "title": "Broken external links in workbook / روابط خارجية مكسورة في المصنف",
+    "steps": [
+      "1. Edit Links to update or break links / تحرير الروابط للتحديث أو القطع",
+      "2. Use Find to locate [ ] references / استخدام البحث للعثور على المراجع [ ]",
+      "3. Replace with named ranges/tables / الاستبدال بنطاقات أو جداول مسماة",
+      "4. Open source files then refresh / فتح الملفات المصدر ثم التحديث",
+      "5. Save and test on another PC / الحفظ والاختبار على جهاز آخر"
+    ],
+    "severity": "Low",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "performance",
+      "slow",
+      "بطء"
+    ],
+    "title": "Slow workbook performance / أداء المصنف بطيء",
+    "steps": [
+      "1. Remove volatile functions (OFFSET/INDIRECT) / إزالة الدوال المتطايرة (OFFSET/INDIRECT)",
+      "2. Limit conditional formatting ranges / تقليل نطاقات التنسيق الشرطي",
+      "3. Turn off gridlines and animations / إيقاف خطوط الشبكة والرسوم المتحركة",
+      "4. Convert formulas to values where possible / تحويل المعادلات إلى قيم حيث يمكن",
+      "5. Split large sheets into smaller ones / تقسيم الأوراق الكبيرة إلى أصغر"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "data validation",
+      "dropdown",
+      "التحقق من صحة البيانات"
+    ],
+    "title": "Data validation list not working / قائمة التحقق من صحة البيانات لا تعمل",
+    "steps": [
+      "1. Use absolute references for list / استخدام مراجع مطلقة للقائمة",
+      "2. Avoid merged cells in range / تجنب الخلايا المدمجة في النطاق",
+      "3. Ensure workbook calculation is Automatic / التأكد من أن الحساب تلقائي",
+      "4. Check for hidden characters/spaces / فحص الأحرف/المسافات المخفية",
+      "5. Recreate validation on a clean range / إعادة إنشاء التحقق على نطاق نظيف"
+    ],
+    "severity": "Low",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "macro",
+      "vba",
+      "security",
+      "ماكرو"
+    ],
+    "title": "Macro disabled due to security / تم تعطيل الماكرو بسبب الأمان",
+    "steps": [
+      "1. Enable macros from Trust Center / تفعيل الماكرو من مركز التوثيق",
+      "2. Sign macros with a trusted certificate / توقيع الماكرو بشهادة موثوقة",
+      "3. Place file in a Trusted Location / وضع الملف في موقع موثوق",
+      "4. Scan for malicious code before enabling / فحص أي كود خبيث قبل التفعيل",
+      "5. Restart Excel after changes / إعادة تشغيل إكسل بعد التغييرات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "power query",
+      "get & transform",
+      "باور كويري"
+    ],
+    "title": "Power Query fails to refresh / فشل تحديث Power Query",
+    "steps": [
+      "1. Authenticate to data source again / إعادة المصادقة على مصدر البيانات",
+      "2. Review privacy levels and combine settings / مراجعة مستويات الخصوصية وإعدادات الدمج",
+      "3. Enable fast data load and background refresh / تفعيل التحميل السريع والتحديث بالخلفية",
+      "4. Check column type mismatches / فحص تعارض أنواع الأعمدة",
+      "5. Clear cache and rebuild query / مسح الذاكرة المؤقتة وإعادة بناء الاستعلام"
+    ],
+    "severity": "Medium",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "outlook",
+      "send fail",
+      "smtp",
+      "فشل الإرسال"
+    ],
+    "title": "Cannot send email / تعذر إرسال البريد الإلكتروني",
+    "steps": [
+      "1. Verify internet and mailbox quota / التحقق من الإنترنت وحصة البريد",
+      "2. Check account SMTP settings and auth / فحص إعدادات SMTP والمصادقة",
+      "3. Clear Outbox and retry / مسح صندوق الصادر وإعادة المحاولة",
+      "4. Disable conflicting add-ins / تعطيل الإضافات المتعارضة",
+      "5. Contact admin if server rejects mail / التواصل مع المسؤول إذا رفض الخادم الرسالة"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "search",
+      "index",
+      "no results",
+      "بحث"
+    ],
+    "title": "Outlook search returns no results / بحث أوتلوك لا يعرض نتائج",
+    "steps": [
+      "1. Rebuild Windows Search index / إعادة بناء فهرس بحث ويندوز",
+      "2. Ensure PST/OST locations included / التأكد من تضمين مواقع PST/OST",
+      "3. Update Office to latest build / تحديث أوفيس لأحدث إصدار",
+      "4. Repair data files via SCANPST/SCANOST / إصلاح ملفات البيانات عبر SCANPST/SCANOST",
+      "5. Create a new Outlook profile / إنشاء ملف تعريف جديد لأوتلوك"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "profile",
+      "ost",
+      "pst",
+      "ملف بيانات"
+    ],
+    "title": "Profile corruption or OST issues / تلف ملف التعريف أو مشاكل OST",
+    "steps": [
+      "1. Close Outlook and delete/rebuild OST / إغلاق أوتلوك وحذف/إعادة بناء OST",
+      "2. Run SCANPST for PST errors / تشغيل SCANPST لأخطاء PST",
+      "3. Reduce mailbox size (archive) / تقليل حجم البريد بالأرشفة",
+      "4. Disable antivirus email scanning / تعطيل فحص البريد بمضاد الفيروسات",
+      "5. Create a fresh profile / إنشاء ملف تعريف جديد"
+    ],
+    "severity": "High",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "calendar",
+      "sync",
+      "meeting",
+      "تقويم"
+    ],
+    "title": "Calendar not syncing or invitations failing / التقويم لا يتزامن أو الدعوات تفشل",
+    "steps": [
+      "1. Check time zone and calendar permissions / فحص المنطقة الزمنية وأذونات التقويم",
+      "2. Repair mailbox (Office 365) / إصلاح صندوق البريد (أوفيس 365)",
+      "3. Clear reminders and free/busy cache / مسح التذكيرات وذاكرة مشغول/متاح",
+      "4. Recreate OST profile / إعادة إنشاء ملف OST",
+      "5. Use OWA to test service side / الاختبار عبر OWA للتحقق من جانب الخادم"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "add-ins",
+      "slow",
+      "startup",
+      "إضافات"
+    ],
+    "title": "Outlook slow to start (add-ins) / بطء بدء تشغيل أوتلوك (إضافات)",
+    "steps": [
+      "1. Start in Safe Mode (outlook.exe /safe) / تشغيل في الوضع الآمن",
+      "2. Disable heavy add-ins one by one / تعطيل الإضافات الثقيلة تدريجيًا",
+      "3. Reduce mailbox and OST size / تقليل حجم صندوق البريد وOST",
+      "4. Update Office and add-ins / تحديث أوفيس والإضافات",
+      "5. Repair Office installation / إصلاح تثبيت أوفيس"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "slideshow",
+      "presenter view",
+      "العرض التقديمي"
+    ],
+    "title": "Slide Show won't start or presenter view broken / عرض الشرائح لا يبدأ أو وضع المقدم معطل",
+    "steps": [
+      "1. Check display setup (Duplicate/Extend) / فحص إعداد العرض (تكرار/تمديد)",
+      "2. Disable hardware graphics acceleration / تعطيل تسريع الرسوميات بالأجهزة",
+      "3. Remove problematic transitions/animations / إزالة الانتقالات/الحركات المسببة للمشكلة",
+      "4. Update GPU and Office / تحديث تعريف كرت الشاشة وأوفيس",
+      "5. Try 'Present Online' or export to video / تجربة العرض عبر الإنترنت أو التصدير لفيديو"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "media",
+      "codec",
+      "video",
+      "صوت",
+      "فيديو"
+    ],
+    "title": "Embedded video/audio won't play / الفيديو/الصوت المضمن لا يعمل",
+    "steps": [
+      "1. Install required codecs or re-encode media / تثبيت الترميزات المطلوبة أو إعادة ترميز الوسائط",
+      "2. Use 'Insert → Video' (not copy-paste) / استخدام 'إدراج → فيديو' بدل النسخ/اللصق",
+      "3. Compress media in PowerPoint / ضغط الوسائط داخل باوربوينت",
+      "4. Ensure file path has ASCII characters / التأكد أن مسار الملف لا يحتوي أحرفًا خاصة",
+      "5. Link media instead if file too large / ربط الوسائط بدل تضمينها إذا كانت كبيرة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "fonts",
+      "missing",
+      "خطوط"
+    ],
+    "title": "Missing fonts alter slide layout / اختفاء الخطوط يغير تنسيق الشرائح",
+    "steps": [
+      "1. Embed fonts when saving / تضمين الخطوط عند الحفظ",
+      "2. Use cross-platform fonts / استخدام خطوط متوافقة عبر الأنظمة",
+      "3. Install the required fonts locally / تثبيت الخطوط المطلوبة محليًا",
+      "4. Replace unavailable fonts via Replace Fonts / استبدال الخطوط غير المتوفرة من استبدال الخطوط",
+      "5. Export to PDF if sharing externally / التصدير إلى PDF عند المشاركة"
+    ],
+    "severity": "Low",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "sync",
+      "notebook",
+      "تزامن"
+    ],
+    "title": "Notebook won't sync / دفتر الملاحظات لا يتزامن",
+    "steps": [
+      "1. Sign out/in to OneNote/Office / تسجيل الخروج/الدخول إلى ون نوت/أوفيس",
+      "2. Check OneDrive/SharePoint storage quota / فحص سعة ون درايف/شيربوينت",
+      "3. Move notebook to a new location / نقل الدفتر إلى موقع جديد",
+      "4. Repair Office and reset OneNote cache / إصلاح أوفيس وإعادة ضبط ذاكرة ون نوت",
+      "5. Create a new notebook and copy sections / إنشاء دفتر جديد ونسخ المقاطع"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "ink",
+      "pen",
+      "قلم"
+    ],
+    "title": "Pen/Ink not working properly / القلم/الكتابة بالحبر لا تعمل بشكل صحيح",
+    "steps": [
+      "1. Update pen drivers and firmware / تحديث تعريفات وبرمجيات القلم",
+      "2. Calibrate pen in Windows settings / معايرة القلم من إعدادات ويندوز",
+      "3. Disable 'Ignore touch input' if misconfigured / تعطيل خيار 'تجاهل اللمس' إذا كان مفعلاً خطأ",
+      "4. Test in other apps (Whiteboard) / الاختبار في تطبيقات أخرى (السبورة)",
+      "5. Reinstall OneNote if needed / إعادة تثبيت ون نوت إذا لزم"
+    ],
+    "severity": "Low",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Access",
+    "keywords": [
+      "mdb",
+      "accdb",
+      "database",
+      "قاعدة بيانات"
+    ],
+    "title": "Database won't open or is in use / قاعدة البيانات لا تفتح أو قيد الاستخدام",
+    "steps": [
+      "1. Ask users to close shared file / طلب إغلاق الملف المشترك من المستخدمين",
+      "2. Copy file locally and open / نسخ الملف محليًا وفتحه",
+      "3. Compact and Repair the database / ضغط وإصلاح قاعدة البيانات",
+      "4. Split front-end/back-end for multiuser / فصل الواجهة الأمامية/الخلفية للمستخدمين المتعددين",
+      "5. Migrate to ACCDB if still MDB / الترحيل إلى ACCDB إذا كان الملف MDB"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Access",
+    "keywords": [
+      "odbc",
+      "provider",
+      "64-bit",
+      "مزود"
+    ],
+    "title": "Missing ODBC/OLE DB provider (32/64-bit) / مزود ODBC/OLE DB مفقود (32/64 بت)",
+    "steps": [
+      "1. Install matching 32/64-bit drivers / تثبيت تعريفات 32/64 بت المطابقة",
+      "2. Match Office bitness with provider / مطابقة بنية أوفيس مع المزود",
+      "3. Use DSN-less connection strings / استخدام سلاسل اتصال بدون DSN",
+      "4. Update drivers to latest version / تحديث التعريفات لآخر إصدار",
+      "5. Test connectivity via ODBC Administrator / اختبار الاتصال عبر مدير ODBC"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "teams",
+      "login",
+      "sign-in",
+      "تسجيل الدخول"
+    ],
+    "title": "Cannot sign in to Teams / تعذر تسجيل الدخول إلى تيمز",
+    "steps": [
+      "1. Check service status (Office 365) / التحقق من حالة الخدمة (أوفيس 365)",
+      "2. Clear Teams cache and restart / مسح ذاكرة تيمز المؤقتة وإعادة التشغيل",
+      "3. Update Teams to latest version / تحديث تيمز إلى أحدث إصدار",
+      "4. Verify MFA and network restrictions / التحقق من المصادقة المتعددة والشبكة",
+      "5. Use Teams web as a test / استخدام نسخة الويب للاختبار"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "microphone",
+      "camera",
+      "permissions",
+      "ميكروفون",
+      "كاميرا"
+    ],
+    "title": "Camera or microphone not working in Teams / الكاميرا أو الميكروفون لا يعمل في تيمز",
+    "steps": [
+      "1. Allow app permissions in Windows/Teams / السماح بأذونات التطبيق في ويندوز/تيمز",
+      "2. Choose correct device in Settings / اختيار الجهاز الصحيح من الإعدادات",
+      "3. Close apps that use camera/mic / إغلاق التطبيقات التي تستخدم الكاميرا/المايك",
+      "4. Update audio/video drivers / تحديث تعريفات الصوت/الفيديو",
+      "5. Test call and adjust levels / إجراء مكالمة اختبار وضبط المستويات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "activation",
+      "license",
+      "تفعيل"
+    ],
+    "title": "Office activation failed / فشل تفعيل أوفيس",
+    "steps": [
+      "1. Sign in with licensed account / تسجيل الدخول بحساب مرخص",
+      "2. Run Activation Troubleshooter / تشغيل مستكشف التفعيل",
+      "3. Verify edition and subscription status / التحقق من الإصدار وحالة الاشتراك",
+      "4. Clear cached licenses (OSPP) / مسح التراخيص المخزنة (OSPP)",
+      "5. Reactivate or reinstall if needed / إعادة التفعيل أو التثبيت عند الحاجة"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "install",
+      "update",
+      "setup",
+      "تثبيت"
+    ],
+    "title": "Office installation/update fails / فشل تثبيت/تحديث أوفيس",
+    "steps": [
+      "1. Run Office Repair (Online) / تشغيل إصلاح أوفيس (أونلاين)",
+      "2. Use Office Removal Tool then reinstall / استخدام أداة إزالة أوفيس ثم إعادة التثبيت",
+      "3. Check disk space and permissions / التحقق من المساحة والأذونات",
+      "4. Disable antivirus/firewall temporarily / تعطيل مضاد الفيروسات/الجدار مؤقتًا",
+      "5. Install with admin rights and clean boot / التثبيت بصلاحيات المدير مع إقلاع نظيف"
+    ],
+    "severity": "High",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "add-ins",
+      "conflict",
+      "إضافات"
+    ],
+    "title": "Problematic Office add-in causing crashes / إضافة أوفيس تسبب أعطالًا",
+    "steps": [
+      "1. Start app in Safe Mode / بدء التطبيق في الوضع الآمن",
+      "2. Disable add-ins then enable selectively / تعطيل الإضافات ثم تفعيلها تدريجيًا",
+      "3. Update or remove the faulty add-in / تحديث أو إزالة الإضافة المسببة",
+      "4. Check vendor for compatibility updates / التحقق من تحديثات التوافق من المورد",
+      "5. Report crash details for analysis / إرسال تفاصيل العطل للتحليل"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "language pack",
+      "rtl",
+      "arabic",
+      "حزمة لغة"
+    ],
+    "title": "Cannot switch or install language pack / تعذر تبديل/تثبيت حزمة اللغة",
+    "steps": [
+      "1. Download correct language accessory pack / تنزيل حزمة اللغة الصحيحة",
+      "2. Install proofing tools and set as default / تثبيت أدوات التدقيق وتعيينها كافتراضية",
+      "3. Change Office display and editing languages / تغيير لغات العرض والتحرير في أوفيس",
+      "4. Update Office then restart apps / تحديث أوفيس ثم إعادة تشغيل التطبيقات",
+      "5. Reinstall language pack if broken / إعادة تثبيت الحزمة إذا كانت تالفة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "onenote vs onenote for windows 10",
+      "confusion",
+      "اختلاف"
+    ],
+    "title": "Confusion between OneNote apps / التباس بين تطبيقات ون نوت",
+    "steps": [
+      "1. Identify the app version in use / تحديد إصدار التطبيق المستخدم",
+      "2. Choose preferred app and set as default / اختيار التطبيق المفضل وتعيينه كافتراضي",
+      "3. Migrate notebooks if required / نقل دفاتر الملاحظات إذا لزم",
+      "4. Uninstall/Hide the unused app / إزالة/إخفاء التطبيق غير المستخدم",
+      "5. Educate users on feature differences / توعية المستخدمين بفروق الميزات"
+    ],
+    "severity": "Low",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "protection",
+      "password",
+      "حماية"
+    ],
+    "title": "Protected document cannot be edited / لا يمكن تحرير المستند المحمي",
+    "steps": [
+      "1. Check if document is restricted editing / التحقق من تقييد التحرير بالمستند",
+      "2. Remove protection with password or owner / إزالة الحماية بكلمة المرور أو المالك",
+      "3. Copy content to a new file without protection / نسخ المحتوى لملف جديد بدون حماية",
+      "4. Verify IRM/DRM policies / التحقق من سياسات IRM/DRM",
+      "5. Ask owner/admin to grant permissions / طلب الأذونات من المالك/المسؤول"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "shared workbook",
+      "locked",
+      "مشترك"
+    ],
+    "title": "Workbook shared/locked for editing / المصنف مشترك/مقفل للتحرير",
+    "steps": [
+      "1. Save a local copy with a new name / حفظ نسخة محلية باسم جديد",
+      "2. Disable legacy 'Shared Workbook' feature / تعطيل ميزة 'مصنف مشترك' القديمة",
+      "3. Ask other users to close file / طلب إغلاق الملف من المستخدمين الآخرين",
+      "4. Move to SharePoint/OneDrive coauthoring / النقل إلى التأليف المشترك على شيربوينت/ون درايف",
+      "5. Remove read-only attribute / إزالة خاصية القراءة فقط"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "outbox stuck",
+      "large attachment",
+      "صادر"
+    ],
+    "title": "Mails stuck in Outbox / الرسائل عالقة في الصادر",
+    "steps": [
+      "1. Delete or reduce large attachments / حذف أو تقليل المرفقات الكبيرة",
+      "2. Work Offline then back Online / التبديل إلى وضع عدم الاتصال ثم العودة",
+      "3. Restart Outlook / إعادة تشغيل أوتلوك",
+      "4. Repair account settings / إصلاح إعدادات الحساب",
+      "5. Check antivirus email scanning / فحص مسح البريد بمضاد الفيروسات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "export video",
+      "render fail",
+      "تصدير فيديو"
+    ],
+    "title": "Cannot export to video / تعذر التصدير إلى فيديو",
+    "steps": [
+      "1. Install latest Office and codecs / تثبيت أحدث أوفيس والترميزات",
+      "2. Remove unsupported media/effects / إزالة الوسائط/التأثيرات غير المدعومة",
+      "3. Reduce resolution and bitrate / خفض الدقة ومعدل البت",
+      "4. Close other heavy apps before export / إغلاق التطبيقات الثقيلة قبل التصدير",
+      "5. Try exporting from another PC / التجربة على جهاز آخر"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "share screen",
+      "policy",
+      "مشاركة"
+    ],
+    "title": "Screen sharing not working / مشاركة الشاشة لا تعمل",
+    "steps": [
+      "1. Grant screen recording permission (OS) / منح إذن تسجيل الشاشة في النظام",
+      "2. Select specific window vs entire screen / اختيار نافذة محددة بدلاً من الشاشة الكاملة",
+      "3. Disable hardware acceleration in Teams / تعطيل تسريع العتاد في تيمز",
+      "4. Check tenant policies that block sharing / فحص سياسات المؤسسة التي تمنع المشاركة",
+      "5. Update Teams client / تحديث تطبيق تيمز"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "sharepoint read-only",
+      "onedrive lock",
+      "قراءة فقط"
+    ],
+    "title": "Files open read-only from SharePoint/OneDrive / الملفات تُفتح للقراءة فقط من شيربوينت/ون درايف",
+    "steps": [
+      "1. Check checkout/permissions on library / التحقق من الإعارة/الأذونات في المكتبة",
+      "2. Sync locally via OneDrive client / المزامنة محليًا عبر عميل ون درايف",
+      "3. Ensure user has edit rights / التأكد من امتلاك المستخدم لحقوق التحرير",
+      "4. Clear Office cache and credentials / مسح ذاكرة أوفيس المؤقتة وبيانات الاعتماد",
+      "5. Avoid opening in browser when editing required / تجنب الفتح في المتصفح عند الحاجة إلى التحرير"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "add-ins",
+      "slow",
+      "startup",
+      "إضافات",
+      "variation"
+    ],
+    "title": "Outlook slow to start (add-ins) (on one specific file) / بطء بدء تشغيل أوتلوك (إضافات) (في ملف محدد)",
+    "steps": [
+      "1. 1. Start in Safe Mode (outlook.exe /safe) / تشغيل في الوضع الآمن",
+      "2. 2. Disable heavy add-ins one by one / تعطيل الإضافات الثقيلة تدريجيًا",
+      "3. 3. Reduce mailbox and OST size / تقليل حجم صندوق البريد وOST",
+      "4. 4. Update Office and add-ins / تحديث أوفيس والإضافات",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "template",
+      "normal.dotm",
+      "قالب",
+      "variation"
+    ],
+    "title": "Normal.dotm template issues (styles/macros) (after update) / مشاكل قالب Normal.dotm (أنماط/ماكرو) (بعد التحديث)",
+    "steps": [
+      "1. 1. Close Word completely / إغلاق وورد بالكامل",
+      "2. 2. Rename Normal.dotm to force regeneration / إعادة تسمية Normal.dotm لإعادة إنشائه",
+      "3. 3. Check Startup/Add-ins folders for conflicts / فحص مجلدات بدء التشغيل/الإضافات للتعارضات",
+      "4. 4. Repair Office installation / إصلاح تثبيت أوفيس",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "outlook",
+      "send fail",
+      "smtp",
+      "فشل الإرسال",
+      "variation"
+    ],
+    "title": "Cannot send email (after update) / تعذر إرسال البريد الإلكتروني (بعد التحديث)",
+    "steps": [
+      "1. 1. Verify internet and mailbox quota / التحقق من الإنترنت وحصة البريد",
+      "2. 2. Check account SMTP settings and auth / فحص إعدادات SMTP والمصادقة",
+      "3. 3. Clear Outbox and retry / مسح صندوق الصادر وإعادة المحاولة",
+      "4. 4. Disable conflicting add-ins / تعطيل الإضافات المتعارضة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "High",
+    "confidence": 0.95,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "teams",
+      "login",
+      "sign-in",
+      "تسجيل الدخول",
+      "variation"
+    ],
+    "title": "Cannot sign in to Teams (on one specific file) / تعذر تسجيل الدخول إلى تيمز (في ملف محدد)",
+    "steps": [
+      "1. 1. Check service status (Office 365) / التحقق من حالة الخدمة (أوفيس 365)",
+      "2. 2. Clear Teams cache and restart / مسح ذاكرة تيمز المؤقتة وإعادة التشغيل",
+      "3. 3. Update Teams to latest version / تحديث تيمز إلى أحدث إصدار",
+      "4. 4. Verify MFA and network restrictions / التحقق من المصادقة المتعددة والشبكة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "images",
+      "wrap text",
+      "الصور",
+      "variation"
+    ],
+    "title": "Images jump or move when editing (with large files) / الصور تتحرك أثناء التحرير (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Set wrapping to 'In line with text' to fix position / ضبط الالتفاف على 'ضمن النص' لتثبيت الموضع",
+      "2. 2. Use 'Fix position on page' for floating objects / استخدام 'تثبيت الموضع على الصفحة'",
+      "3. 3. Anchor images to paragraphs properly / تثبيت الصور على الفقرات بالشكل الصحيح",
+      "4. 4. Disable 'Allow overlap' if needed / تعطيل 'السماح بالتداخل' إذا لزم",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "sync",
+      "notebook",
+      "تزامن",
+      "variation"
+    ],
+    "title": "Notebook won't sync (after update) / دفتر الملاحظات لا يتزامن (بعد التحديث)",
+    "steps": [
+      "1. 1. Sign out/in to OneNote/Office / تسجيل الخروج/الدخول إلى ون نوت/أوفيس",
+      "2. 2. Check OneDrive/SharePoint storage quota / فحص سعة ون درايف/شيربوينت",
+      "3. 3. Move notebook to a new location / نقل الدفتر إلى موقع جديد",
+      "4. 4. Repair Office and reset OneNote cache / إصلاح أوفيس وإعادة ضبط ذاكرة ون نوت",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "fonts",
+      "missing",
+      "خطوط",
+      "variation"
+    ],
+    "title": "Missing fonts alter slide layout (with large files) / اختفاء الخطوط يغير تنسيق الشرائح (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Embed fonts when saving / تضمين الخطوط عند الحفظ",
+      "2. 2. Use cross-platform fonts / استخدام خطوط متوافقة عبر الأنظمة",
+      "3. 3. Install the required fonts locally / تثبيت الخطوط المطلوبة محليًا",
+      "4. 4. Replace unavailable fonts via Replace Fonts / استبدال الخطوط غير المتوفرة من استبدال الخطوط",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "fonts",
+      "missing",
+      "خطوط",
+      "variation"
+    ],
+    "title": "Missing fonts alter slide layout (on one specific file) / اختفاء الخطوط يغير تنسيق الشرائح (في ملف محدد)",
+    "steps": [
+      "1. 1. Embed fonts when saving / تضمين الخطوط عند الحفظ",
+      "2. 2. Use cross-platform fonts / استخدام خطوط متوافقة عبر الأنظمة",
+      "3. 3. Install the required fonts locally / تثبيت الخطوط المطلوبة محليًا",
+      "4. 4. Replace unavailable fonts via Replace Fonts / استبدال الخطوط غير المتوفرة من استبدال الخطوط",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "sync",
+      "notebook",
+      "تزامن",
+      "variation"
+    ],
+    "title": "Notebook won't sync (intermittently) / دفتر الملاحظات لا يتزامن (بشكل متقطع)",
+    "steps": [
+      "1. 1. Sign out/in to OneNote/Office / تسجيل الخروج/الدخول إلى ون نوت/أوفيس",
+      "2. 2. Check OneDrive/SharePoint storage quota / فحص سعة ون درايف/شيربوينت",
+      "3. 3. Move notebook to a new location / نقل الدفتر إلى موقع جديد",
+      "4. 4. Repair Office and reset OneNote cache / إصلاح أوفيس وإعادة ضبط ذاكرة ون نوت",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "footnotes",
+      "endnotes",
+      "حواشي",
+      "variation"
+    ],
+    "title": "Footnotes/endnotes misnumbered or missing (on one specific file) / ترقيم الحواشي غير صحيح أو مفقود (في ملف محدد)",
+    "steps": [
+      "1. 1. Convert between footnotes/endnotes / التحويل بين الحاشية السفلية والنهائية",
+      "2. 2. Restart numbering per section if required / إعادة ترقيم حسب القسم عند الحاجة",
+      "3. 3. Check for hidden sections or breaks / فحص الأقسام أو الفواصل المخفية",
+      "4. 4. Update field codes (Ctrl+A then F9) / تحديث الحقول (Ctrl+A ثم F9)",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "images",
+      "wrap text",
+      "الصور",
+      "variation"
+    ],
+    "title": "Images jump or move when editing (for one user only) / الصور تتحرك أثناء التحرير (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Set wrapping to 'In line with text' to fix position / ضبط الالتفاف على 'ضمن النص' لتثبيت الموضع",
+      "2. 2. Use 'Fix position on page' for floating objects / استخدام 'تثبيت الموضع على الصفحة'",
+      "3. 3. Anchor images to paragraphs properly / تثبيت الصور على الفقرات بالشكل الصحيح",
+      "4. 4. Disable 'Allow overlap' if needed / تعطيل 'السماح بالتداخل' إذا لزم",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "language",
+      "arabic",
+      "rtl",
+      "اللغة",
+      "يمين لليسار",
+      "variation"
+    ],
+    "title": "Mixed RTL/LTR layout issues (intermittently) / مشاكل تنسيق اتجاه يمين-يسار/يسار-يمين (بشكل متقطع)",
+    "steps": [
+      "1. 1. Enable 'Arabic' editing language / تفعيل لغة التحرير العربية",
+      "2. 2. Turn on 'Right-to-left' layout / تفعيل تخطيط 'من اليمين إلى اليسار'",
+      "3. 3. Use appropriate fonts that support Arabic / استخدام خطوط تدعم العربية",
+      "4. 4. Avoid manual spacing; use paragraph styles / تجنب المسافات اليدوية؛ استخدم أنماط الفقرات",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "footnotes",
+      "endnotes",
+      "حواشي",
+      "variation"
+    ],
+    "title": "Footnotes/endnotes misnumbered or missing (after update) / ترقيم الحواشي غير صحيح أو مفقود (بعد التحديث)",
+    "steps": [
+      "1. 1. Convert between footnotes/endnotes / التحويل بين الحاشية السفلية والنهائية",
+      "2. 2. Restart numbering per section if required / إعادة ترقيم حسب القسم عند الحاجة",
+      "3. 3. Check for hidden sections or breaks / فحص الأقسام أو الفواصل المخفية",
+      "4. 4. Update field codes (Ctrl+A then F9) / تحديث الحقول (Ctrl+A ثم F9)",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "power query",
+      "get & transform",
+      "باور كويري",
+      "variation"
+    ],
+    "title": "Power Query fails to refresh (with large files) / فشل تحديث Power Query (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Authenticate to data source again / إعادة المصادقة على مصدر البيانات",
+      "2. 2. Review privacy levels and combine settings / مراجعة مستويات الخصوصية وإعدادات الدمج",
+      "3. 3. Enable fast data load and background refresh / تفعيل التحميل السريع والتحديث بالخلفية",
+      "4. 4. Check column type mismatches / فحص تعارض أنواع الأعمدة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "data validation",
+      "dropdown",
+      "التحقق من صحة البيانات",
+      "variation"
+    ],
+    "title": "Data validation list not working (on one specific file) / قائمة التحقق من صحة البيانات لا تعمل (في ملف محدد)",
+    "steps": [
+      "1. 1. Use absolute references for list / استخدام مراجع مطلقة للقائمة",
+      "2. 2. Avoid merged cells in range / تجنب الخلايا المدمجة في النطاق",
+      "3. 3. Ensure workbook calculation is Automatic / التأكد من أن الحساب تلقائي",
+      "4. 4. Check for hidden characters/spaces / فحص الأحرف/المسافات المخفية",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "onenote vs onenote for windows 10",
+      "confusion",
+      "اختلاف",
+      "variation"
+    ],
+    "title": "Confusion between OneNote apps (with large files) / التباس بين تطبيقات ون نوت (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Identify the app version in use / تحديد إصدار التطبيق المستخدم",
+      "2. 2. Choose preferred app and set as default / اختيار التطبيق المفضل وتعيينه كافتراضي",
+      "3. 3. Migrate notebooks if required / نقل دفاتر الملاحظات إذا لزم",
+      "4. 4. Uninstall/Hide the unused app / إزالة/إخفاء التطبيق غير المستخدم",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "ink",
+      "pen",
+      "قلم",
+      "variation"
+    ],
+    "title": "Pen/Ink not working properly (on one specific file) / القلم/الكتابة بالحبر لا تعمل بشكل صحيح (في ملف محدد)",
+    "steps": [
+      "1. 1. Update pen drivers and firmware / تحديث تعريفات وبرمجيات القلم",
+      "2. 2. Calibrate pen in Windows settings / معايرة القلم من إعدادات ويندوز",
+      "3. 3. Disable 'Ignore touch input' if misconfigured / تعطيل خيار 'تجاهل اللمس' إذا كان مفعلاً خطأ",
+      "4. 4. Test in other apps (Whiteboard) / الاختبار في تطبيقات أخرى (السبورة)",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "images",
+      "wrap text",
+      "الصور",
+      "variation"
+    ],
+    "title": "Images jump or move when editing (intermittently) / الصور تتحرك أثناء التحرير (بشكل متقطع)",
+    "steps": [
+      "1. 1. Set wrapping to 'In line with text' to fix position / ضبط الالتفاف على 'ضمن النص' لتثبيت الموضع",
+      "2. 2. Use 'Fix position on page' for floating objects / استخدام 'تثبيت الموضع على الصفحة'",
+      "3. 3. Anchor images to paragraphs properly / تثبيت الصور على الفقرات بالشكل الصحيح",
+      "4. 4. Disable 'Allow overlap' if needed / تعطيل 'السماح بالتداخل' إذا لزم",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "calendar",
+      "sync",
+      "meeting",
+      "تقويم",
+      "variation"
+    ],
+    "title": "Calendar not syncing or invitations failing (intermittently) / التقويم لا يتزامن أو الدعوات تفشل (بشكل متقطع)",
+    "steps": [
+      "1. 1. Check time zone and calendar permissions / فحص المنطقة الزمنية وأذونات التقويم",
+      "2. 2. Repair mailbox (Office 365) / إصلاح صندوق البريد (أوفيس 365)",
+      "3. 3. Clear reminders and free/busy cache / مسح التذكيرات وذاكرة مشغول/متاح",
+      "4. 4. Recreate OST profile / إعادة إنشاء ملف OST",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "docx",
+      "formatting lost",
+      "فقدان التنسيق",
+      "variation"
+    ],
+    "title": "Word document formatting issues (for one user only) / مشاكل تنسيق مستند وورد (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Paste as plain text first / اللصق كنص عادي أولاً",
+      "2. 2. Reapply styles and use Normal template / إعادة تطبيق الأنماط واستخدام القالب الافتراضي",
+      "3. 3. Check compatibility mode and convert to .docx / فحص وضع التوافق والتحويل إلى .docx",
+      "4. 4. Clear direct formatting (Ctrl+Space/Ctrl+Q) / مسح التنسيق المباشر",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "table of contents",
+      "toc",
+      "فهرس",
+      "variation"
+    ],
+    "title": "TOC not updating correctly (for one user only) / فهرس المحتويات لا يتحدث بشكل صحيح (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Mark headings with built-in styles / تمييز العناوين بأنماط مدمجة",
+      "2. 2. Update entire table (references) / تحديث الجدول بالكامل (مراجع)",
+      "3. 3. Remove manual tabs and spacing / إزالة علامات الجدولة والمسافات اليدوية",
+      "4. 4. Toggle field codes and refresh / التبديل بين أكواد الحقول والتحديث",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "ink",
+      "pen",
+      "قلم",
+      "variation"
+    ],
+    "title": "Pen/Ink not working properly (after update) / القلم/الكتابة بالحبر لا تعمل بشكل صحيح (بعد التحديث)",
+    "steps": [
+      "1. 1. Update pen drivers and firmware / تحديث تعريفات وبرمجيات القلم",
+      "2. 2. Calibrate pen in Windows settings / معايرة القلم من إعدادات ويندوز",
+      "3. 3. Disable 'Ignore touch input' if misconfigured / تعطيل خيار 'تجاهل اللمس' إذا كان مفعلاً خطأ",
+      "4. 4. Test in other apps (Whiteboard) / الاختبار في تطبيقات أخرى (السبورة)",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "mail merge",
+      "mergefields",
+      "دمج المراسلات",
+      "variation"
+    ],
+    "title": "Mail Merge fields show codes instead of values (with large files) / حقول دمج المراسلات تعرض أكواد بدل القيم (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Press Alt+F9 to toggle field codes / اضغط Alt+F9 للتبديل بين الأكواد والقيم",
+      "2. 2. Update fields (Select all → F9) / تحديث الحقول (تحديد الكل → F9)",
+      "3. 3. Confirm data source connection/encoding / تأكيد اتصال/ترميز مصدر البيانات",
+      "4. 4. Set correct number/date formats in switches / ضبط تنسيقات الرقم/التاريخ في المفاتيح",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "images",
+      "wrap text",
+      "الصور",
+      "variation"
+    ],
+    "title": "Images jump or move when editing (with large files) / الصور تتحرك أثناء التحرير (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Set wrapping to 'In line with text' to fix position / ضبط الالتفاف على 'ضمن النص' لتثبيت الموضع",
+      "2. 2. Use 'Fix position on page' for floating objects / استخدام 'تثبيت الموضع على الصفحة'",
+      "3. 3. Anchor images to paragraphs properly / تثبيت الصور على الفقرات بالشكل الصحيح",
+      "4. 4. Disable 'Allow overlap' if needed / تعطيل 'السماح بالتداخل' إذا لزم",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "docx",
+      "formatting lost",
+      "فقدان التنسيق",
+      "variation"
+    ],
+    "title": "Word document formatting issues (with large files) / مشاكل تنسيق مستند وورد (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Paste as plain text first / اللصق كنص عادي أولاً",
+      "2. 2. Reapply styles and use Normal template / إعادة تطبيق الأنماط واستخدام القالب الافتراضي",
+      "3. 3. Check compatibility mode and convert to .docx / فحص وضع التوافق والتحويل إلى .docx",
+      "4. 4. Clear direct formatting (Ctrl+Space/Ctrl+Q) / مسح التنسيق المباشر",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "calendar",
+      "sync",
+      "meeting",
+      "تقويم",
+      "variation"
+    ],
+    "title": "Calendar not syncing or invitations failing (intermittently) / التقويم لا يتزامن أو الدعوات تفشل (بشكل متقطع)",
+    "steps": [
+      "1. 1. Check time zone and calendar permissions / فحص المنطقة الزمنية وأذونات التقويم",
+      "2. 2. Repair mailbox (Office 365) / إصلاح صندوق البريد (أوفيس 365)",
+      "3. 3. Clear reminders and free/busy cache / مسح التذكيرات وذاكرة مشغول/متاح",
+      "4. 4. Recreate OST profile / إعادة إنشاء ملف OST",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "microphone",
+      "camera",
+      "permissions",
+      "ميكروفون",
+      "كاميرا",
+      "variation"
+    ],
+    "title": "Camera or microphone not working in Teams (intermittently) / الكاميرا أو الميكروفون لا يعمل في تيمز (بشكل متقطع)",
+    "steps": [
+      "1. 1. Allow app permissions in Windows/Teams / السماح بأذونات التطبيق في ويندوز/تيمز",
+      "2. 2. Choose correct device in Settings / اختيار الجهاز الصحيح من الإعدادات",
+      "3. 3. Close apps that use camera/mic / إغلاق التطبيقات التي تستخدم الكاميرا/المايك",
+      "4. 4. Update audio/video drivers / تحديث تعريفات الصوت/الفيديو",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "external links",
+      "#REF!",
+      "روابط خارجية",
+      "variation"
+    ],
+    "title": "Broken external links in workbook (on one specific file) / روابط خارجية مكسورة في المصنف (في ملف محدد)",
+    "steps": [
+      "1. 1. Edit Links to update or break links / تحرير الروابط للتحديث أو القطع",
+      "2. 2. Use Find to locate [ ] references / استخدام البحث للعثور على المراجع [ ]",
+      "3. 3. Replace with named ranges/tables / الاستبدال بنطاقات أو جداول مسماة",
+      "4. 4. Open source files then refresh / فتح الملفات المصدر ثم التحديث",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "docx",
+      "formatting lost",
+      "فقدان التنسيق",
+      "variation"
+    ],
+    "title": "Word document formatting issues (intermittently) / مشاكل تنسيق مستند وورد (بشكل متقطع)",
+    "steps": [
+      "1. 1. Paste as plain text first / اللصق كنص عادي أولاً",
+      "2. 2. Reapply styles and use Normal template / إعادة تطبيق الأنماط واستخدام القالب الافتراضي",
+      "3. 3. Check compatibility mode and convert to .docx / فحص وضع التوافق والتحويل إلى .docx",
+      "4. 4. Clear direct formatting (Ctrl+Space/Ctrl+Q) / مسح التنسيق المباشر",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "docx",
+      "formatting lost",
+      "فقدان التنسيق",
+      "variation"
+    ],
+    "title": "Word document formatting issues (for one user only) / مشاكل تنسيق مستند وورد (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Paste as plain text first / اللصق كنص عادي أولاً",
+      "2. 2. Reapply styles and use Normal template / إعادة تطبيق الأنماط واستخدام القالب الافتراضي",
+      "3. 3. Check compatibility mode and convert to .docx / فحص وضع التوافق والتحويل إلى .docx",
+      "4. 4. Clear direct formatting (Ctrl+Space/Ctrl+Q) / مسح التنسيق المباشر",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "track changes",
+      "review",
+      "تعقب التغييرات",
+      "variation"
+    ],
+    "title": "Track Changes confusion (markup won't hide) (intermittently) / ارتباك في تعقب التغييرات (الملاحظات لا تختفي) (بشكل متقطع)",
+    "steps": [
+      "1. 1. Switch to 'No Markup' view / التبديل إلى عرض 'بدون تعليقات'",
+      "2. 2. Accept/Reject all changes after review / قبول/رفض جميع التغييرات بعد المراجعة",
+      "3. 3. Ensure balloons and markup options set correctly / التأكد من ضبط البالونات وخيارات التعليق",
+      "4. 4. Remove protection if document is restricted / إزالة الحماية إذا كان المستند مقيّدًا",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Access",
+    "keywords": [
+      "odbc",
+      "provider",
+      "64-bit",
+      "مزود",
+      "variation"
+    ],
+    "title": "Missing ODBC/OLE DB provider (32/64-bit) (intermittently) / مزود ODBC/OLE DB مفقود (32/64 بت) (بشكل متقطع)",
+    "steps": [
+      "1. 1. Install matching 32/64-bit drivers / تثبيت تعريفات 32/64 بت المطابقة",
+      "2. 2. Match Office bitness with provider / مطابقة بنية أوفيس مع المزود",
+      "3. 3. Use DSN-less connection strings / استخدام سلاسل اتصال بدون DSN",
+      "4. 4. Update drivers to latest version / تحديث التعريفات لآخر إصدار",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "docx",
+      "formatting lost",
+      "فقدان التنسيق",
+      "variation"
+    ],
+    "title": "Word document formatting issues (on shared computer) / مشاكل تنسيق مستند وورد (على جهاز مشترك)",
+    "steps": [
+      "1. 1. Paste as plain text first / اللصق كنص عادي أولاً",
+      "2. 2. Reapply styles and use Normal template / إعادة تطبيق الأنماط واستخدام القالب الافتراضي",
+      "3. 3. Check compatibility mode and convert to .docx / فحص وضع التوافق والتحويل إلى .docx",
+      "4. 4. Clear direct formatting (Ctrl+Space/Ctrl+Q) / مسح التنسيق المباشر",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "power query",
+      "get & transform",
+      "باور كويري",
+      "variation"
+    ],
+    "title": "Power Query fails to refresh (for one user only) / فشل تحديث Power Query (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Authenticate to data source again / إعادة المصادقة على مصدر البيانات",
+      "2. 2. Review privacy levels and combine settings / مراجعة مستويات الخصوصية وإعدادات الدمج",
+      "3. 3. Enable fast data load and background refresh / تفعيل التحميل السريع والتحديث بالخلفية",
+      "4. 4. Check column type mismatches / فحص تعارض أنواع الأعمدة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Access",
+    "keywords": [
+      "odbc",
+      "provider",
+      "64-bit",
+      "مزود",
+      "variation"
+    ],
+    "title": "Missing ODBC/OLE DB provider (32/64-bit) (for one user only) / مزود ODBC/OLE DB مفقود (32/64 بت) (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Install matching 32/64-bit drivers / تثبيت تعريفات 32/64 بت المطابقة",
+      "2. 2. Match Office bitness with provider / مطابقة بنية أوفيس مع المزود",
+      "3. 3. Use DSN-less connection strings / استخدام سلاسل اتصال بدون DSN",
+      "4. 4. Update drivers to latest version / تحديث التعريفات لآخر إصدار",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "template",
+      "normal.dotm",
+      "قالب",
+      "variation"
+    ],
+    "title": "Normal.dotm template issues (styles/macros) (after update) / مشاكل قالب Normal.dotm (أنماط/ماكرو) (بعد التحديث)",
+    "steps": [
+      "1. 1. Close Word completely / إغلاق وورد بالكامل",
+      "2. 2. Rename Normal.dotm to force regeneration / إعادة تسمية Normal.dotm لإعادة إنشائه",
+      "3. 3. Check Startup/Add-ins folders for conflicts / فحص مجلدات بدء التشغيل/الإضافات للتعارضات",
+      "4. 4. Repair Office installation / إصلاح تثبيت أوفيس",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "excel",
+      "formula",
+      "calculation",
+      "معادلة لا تعمل",
+      "variation"
+    ],
+    "title": "Formulas not calculating (for one user only) / معادلات إكسل لا تعمل (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Set calculation mode to Automatic / تعيين وضع الحساب إلى تلقائي",
+      "2. 2. Press F9 to force recalculation / الضغط على F9 لإعادة الحساب",
+      "3. 3. Check for circular references / التحقق من المراجع الدائرية",
+      "4. 4. Verify cell format and apostrophes / فحص تنسيق الخلية وعلامة الاقتباس",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "profile",
+      "ost",
+      "pst",
+      "ملف بيانات",
+      "variation"
+    ],
+    "title": "Profile corruption or OST issues (intermittently) / تلف ملف التعريف أو مشاكل OST (بشكل متقطع)",
+    "steps": [
+      "1. 1. Close Outlook and delete/rebuild OST / إغلاق أوتلوك وحذف/إعادة بناء OST",
+      "2. 2. Run SCANPST for PST errors / تشغيل SCANPST لأخطاء PST",
+      "3. 3. Reduce mailbox size (archive) / تقليل حجم البريد بالأرشفة",
+      "4. 4. Disable antivirus email scanning / تعطيل فحص البريد بمضاد الفيروسات",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "High",
+    "confidence": 0.95,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "footnotes",
+      "endnotes",
+      "حواشي",
+      "variation"
+    ],
+    "title": "Footnotes/endnotes misnumbered or missing (on shared computer) / ترقيم الحواشي غير صحيح أو مفقود (على جهاز مشترك)",
+    "steps": [
+      "1. 1. Convert between footnotes/endnotes / التحويل بين الحاشية السفلية والنهائية",
+      "2. 2. Restart numbering per section if required / إعادة ترقيم حسب القسم عند الحاجة",
+      "3. 3. Check for hidden sections or breaks / فحص الأقسام أو الفواصل المخفية",
+      "4. 4. Update field codes (Ctrl+A then F9) / تحديث الحقول (Ctrl+A ثم F9)",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "teams",
+      "login",
+      "sign-in",
+      "تسجيل الدخول",
+      "variation"
+    ],
+    "title": "Cannot sign in to Teams (for one user only) / تعذر تسجيل الدخول إلى تيمز (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Check service status (Office 365) / التحقق من حالة الخدمة (أوفيس 365)",
+      "2. 2. Clear Teams cache and restart / مسح ذاكرة تيمز المؤقتة وإعادة التشغيل",
+      "3. 3. Update Teams to latest version / تحديث تيمز إلى أحدث إصدار",
+      "4. 4. Verify MFA and network restrictions / التحقق من المصادقة المتعددة والشبكة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "sync",
+      "notebook",
+      "تزامن",
+      "variation"
+    ],
+    "title": "Notebook won't sync (for one user only) / دفتر الملاحظات لا يتزامن (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Sign out/in to OneNote/Office / تسجيل الخروج/الدخول إلى ون نوت/أوفيس",
+      "2. 2. Check OneDrive/SharePoint storage quota / فحص سعة ون درايف/شيربوينت",
+      "3. 3. Move notebook to a new location / نقل الدفتر إلى موقع جديد",
+      "4. 4. Repair Office and reset OneNote cache / إصلاح أوفيس وإعادة ضبط ذاكرة ون نوت",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "images",
+      "wrap text",
+      "الصور",
+      "variation"
+    ],
+    "title": "Images jump or move when editing (on shared computer) / الصور تتحرك أثناء التحرير (على جهاز مشترك)",
+    "steps": [
+      "1. 1. Set wrapping to 'In line with text' to fix position / ضبط الالتفاف على 'ضمن النص' لتثبيت الموضع",
+      "2. 2. Use 'Fix position on page' for floating objects / استخدام 'تثبيت الموضع على الصفحة'",
+      "3. 3. Anchor images to paragraphs properly / تثبيت الصور على الفقرات بالشكل الصحيح",
+      "4. 4. Disable 'Allow overlap' if needed / تعطيل 'السماح بالتداخل' إذا لزم",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "add-ins",
+      "conflict",
+      "إضافات",
+      "variation"
+    ],
+    "title": "Problematic Office add-in causing crashes (for one user only) / إضافة أوفيس تسبب أعطالًا (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Start app in Safe Mode / بدء التطبيق في الوضع الآمن",
+      "2. 2. Disable add-ins then enable selectively / تعطيل الإضافات ثم تفعيلها تدريجيًا",
+      "3. 3. Update or remove the faulty add-in / تحديث أو إزالة الإضافة المسببة",
+      "4. 4. Check vendor for compatibility updates / التحقق من تحديثات التوافق من المورد",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "excel",
+      "formula",
+      "calculation",
+      "معادلة لا تعمل",
+      "variation"
+    ],
+    "title": "Formulas not calculating (on one specific file) / معادلات إكسل لا تعمل (في ملف محدد)",
+    "steps": [
+      "1. 1. Set calculation mode to Automatic / تعيين وضع الحساب إلى تلقائي",
+      "2. 2. Press F9 to force recalculation / الضغط على F9 لإعادة الحساب",
+      "3. 3. Check for circular references / التحقق من المراجع الدائرية",
+      "4. 4. Verify cell format and apostrophes / فحص تنسيق الخلية وعلامة الاقتباس",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "pivot table",
+      "refresh",
+      "Pivot",
+      "جدول محوري",
+      "variation"
+    ],
+    "title": "PivotTable not refreshing or wrong totals (with large files) / الجدول المحوري لا يتحدث أو المجاميع خاطئة (مع ملفات كبيرة)",
+    "steps": [
+      "1. 1. Refresh all connections / تحديث جميع الاتصالات",
+      "2. 2. Check source range and headers / فحص نطاق المصدر والعناوين",
+      "3. 3. Clear filters and slicers / مسح المرشحات والمحددات",
+      "4. 4. Rebuild cache by recreating PivotTable / إعادة إنشاء الجدول المحوري لبناء ذاكرة جديدة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "profile",
+      "ost",
+      "pst",
+      "ملف بيانات",
+      "variation"
+    ],
+    "title": "Profile corruption or OST issues (after update) / تلف ملف التعريف أو مشاكل OST (بعد التحديث)",
+    "steps": [
+      "1. 1. Close Outlook and delete/rebuild OST / إغلاق أوتلوك وحذف/إعادة بناء OST",
+      "2. 2. Run SCANPST for PST errors / تشغيل SCANPST لأخطاء PST",
+      "3. 3. Reduce mailbox size (archive) / تقليل حجم البريد بالأرشفة",
+      "4. 4. Disable antivirus email scanning / تعطيل فحص البريد بمضاد الفيروسات",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "OneNote",
+    "keywords": [
+      "sync",
+      "notebook",
+      "تزامن",
+      "variation"
+    ],
+    "title": "Notebook won't sync (for one user only) / دفتر الملاحظات لا يتزامن (لأحد المستخدمين فقط)",
+    "steps": [
+      "1. 1. Sign out/in to OneNote/Office / تسجيل الخروج/الدخول إلى ون نوت/أوفيس",
+      "2. 2. Check OneDrive/SharePoint storage quota / فحص سعة ون درايف/شيربوينت",
+      "3. 3. Move notebook to a new location / نقل الدفتر إلى موقع جديد",
+      "4. 4. Repair Office and reset OneNote cache / إصلاح أوفيس وإعادة ضبط ذاكرة ون نوت",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Access",
+    "keywords": [
+      "odbc",
+      "provider",
+      "64-bit",
+      "مزود",
+      "variation"
+    ],
+    "title": "Missing ODBC/OLE DB provider (32/64-bit) (intermittently) / مزود ODBC/OLE DB مفقود (32/64 بت) (بشكل متقطع)",
+    "steps": [
+      "1. 1. Install matching 32/64-bit drivers / تثبيت تعريفات 32/64 بت المطابقة",
+      "2. 2. Match Office bitness with provider / مطابقة بنية أوفيس مع المزود",
+      "3. 3. Use DSN-less connection strings / استخدام سلاسل اتصال بدون DSN",
+      "4. 4. Update drivers to latest version / تحديث التعريفات لآخر إصدار",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Access",
+    "keywords": [
+      "mdb",
+      "accdb",
+      "database",
+      "قاعدة بيانات",
+      "variation"
+    ],
+    "title": "Database won't open or is in use (on one specific file) / قاعدة البيانات لا تفتح أو قيد الاستخدام (في ملف محدد)",
+    "steps": [
+      "1. 1. Ask users to close shared file / طلب إغلاق الملف المشترك من المستخدمين",
+      "2. 2. Copy file locally and open / نسخ الملف محليًا وفتحه",
+      "3. 3. Compact and Repair the database / ضغط وإصلاح قاعدة البيانات",
+      "4. 4. Split front-end/back-end for multiuser / فصل الواجهة الأمامية/الخلفية للمستخدمين المتعددين",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "power query",
+      "get & transform",
+      "باور كويري",
+      "variation"
+    ],
+    "title": "Power Query fails to refresh (after update) / فشل تحديث Power Query (بعد التحديث)",
+    "steps": [
+      "1. 1. Authenticate to data source again / إعادة المصادقة على مصدر البيانات",
+      "2. 2. Review privacy levels and combine settings / مراجعة مستويات الخصوصية وإعدادات الدمج",
+      "3. 3. Enable fast data load and background refresh / تفعيل التحميل السريع والتحديث بالخلفية",
+      "4. 4. Check column type mismatches / فحص تعارض أنواع الأعمدة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "word",
+      "docx",
+      "formatting lost",
+      "فقدان التنسيق",
+      "variation"
+    ],
+    "title": "Word document formatting issues (intermittently) / مشاكل تنسيق مستند وورد (بشكل متقطع)",
+    "steps": [
+      "1. 1. Paste as plain text first / اللصق كنص عادي أولاً",
+      "2. 2. Reapply styles and use Normal template / إعادة تطبيق الأنماط واستخدام القالب الافتراضي",
+      "3. 3. Check compatibility mode and convert to .docx / فحص وضع التوافق والتحويل إلى .docx",
+      "4. 4. Clear direct formatting (Ctrl+Space/Ctrl+Q) / مسح التنسيق المباشر",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Teams",
+    "keywords": [
+      "microphone",
+      "camera",
+      "permissions",
+      "ميكروفون",
+      "كاميرا",
+      "variation"
+    ],
+    "title": "Camera or microphone not working in Teams (intermittently) / الكاميرا أو الميكروفون لا يعمل في تيمز (بشكل متقطع)",
+    "steps": [
+      "1. 1. Allow app permissions in Windows/Teams / السماح بأذونات التطبيق في ويندوز/تيمز",
+      "2. 2. Choose correct device in Settings / اختيار الجهاز الصحيح من الإعدادات",
+      "3. 3. Close apps that use camera/mic / إغلاق التطبيقات التي تستخدم الكاميرا/المايك",
+      "4. 4. Update audio/video drivers / تحديث تعريفات الصوت/الفيديو",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "PowerPoint",
+    "keywords": [
+      "fonts",
+      "missing",
+      "خطوط",
+      "variation"
+    ],
+    "title": "Missing fonts alter slide layout (on one specific file) / اختفاء الخطوط يغير تنسيق الشرائح (في ملف محدد)",
+    "steps": [
+      "1. 1. Embed fonts when saving / تضمين الخطوط عند الحفظ",
+      "2. 2. Use cross-platform fonts / استخدام خطوط متوافقة عبر الأنظمة",
+      "3. 3. Install the required fonts locally / تثبيت الخطوط المطلوبة محليًا",
+      "4. 4. Replace unavailable fonts via Replace Fonts / استبدال الخطوط غير المتوفرة من استبدال الخطوط",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Low",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Excel",
+    "keywords": [
+      "pivot table",
+      "refresh",
+      "Pivot",
+      "جدول محوري",
+      "variation"
+    ],
+    "title": "PivotTable not refreshing or wrong totals (intermittently) / الجدول المحوري لا يتحدث أو المجاميع خاطئة (بشكل متقطع)",
+    "steps": [
+      "1. 1. Refresh all connections / تحديث جميع الاتصالات",
+      "2. 2. Check source range and headers / فحص نطاق المصدر والعناوين",
+      "3. 3. Clear filters and slicers / مسح المرشحات والمحددات",
+      "4. 4. Rebuild cache by recreating PivotTable / إعادة إنشاء الجدول المحوري لبناء ذاكرة جديدة",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Outlook",
+    "keywords": [
+      "add-ins",
+      "slow",
+      "startup",
+      "إضافات",
+      "variation"
+    ],
+    "title": "Outlook slow to start (add-ins) (on one specific file) / بطء بدء تشغيل أوتلوك (إضافات) (في ملف محدد)",
+    "steps": [
+      "1. 1. Start in Safe Mode (outlook.exe /safe) / تشغيل في الوضع الآمن",
+      "2. 2. Disable heavy add-ins one by one / تعطيل الإضافات الثقيلة تدريجيًا",
+      "3. 3. Reduce mailbox and OST size / تقليل حجم صندوق البريد وOST",
+      "4. 4. Update Office and add-ins / تحديث أوفيس والإضافات",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "activation",
+      "license",
+      "تفعيل",
+      "variation"
+    ],
+    "title": "Office activation failed (on one specific file) / فشل تفعيل أوفيس (في ملف محدد)",
+    "steps": [
+      "1. 1. Sign in with licensed account / تسجيل الدخول بحساب مرخص",
+      "2. 2. Run Activation Troubleshooter / تشغيل مستكشف التفعيل",
+      "3. 3. Verify edition and subscription status / التحقق من الإصدار وحالة الاشتراك",
+      "4. 4. Clear cached licenses (OSPP) / مسح التراخيص المخزنة (OSPP)",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "General",
+    "keywords": [
+      "install",
+      "update",
+      "setup",
+      "تثبيت",
+      "variation"
+    ],
+    "title": "Office installation/update fails (intermittently) / فشل تثبيت/تحديث أوفيس (بشكل متقطع)",
+    "steps": [
+      "1. 1. Run Office Repair (Online) / تشغيل إصلاح أوفيس (أونلاين)",
+      "2. 2. Use Office Removal Tool then reinstall / استخدام أداة إزالة أوفيس ثم إعادة التثبيت",
+      "3. 3. Check disk space and permissions / التحقق من المساحة والأذونات",
+      "4. 4. Disable antivirus/firewall temporarily / تعطيل مضاد الفيروسات/الجدار مؤقتًا",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "High",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "MS Office",
+    "subcategory": "Word",
+    "keywords": [
+      "language",
+      "arabic",
+      "rtl",
+      "اللغة",
+      "يمين لليسار",
+      "variation"
+    ],
+    "title": "Mixed RTL/LTR layout issues (after update) / مشاكل تنسيق اتجاه يمين-يسار/يسار-يمين (بعد التحديث)",
+    "steps": [
+      "1. 1. Enable 'Arabic' editing language / تفعيل لغة التحرير العربية",
+      "2. 2. Turn on 'Right-to-left' layout / تفعيل تخطيط 'من اليمين إلى اليسار'",
+      "3. 3. Use appropriate fonts that support Arabic / استخدام خطوط تدعم العربية",
+      "4. 4. Avoid manual spacing; use paragraph styles / تجنب المسافات اليدوية؛ استخدم أنماط الفقرات",
+      "5. 5. Clear Office cache / مسح ذاكرة أوفيس المؤقتة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  }
+];
+

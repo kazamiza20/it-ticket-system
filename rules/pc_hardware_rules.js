@@ -1,0 +1,3159 @@
+module.exports = [
+  // ...existing code...
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8"
+    ],
+    "title": "Stuck on BIOS screen (case 8) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9"
+    ],
+    "title": "SSD running slow (case 9) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10"
+    ],
+    "title": "General system slowness (case 10) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11"
+    ],
+    "title": "General system slowness (case 10) (case 11) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12"
+    ],
+    "title": "SSD running slow (case 9) (case 12) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13"
+    ],
+    "title": "SSD running slow (case 13) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case14"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 14) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.99,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case15"
+    ],
+    "title": "SSD running slow (case 9) (case 15) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.99,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case16"
+    ],
+    "title": "PC won't turn on (case 16) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case17"
+    ],
+    "title": "SSD running slow (case 9) (case 17) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case18"
+    ],
+    "title": "SSD running slow (case 18) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "hdd missing",
+      "disk not found",
+      "no drive",
+      "لا يوجد قرص",
+      "case19"
+    ],
+    "title": "Hard drive not detected (case 19) / لم يتم التعرف على القرص الصلب",
+    "steps": [
+      "1. Check SATA/Power cables / فحص كابلات الساتا والكهرباء",
+      "2. Test with another cable / تجربة كابل آخر",
+      "3. Check BIOS for drive detection / فحص البيوس",
+      "4. Test drive in another PC / تجربة القرص على جهاز آخر"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case20"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 20) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case20",
+      "case22"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 20) (case 22) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case23"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 23) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case24"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 24) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case26"
+    ],
+    "title": "General system slowness (case 7) (case 26) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case27"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 27) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case14",
+      "case28"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 14) (case 28) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case14",
+      "case28",
+      "case29"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 14) (case 28) (case 29) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30"
+    ],
+    "title": "SSD running slow (case 13) (case 30) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case31"
+    ],
+    "title": "PC won't turn on (case 31) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case26",
+      "case32"
+    ],
+    "title": "General system slowness (case 7) (case 26) (case 32) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case14",
+      "case28",
+      "case33"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 14) (case 28) (case 33) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "hdd missing",
+      "disk not found",
+      "no drive",
+      "لا يوجد قرص",
+      "case34"
+    ],
+    "title": "Hard drive not detected (case 34) / لم يتم التعرف على القرص الصلب",
+    "steps": [
+      "1. Check SATA/Power cables / فحص كابلات الساتا والكهرباء",
+      "2. Test with another cable / تجربة كابل آخر",
+      "3. Check BIOS for drive detection / فحص البيوس",
+      "4. Test drive in another PC / تجربة القرص على جهاز آخر"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case35"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 35) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case36"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 36) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case26",
+      "case32",
+      "case37"
+    ],
+    "title": "General system slowness (case 7) (case 26) (case 32) (case 37) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case26",
+      "case32",
+      "case37",
+      "case38"
+    ],
+    "title": "General system slowness (case 7) (case 26) (case 32) (case 37) (case 38) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case27",
+      "case39"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 27) (case 39) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case41"
+    ],
+    "title": "SSD running slow (case 41) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.98,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case15",
+      "case43"
+    ],
+    "title": "SSD running slow (case 9) (case 15) (case 43) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case16",
+      "case44"
+    ],
+    "title": "PC won't turn on (case 16) (case 44) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case45"
+    ],
+    "title": "Stuck on BIOS screen (case 45) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case45",
+      "case46"
+    ],
+    "title": "Stuck on BIOS screen (case 45) (case 46) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case27",
+      "case47"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 27) (case 47) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case48"
+    ],
+    "title": "SSD running slow (case 9) (case 48) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case49"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 49) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case50"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 50) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "cpu usage",
+      "processor high",
+      "بطء المعالج",
+      "استغلال المعالج",
+      "case51"
+    ],
+    "title": "High CPU usage (case 51) / استهلاك مرتفع لوحدة المعالجة",
+    "steps": [
+      "1. Open Task Manager / فتح مدير المهام",
+      "2. Identify process with high CPU / تحديد العملية التي تستهلك المعالج",
+      "3. End unnecessary tasks / إنهاء المهام غير الضرورية",
+      "4. Update application or OS / تحديث التطبيق أو النظام",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case52"
+    ],
+    "title": "Stuck on BIOS screen (case 52) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case53"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 53) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case31",
+      "case54"
+    ],
+    "title": "PC won't turn on (case 31) (case 54) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case23",
+      "case55"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 23) (case 55) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.95,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case48",
+      "case58"
+    ],
+    "title": "SSD running slow (case 9) (case 48) (case 58) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case59"
+    ],
+    "title": "Stuck on BIOS screen (case 59) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case36",
+      "case60"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 36) (case 60) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case49",
+      "case61"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 49) (case 61) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case50",
+      "case62"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 50) (case 62) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case24",
+      "case63"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 24) (case 63) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56",
+      "case64"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) (case 64) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case65"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 65) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.98,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case16",
+      "case44",
+      "case66"
+    ],
+    "title": "PC won't turn on (case 16) (case 44) (case 66) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case17",
+      "case67"
+    ],
+    "title": "SSD running slow (case 9) (case 17) (case 67) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case68"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 68) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case16",
+      "case44",
+      "case69"
+    ],
+    "title": "PC won't turn on (case 16) (case 44) (case 69) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case24",
+      "case63",
+      "case70"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 24) (case 63) (case 70) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case18",
+      "case71"
+    ],
+    "title": "SSD running slow (case 18) (case 71) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case53",
+      "case72"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 53) (case 72) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56",
+      "case64",
+      "case73"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) (case 64) (case 73) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case53",
+      "case74"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 53) (case 74) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56",
+      "case64",
+      "case75"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) (case 64) (case 75) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case65",
+      "case76"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 65) (case 76) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case53",
+      "case72",
+      "case77"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 53) (case 72) (case 77) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case27",
+      "case78"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 27) (case 78) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case35",
+      "case79"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 35) (case 79) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case53",
+      "case74",
+      "case80"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 53) (case 74) (case 80) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case81"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 81) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.95,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case49",
+      "case61",
+      "case82"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 49) (case 61) (case 82) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.99,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case41",
+      "case83"
+    ],
+    "title": "SSD running slow (case 41) (case 83) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "hdd missing",
+      "disk not found",
+      "no drive",
+      "لا يوجد قرص",
+      "case34",
+      "case84"
+    ],
+    "title": "Hard drive not detected (case 34) (case 84) / لم يتم التعرف على القرص الصلب",
+    "steps": [
+      "1. Check SATA/Power cables / فحص كابلات الساتا والكهرباء",
+      "2. Test with another cable / تجربة كابل آخر",
+      "3. Check BIOS for drive detection / فحص البيوس",
+      "4. Test drive in another PC / تجربة القرص على جهاز آخر"
+    ],
+    "severity": "High",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case24",
+      "case85"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 24) (case 85) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case86"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 86) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case87"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 87) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case88"
+    ],
+    "title": "General system slowness (case 7) (case 88) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56",
+      "case89"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) (case 89) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.96,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case90"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 90) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.99,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case36",
+      "case60",
+      "case91"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 36) (case 60) (case 91) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case49",
+      "case61",
+      "case92"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 49) (case 61) (case 92) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case41",
+      "case93"
+    ],
+    "title": "SSD running slow (case 41) (case 93) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case15",
+      "case43",
+      "case94"
+    ],
+    "title": "SSD running slow (case 9) (case 15) (case 43) (case 94) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case86",
+      "case95"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 86) (case 95) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case49",
+      "case61",
+      "case92",
+      "case96"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 49) (case 61) (case 92) (case 96) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case65",
+      "case76",
+      "case97"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 65) (case 76) (case 97) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case98"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 98) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case41",
+      "case93",
+      "case99"
+    ],
+    "title": "SSD running slow (case 41) (case 93) (case 99) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case42",
+      "case53",
+      "case72",
+      "case100"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 42) (case 53) (case 72) (case 100) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case45",
+      "case101"
+    ],
+    "title": "Stuck on BIOS screen (case 45) (case 101) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56",
+      "case64",
+      "case73",
+      "case102"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) (case 64) (case 73) (case 102) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case88",
+      "case103"
+    ],
+    "title": "General system slowness (case 7) (case 88) (case 103) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.94,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case15",
+      "case43",
+      "case94",
+      "case104"
+    ],
+    "title": "SSD running slow (case 9) (case 15) (case 43) (case 94) (case 104) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.92,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case65",
+      "case105"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 65) (case 105) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case7",
+      "case26",
+      "case32",
+      "case106"
+    ],
+    "title": "General system slowness (case 7) (case 26) (case 32) (case 106) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case107"
+    ],
+    "title": "SSD running slow (case 107) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.97,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "bios stuck",
+      "cannot boot",
+      "عالق في البيوس",
+      "case8",
+      "case108"
+    ],
+    "title": "Stuck on BIOS screen (case 8) (case 108) / الجهاز عالق في شاشة البيوس",
+    "steps": [
+      "1. Check boot order in BIOS / فحص ترتيب الإقلاع في البيوس",
+      "2. Disconnect external drives / فصل الأقراص الخارجية",
+      "3. Reset BIOS to defaults / إعادة ضبط البيوس للإعدادات الافتراضية",
+      "4. Check storage device connection / فحص توصيل قرص التخزين"
+    ],
+    "severity": "High",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case40",
+      "case49",
+      "case61",
+      "case92",
+      "case96",
+      "case109"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 40) (case 49) (case 61) (case 92) (case 96) (case 109) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case50",
+      "case62",
+      "case110"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 50) (case 62) (case 110) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "hdd missing",
+      "disk not found",
+      "no drive",
+      "لا يوجد قرص",
+      "case19",
+      "case111"
+    ],
+    "title": "Hard drive not detected (case 19) (case 111) / لم يتم التعرف على القرص الصلب",
+    "steps": [
+      "1. Check SATA/Power cables / فحص كابلات الساتا والكهرباء",
+      "2. Test with another cable / تجربة كابل آخر",
+      "3. Check BIOS for drive detection / فحص البيوس",
+      "4. Test drive in another PC / تجربة القرص على جهاز آخر"
+    ],
+    "severity": "High",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "hdd missing",
+      "disk not found",
+      "no drive",
+      "لا يوجد قرص",
+      "case112"
+    ],
+    "title": "Hard drive not detected (case 112) / لم يتم التعرف على القرص الصلب",
+    "steps": [
+      "1. Check SATA/Power cables / فحص كابلات الساتا والكهرباء",
+      "2. Test with another cable / تجربة كابل آخر",
+      "3. Check BIOS for drive detection / فحص البيوس",
+      "4. Test drive in another PC / تجربة القرص على جهاز آخر"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case65",
+      "case76",
+      "case113"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 65) (case 76) (case 113) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case114"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 114) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case56",
+      "case64",
+      "case73",
+      "case115"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 56) (case 64) (case 73) (case 115) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case9",
+      "case12",
+      "case116"
+    ],
+    "title": "SSD running slow (case 9) (case 12) (case 116) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case16",
+      "case44",
+      "case66",
+      "case117"
+    ],
+    "title": "PC won't turn on (case 16) (case 44) (case 66) (case 117) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow",
+      "lag",
+      "freeze",
+      "unresponsive",
+      "بطء",
+      "تجمد",
+      "توقف",
+      "case10",
+      "case11",
+      "case21",
+      "case25",
+      "case90",
+      "case118"
+    ],
+    "title": "General system slowness (case 10) (case 11) (case 21) (case 25) (case 90) (case 118) / بطء النظام العام",
+    "steps": [
+      "1. Restart computer / إعادة تشغيل الجهاز",
+      "2. Check Task Manager for high resource usage / فحص مدير المهام",
+      "3. Run disk cleanup (cleanmgr) / تشغيل تنظيف القرص",
+      "4. Update drivers / تحديث التعريفات",
+      "5. Scan for malware / فحص الفيروسات"
+    ],
+    "severity": "High",
+    "confidence": 0.93,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Storage",
+    "keywords": [
+      "ssd slow",
+      "بطء ssd",
+      "slow disk",
+      "case13",
+      "case30",
+      "case57",
+      "case65",
+      "case76",
+      "case119"
+    ],
+    "title": "SSD running slow (case 13) (case 30) (case 57) (case 65) (case 76) (case 119) / بطء في أداء القرص SSD",
+    "steps": [
+      "1. Check available free space / فحص المساحة المتوفرة",
+      "2. Update SSD firmware / تحديث برنامج تشغيل القرص",
+      "3. Enable AHCI mode / تفعيل وضع AHCI",
+      "4. Run manufacturer diagnostic / تشغيل أداة الفحص من الشركة المصنعة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "PC",
+    "subcategory": "Boot",
+    "keywords": [
+      "won't boot",
+      "no power",
+      "black screen",
+      "لا يعمل",
+      "شاشة سوداء",
+      "case16",
+      "case120"
+    ],
+    "title": "PC won't turn on (case 16) (case 120) / الجهاز لا يعمل",
+    "steps": [
+      "1. Check power connections / فحص توصيلات الكهرباء",
+      "2. Test different power outlet / تجربة مقبس كهرباء آخر",
+      "3. Remove peripherals / فصل الملحقات",
+      "4. Listen for beep codes / الاستماع لرموز الصفارة"
+    ],
+    "severity": "Critical",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  }
+];
+

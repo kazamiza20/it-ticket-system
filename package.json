@@ -1,0 +1,40 @@
+{
+  "name": "it-ticket-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Internal IT Ticketing System",
+  "author": "Nasser Dawood",
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "dev": "nodemon --watch server.js --watch public --ext js,json,html server.js",
+    "dev:port": "cross-env PORT=5055 nodemon server.js",
+    "start": "node server.js",
+    "start:prod": "cross-env NODE_ENV=production node server.js",
+    "lint": "node -e \"require('fs').accessSync('server.js')\""
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "ldapjs": "^3.0.7",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*.json",
+      "data/*.txt",
+      "node_modules"
+    ],
+    "delay": "80ms"
+  }
+}
