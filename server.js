@@ -14,6 +14,7 @@ const dns = require('dns');
 const { exec } = require('child_process');
 const ldap = require('ldapjs');
 const bcrypt = require('bcrypt');
+const { load: loadRules } = require('./lib/rules-loader'); // loads ./rules/*.json|js|cjs
 
 let listEndpoints = null; // optional (dev convenience)
 try { listEndpoints = require('express-list-endpoints'); } catch { /* optional */ }
@@ -46,6 +47,9 @@ app.get('/__version', (_req, res) => res.json({ ok: true, version: '1.0.0' }));
 app.get('/__r', (_req, res) => {
   try { return res.json({ ok: true, routes: listEndpoints ? listEndpoints(app) : [] }); }
   catch (e) { return res.status(500).json({ ok:false, error: String(e?.message || e) }); }
+});
+app.get('/__debug/rules', (_req, res) => {
+  res.json({ ok: true, total: rules.length, meta: extra.meta, sample: rules.slice(0, 3) });
 });
 
 // ---- File storage ----
@@ -116,18 +120,22 @@ const defaultRules = [
   { category:'Outlook', keywords:['outlook','email','pst','ost','search','send','receive','اوتلوك','البريد'], title:'Outlook issues / مشاكل أوتلوك', steps:['Restart','Check connectivity','Repair OST/PST','Recreate profile'] },
   { category:'Excel', keywords:['excel','xlsx','formula','pivot','calc','sheet','اكسل','معادلات'], title:'Excel issues / مشاكل إكسل', steps:['Auto calc','Check formulas','Break links','Disable add‑ins / Repair Office'] }
 ];
-function loadExtraRules(){
-  const rulesDir = path.join(__dirname, 'rules');
-  if (!fs.existsSync(rulesDir)) return [];
-  const files = fs.readdirSync(rulesDir).filter(f => /\.(js|json)$/i.test(f));
-  const all = [];
-  for (const f of files){
-    try{ const mod = require(path.join(rulesDir, f)); const arr = Array.isArray(mod)?mod:(mod&&Array.isArray(mod.rules))?mod.rules:(mod&&Array.isArray(mod.default))?mod.default:null; if (Array.isArray(arr)) all.push(...arr); else console.log('Skipped bad rules export:', f); }
-    catch(e){ console.log('Failed to load rules from', f, e.message); }
-  }
-  return all;
-}
-const rules = [...defaultRules, ...loadExtraRules()];
+const RULES_DIR = process.env.RULES_DIR
+  ? require('path').resolve(process.env.RULES_DIR)
+  : require('path').join(__dirname, 'rules');
+  
+const extra = loadRules(RULES_DIR);            // { rules, meta }
+const rules = [...defaultRules, ...extra.rules];
+
+console.log(
+  'Rules: default=%d, extra=%d (from %s)',
+  Array.isArray(defaultRules) ? defaultRules.length : 0,
+  extra.meta.count,
+  extra.meta.dir
+);
+if (extra.meta.errors.length) console.log('Rule load errors:', extra.meta.errors);
+
+  
 app.get('/api/rules', (_req, res) => res.json({ ok:true, count: rules.length }));
 
 function computeSuggestionText(text){
