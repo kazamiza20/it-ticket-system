@@ -1,0 +1,49 @@
+# --- dependencies / builds ---
+node_modules/
+coverage/
+dist/
+build/
+
+# --- environment secrets ---
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.suggested
+
+# --- runtime data / logs (tickets, counters, sqlite, etc.) ---
+/data/
+/logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# --- temporary files ---
+*.tmp
+*.temp
+*.bak
+*.old
+*.swp
+*.swo
+~$*
+
+# --- OS/editor cruft ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# --- local debug helpers ---
+/tree.txt
+*.local.*
+smoke.js
+mini.js
+
+# --- misc ---
+# Ignore any compressed backups or exports made locally
+*.zip
+*.7z
+*.tar
+*.gz
