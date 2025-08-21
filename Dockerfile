@@ -1,36 +1,26 @@
-# Runtime image
+# path: Dockerfile
 FROM node:20-alpine
-
-
-ENV NODE_ENV=production \
-PORT=5002
-
 
 WORKDIR /app
 
-
-# Install only production deps
+# dependencies (using cache)
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-
-# Copy app sources
+# app source
 COPY public ./public
-COPY rules ./rules
+COPY rules  ./rules
+COPY lib    ./lib
 COPY server.js ./server.js
 
-
-# Ensure data dir exists (mounted in compose)
+# runtime prep
 RUN mkdir -p /app/data /app/logs \
-&& adduser -D app && chown -R app:app /app
+    && adduser -D app \
+    && chown -R app:app /app
+
 USER app
-
-
 EXPOSE 5002
+ENV NODE_ENV=production
+CMD ["node", "server.js"]
 
 
-HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
-CMD node -e "require('http').get('http://localhost:' + (process.env.PORT||5002) + '/__health', r=>{process.exit(r.statusCode===200?0:1)}).on('error',()=>process.exit(1))"
-
-
-CMD ["node","server.js"]

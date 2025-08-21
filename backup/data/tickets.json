@@ -1,0 +1,343 @@
+[
+  {
+    "id": 1,
+    "ts_iso": "2025-08-18T15:02:34.311Z",
+    "ts_local": "8/18/2025, 18:02:34 GMT+3",
+    "username": "Kazuya20",
+    "email": "kazamizanani@gmail.com",
+    "extension": "5513",
+    "department": "IT",
+    "issue": "cannot open word",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "status": "In Progress",
+    "ts_updated": "2025-08-20T10:36:34.704Z"
+  },
+  {
+    "id": 2,
+    "ts_iso": "2025-08-19T14:32:25.090Z",
+    "ts_local": "8/19/2025, 17:32:25 GMT+3",
+    "username": "TestUser",
+    "email": "test@example.com",
+    "extension": "123",
+    "department": "IT",
+    "issue": "Printer not printing, paper jam",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add the exact error message / اكتب نص رسالة الخطأ",
+        "Explain what you already tried / اذكر ما قمت بتجربته",
+        "Include app/site names involved / اذكر أسماء البرامج/المواقع"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 3,
+    "ts_iso": "2025-08-19T14:39:10.509Z",
+    "ts_local": "8/19/2025, 17:39:10 GMT+3",
+    "username": "TestUser",
+    "email": "test@example.com",
+    "extension": "123",
+    "department": "IT",
+    "issue": "Printer not printing, paper jam",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add the exact error message / اكتب نص رسالة الخطأ",
+        "Explain what you already tried / اذكر ما قمت بتجربته",
+        "Include app/site names involved / اذكر أسماء البرامج/المواقع"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 4,
+    "ts_iso": "2025-08-19T14:53:54.287Z",
+    "ts_local": "8/19/2025, 17:53:54 GMT+3",
+    "username": "TestUser",
+    "email": "test@example.com",
+    "extension": "123",
+    "department": "IT",
+    "issue": "Printer not printing, paper jam",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add the exact error message / اكتب نص رسالة الخطأ",
+        "Explain what you already tried / اذكر ما قمت بتجربته",
+        "Include app/site names involved / اذكر أسماء البرامج/المواقع"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 5,
+    "ts_iso": "2025-08-19T14:58:52.313Z",
+    "ts_local": "8/19/2025, 17:58:52 GMT+3",
+    "username": "TestUser",
+    "email": "test@example.com",
+    "extension": "123",
+    "department": "IT",
+    "issue": "Printer not printing, paper jam",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add the exact error message / اكتب نص رسالة الخطأ",
+        "Explain what you already tried / اذكر ما قمت بتجربته",
+        "Include app/site names involved / اذكر أسماء البرامج/المواقع"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 6,
+    "ts_iso": "2025-08-19T15:16:56.371Z",
+    "ts_local": "8/19/2025, 18:16:56 GMT+3",
+    "username": "Alice",
+    "email": "alice@example.com",
+    "extension": "101",
+    "department": "HR",
+    "issue": "PC very slow at startup, sometimes BSOD",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "General system slowness / بطء النظام العام",
+      "steps": [
+        "Restart PC / أعد تشغيل الجهاز.",
+        "Check Task Manager for high CPU/RAM / فحص مدير المهام.",
+        "Run Disk Cleanup / تنظيف القرص.",
+        "Scan for malware / فحص البرمجيات الخبيثة.",
+        "Update Windows & drivers / تحديث ويندوز والتعريفات."
+      ],
+      "confidence": 0.79,
+      "category": "PC"
+    },
+    "status": "AI Suggested"
+  },
+  {
+    "id": 7,
+    "ts_iso": "2025-08-19T15:17:07.920Z",
+    "ts_local": "8/19/2025, 18:17:07 GMT+3",
+    "username": "Bob",
+    "email": "bob@example.com",
+    "extension": "202",
+    "department": "Finance",
+    "issue": "Outlook stuck on loading profile",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add the exact error message / اكتب نص رسالة الخطأ",
+        "Explain what you already tried / اذكر ما قمت بتجربته",
+        "Include app/site names involved / اذكر أسماء البرامج/المواقع"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 8,
+    "ts_iso": "2025-08-19T15:17:14.311Z",
+    "ts_local": "8/19/2025, 18:17:14 GMT+3",
+    "username": "Sara",
+    "email": "sara@example.com",
+    "extension": "303",
+    "department": "Sales",
+    "issue": "WiFi disconnects, DNS errors",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Network issues / مشاكل الشبكة",
+      "steps": [
+        "Check cable or Wi-Fi signal / فحص الكابل أو الواي-فاي.",
+        "ipconfig /release & /renew / تنفيذ release ثم renew.",
+        "ipconfig /flushdns / تنفيذ flushdns.",
+        "Test other sites / تجربة مواقع أخرى."
+      ],
+      "confidence": 0.2,
+      "category": "Network"
+    },
+    "status": "New"
+  },
+  {
+    "id": 9,
+    "ts_iso": "2025-08-19T15:37:02.611Z",
+    "ts_local": "8/19/2025, 18:37:02 GMT+3",
+    "username": "Sam",
+    "email": "sam@ex.com",
+    "extension": "111",
+    "department": "Ops",
+    "issue": "Printer jam in tray",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Paper jam / إنحشار ورق",
+      "steps": [
+        "Open the tray and remove jammed paper / إزالة الورق العالق.",
+        "Restart Print Spooler (services.msc) / إعادة تشغيل خدمة الطباعة.",
+        "Clear stuck print jobs / مسح مهام الطباعة العالقة.",
+        "Re-map the printer or check permissions / إعادة ربط الطابعة أو التحقق من الصلاحيات.",
+        "Test print a small PDF / تجربة طباعة ملف PDF صغير."
+      ],
+      "confidence": 0.31,
+      "category": "Printer"
+    },
+    "status": "New"
+  },
+  {
+    "id": 10,
+    "ts_iso": "2025-08-19T15:37:02.670Z",
+    "ts_local": "8/19/2025, 18:37:02 GMT+3",
+    "username": "Rita",
+    "email": "ri@ex.com",
+    "extension": "222",
+    "department": "Finance",
+    "issue": "Outlook cannot send emails",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.4768",
+    "ai": {
+      "title": "Outlook issues / مشاكل أوتلوك",
+      "steps": [
+        "Restart Outlook / إعادة التشغيل.",
+        "Check Send/Receive & connectivity / التحقق من الاتصال.",
+        "Repair OST/PST & rebuild index / إصلاح ملفات البيانات وإعادة الفهرسة.",
+        "Recreate profile if needed / إعادة إنشاء ملف التعريف."
+      ],
+      "confidence": 0.33,
+      "category": "Outlook"
+    },
+    "status": "New"
+  },
+  {
+    "id": 11,
+    "ts_iso": "2025-08-20T10:44:16.790Z",
+    "ts_local": "٢٦‏/٢‏/١٤٤٧ هـ، ١٣:٤٤:١٦ غرينتش+٣",
+    "username": "ADMIN2",
+    "email": "admin2@srf.com",
+    "extension": "5513",
+    "department": "it",
+    "issue": "mouse stuck",
+    "client_ip": "172.21.81.11",
+    "client_name": "SRF-IT-011.Srf.com",
+    "client_method": "dns",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add exact error message",
+        "What you tried",
+        "App/site names"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 12,
+    "ts_iso": "2025-08-20T10:55:28.874Z",
+    "ts_local": "٢٦‏/٢‏/١٤٤٧ هـ، ١٣:٥٥:٢٨ غرينتش+٣",
+    "username": "alqahtani_aa",
+    "email": "al2deeb@yahoo.com",
+    "extension": "5252",
+    "department": "mh",
+    "issue": "password error",
+    "client_ip": "172.21.81.8",
+    "client_name": "server05.srf.com",
+    "client_method": "dns",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add exact error message",
+        "What you tried",
+        "App/site names"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  },
+  {
+    "id": 13,
+    "ts_iso": "2025-08-20T11:12:16.755Z",
+    "ts_local": "٢٦‏/٢‏/١٤٤٧ هـ، ١٤:١٢:١٦ غرينتش+٣",
+    "username": "ADMIN2",
+    "email": "admin2@srf.com",
+    "extension": "5513",
+    "department": "it",
+    "issue": "printer",
+    "client_ip": "127.0.0.1",
+    "client_name": "localhost",
+    "client_method": "loopback",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ai": {
+      "title": "Printer not printing / الطابعة لا تطبع",
+      "steps": [
+        "Check printer status in Control Panel / التحقق من حالة الطابعة في لوحة التحكم.",
+        "Ensure paper and ink are loaded / التأكد من وجود ورق وحبر.",
+        "Clear print queue / مسح قائمة الطباعة.",
+        "Restart the printer / إعادة تشغيل الطابعة.",
+        "Test print a small document / تجربة طباعة مستند صغير."
+      ],
+      "confidence": 0.25,
+      "category": "Printer"
+    },
+    "status": "New"
+  },
+  {
+    "id": 14,
+    "ts_iso": "2025-08-20T17:59:05.096Z",
+    "ts_local": "8/20/2025, 17:59:05 UTC",
+    "username": "Kazuya20",
+    "email": "kazamizanani@gmail.com",
+    "extension": "5513",
+    "department": "IT",
+    "issue": "curser stuck",
+    "client_ip": "172.18.0.1",
+    "client_name": "172.18.0.1",
+    "client_method": "ip",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+    "ai": {
+      "title": "Please provide more details / يرجى تزويدنا بتفاصيل أكثر",
+      "steps": [
+        "Add exact error message",
+        "What you tried",
+        "App/site names"
+      ],
+      "confidence": 0
+    },
+    "status": "New"
+  }
+]

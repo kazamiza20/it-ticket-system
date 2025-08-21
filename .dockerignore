@@ -1,9 +1,9 @@
+# path: .dockerignore
 node_modules
-npm-debug.log
+npm-debug.log*
+logs
+*.log
+.DS_Store
 .git
 .gitignore
 .env
-logs
-/data
-coverage
-**/*.log

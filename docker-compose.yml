@@ -1,17 +1,18 @@
 version: "3.9"
+# path: docker-compose.yml
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     container_name: it-ticket-system
     ports:
       - "5002:5002"
     env_file:
       - .env
     environment:
-      - NODE_ENV=production
+      NODE_ENV: production
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs
+      - ./lib:/app/lib:ro   # temporary safety until Dockerfile is verified
     restart: unless-stopped
+
