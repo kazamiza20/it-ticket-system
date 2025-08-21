@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "srcDir": "D:\\it ticket system\\lib\\rules",
+  "outDir": "D:\\it ticket system\\lib\\rules_aug",
+  "files": [
+    {
+      "file": "example.json",
+      "out": "lib\\rules_aug\\example.json",
+      "count": 6
+    },
+    {
+      "file": "keyboard_rules.js",
+      "out": "lib\\rules_aug\\keyboard_rules.json",
+      "count": 50
+    },
+    {
+      "file": "mouse_rules.js",
+      "out": "lib\\rules_aug\\mouse_rules.json",
+      "count": 29
+    },
+    {
+      "file": "network_rules.js",
+      "out": "lib\\rules_aug\\network_rules.json",
+      "count": 120
+    },
+    {
+      "file": "office_rules.js",
+      "out": "lib\\rules_aug\\office_rules.json",
+      "count": 100
+    },
+    {
+      "file": "pc_hardware_rules.js",
+      "out": "lib\\rules_aug\\pc_hardware_rules.json",
+      "count": 113
+    },
+    {
+      "file": "printer.json",
+      "out": "lib\\rules_aug\\printer.json",
+      "count": 7
+    }
+  ],
+  "totalIn": 425,
+  "totalOut": 425
+}

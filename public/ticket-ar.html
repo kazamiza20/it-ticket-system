@@ -6,6 +6,40 @@
   <title>تذكرة دعم تقني – القوات البحرية</title>
   <link rel="icon" href="navy-logo.png">
   <style>
+.ai-suggest{margin:12px 0;padding:12px;border:1px solid #d0d7de;border-radius:10px;background:#f8fafc}
+.ai-badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#eef6ff}
+.ai-why{font-size:.9em;color:#445;}
+</style>
+*/
+/*
+<script>
+(function(){
+const issueEl = document.querySelector('textarea[name="issue"]');
+const host = document.querySelector('#aiSuggest') || (function(){
+const d = document.createElement('div'); d.id='aiSuggest'; d.className='ai-suggest'; d.style.display='none';
+const form = issueEl.closest('form') || document.body; form.parentNode.insertBefore(d, form);
+return d;
+})();
+let t=null; function deb(fn,ms){return function(){clearTimeout(t);t=setTimeout(fn,ms)}}
+async function run(){
+const txt = (issueEl.value||'').trim(); if(!txt){host.style.display='none'; return}
+const res = await fetch('/ai-suggest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({issue:txt})});
+const data = await res.json(); const s = (data && data.suggestions && data.suggestions[0])||null; if(!s){host.style.display='none';return}
+const why = s.reasons ? `<details class="ai-why"><summary>ليش؟</summary>
+<div>الفئة: <b>${s.category||'-'}</b></div>
+<div>كلمات مطابقة: ${(s.reasons.matchedKeywords||[]).slice(0,10).join('، ')||'-'}</div>
+<div>تلميحات: ${(s.reasons.catWhy||[]).join('، ')||'-'}</div>
+<div>تعزيزات: ${(s.reasons.phraseWhy||[]).join('، ')||'-'}</div>
+</details>`: '';
+host.innerHTML = `<div><b>${s.title}</b> <span class="ai-badge">الدقة: ${s.confidence}</span></div>
+<ol>${(s.steps||[]).map(x=>`<li>${x}</li>`).join('')}</ol>${why}`;
+host.style.display='block';
+}
+issueEl && issueEl.addEventListener('input', deb(run, 350));
+})();
+</script>
+*/
+  <style>
     :root{--bg:#f4f6f8;--card:#fff;--brand:#003366;--muted:#6b7280;--ok:#0b7;--err:#d00;--border:#e5e7eb}
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}

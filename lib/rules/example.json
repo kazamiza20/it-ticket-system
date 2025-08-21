@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Printer",
+    "keywords": ["printer", "jam", "stuck", "paper", "tray", "ink", "toner", "طابعة", "ورق"],
+    "title": "Printer paper jam / انحشار الورق",
+    "steps": [
+      "Turn printer off and open all access doors.",
+      "Remove jammed paper gently in feed direction.",
+      "Check trays and fuser area, remove scraps.",
+      "Reload paper, close doors, power on.",
+      "Print a test page and clear any error codes."
+    ]
+  },
+  {
+    "category": "Network",
+    "keywords": ["vpn", "anyconnect", "globalprotect", "forticlient", "ssl", "split tunnel", "proxy", "شبكة", "في بي ان"],
+    "title": "VPN cannot connect",
+    "steps": [
+      "Verify internet works without VPN.",
+      "Restart VPN client and try another gateway if available.",
+      "Clear cached credentials and re‑enter username/password.",
+      "Disable other adapters temporarily (Wi‑Fi/Ethernet).",
+      "If fails, capture exact error code and contact IT."
+    ]
+  },
+  {
+    "category": "Account",
+    "keywords": ["password", "reset", "locked", "unlock", "expired", "ad", "domain", "كلمة السر"],
+    "title": "Password reset / حساب مقفول",
+    "steps": [
+      "Wait 15 minutes after multiple failed attempts.",
+      "Use the company self‑service reset portal if available.",
+      "Create a strong new password (12+ chars, mixed case, number, symbol).",
+      "Lock and unlock workstation to sync credentials.",
+      "Sign out / sign in to Outlook and VPN."
+    ]
+  },
+  {
+    "category": "Meetings",
+    "keywords": ["teams", "zoom", "microphone", "audio", "camera", "headset", "webcam"],
+    "title": "MS Teams audio/video not working",
+    "steps": [
+      "Unplug/replug headset; select correct device in Teams settings.",
+      "Allow microphone/camera permissions in Windows privacy settings.",
+      "Close other apps using camera (Zoom/OBS).",
+      "Run Windows Troubleshooter for Recording/Playback.",
+      "Restart Teams (right‑click tray icon → Quit) and rejoin."
+    ]
+  },
+  {
+    "category": "PC",
+    "keywords": ["no boot", "bsod", "boot", "startup", "black screen", "won't start"],
+    "title": "PC won’t boot",
+    "steps": [
+      "Disconnect USB devices and try again.",
+      "Hold power 10s to fully shut down, then power on.",
+      "Enter BIOS to ensure disk is detected and boot order is correct.",
+      "Run Windows Startup Repair from recovery if available.",
+      "Escalate to IT for hardware diagnostics."
+    ]
+  },
+  {
+    "category": "Network",
+    "keywords": ["dns", "flushdns", "resolve", "internet", "gateway", "dns server", "دي ان اس"],
+    "title": "DNS problems / مشاكل DNS",
+    "steps": [
+      "Open Command Prompt as admin.",
+      "Run: ipconfig /flushdns",
+      "Run: ipconfig /release then ipconfig /renew",
+      "Test with another site and with 8.8.8.8",
+      "If only one site fails, try clearing browser cache."
+    ]
+  }
+]
