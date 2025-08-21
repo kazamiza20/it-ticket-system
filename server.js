@@ -183,9 +183,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 
-
-// ---- AI Suggestion API -----------------------------------------------
-// GET
 app.get('/ai-suggest', (req, res) => {
   const q = (req.query?.issue || '').toString().trim();
   const s = computeSuggestionText(rules, q);
@@ -296,4 +293,3 @@ app.post('/ticket', async (req, res) => {
 // ---- Start ------------------------------------------------------------
 const PORT = process.env.PORT || 5002;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-
