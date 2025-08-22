@@ -1,13 +1,9 @@
 ﻿'use strict';
 // =====================================================================
-// File: server.js  — IT Ticket System (Express 5)
+// IT Ticket System (Express 5) — clean, working server.js
 // =====================================================================
-// Why certain choices:
-// - Bcrypt-based admin auth via ADMIN_PASS_HASH (fallback to ADMIN_PASS) to avoid plaintext.
-// - Rules loader searches multiple folders and supports hot-reload to fix path/runtime drift.
-// - Minimal debug endpoints for fast smoke checks in dev and prod.
 
-// ---- Core & Env -------------------------------------------------------
+/* ---------------- Core & Env ---------------- */
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -18,17 +14,41 @@ const dns = require('dns');
 const { exec } = require('child_process');
 const ldap = require('ldapjs');
 const bcrypt = require('bcrypt');
-const { load: loadRules } = require('./lib/rules-loader');
-const { computeSuggestionText } = require('./lib/ai-scorer');
 
-let listEndpoints = null; // optional dev helper
-try { listEndpoints = require('express-list-endpoints'); } catch { /* optional */ }
+const { load: loadRules } = require('./lib/rules-loader');   // loads ./rules or RULES_DIR
+const { computeSuggestionText } = require('./lib/ai-scorer'); // bilingual scorer
 
 const app = express();
 console.log('Using server file:', __filename);
 console.log('Working directory:', process.cwd());
 
-// ---- App & Middleware -------------------------------------------------
+/* ---------------- Route recorder (place BEFORE routes) ---------------- */
+const ROUTE_LOG = [];
+(function armRouteRecorder(appRef) {
+  const METHODS = ['get','post','put','patch','delete','options','head','all'];
+  for (const m of METHODS) {
+    const orig = appRef[m].bind(appRef);
+    appRef[m] = function wrappedRegister(p, ...handlers) {
+      const paths = Array.isArray(p) ? p : [p];
+      for (const one of paths) {
+        if (typeof one === 'string' && one.startsWith('/')) {
+          ROUTE_LOG.push({ method: m.toUpperCase(), path: one });
+        }
+      }
+      return orig(p, ...handlers);
+    };
+  }
+})(app);
+
+function uniqSortRoutes(list){
+  const key = r => `${r.method} ${r.path}`;
+  const map = new Map();
+  for (const r of list) map.set(key(r), r);
+  return [...map.values()].sort((a,b)=> a.path.localeCompare(b.path) || a.method.localeCompare(b.method));
+}
+function escHtml(s){return String(s).replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+
+/* ---------------- App & Middleware ---------------- */
 app.set('trust proxy', true);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -42,37 +62,61 @@ app.use(session({
   cookie: { httpOnly: true, sameSite: 'lax', secure: false, maxAge: 1000 * 60 * 60 * 8 }
 }));
 
-// ---- Probes / Debug ---------------------------------------------------
+// --- request logger (dev only) ---
+if (process.env.NODE_ENV !== 'production') {
+  app.use((req, _res, next) => {
+    console.log('[REQ]', req.method, req.path);
+    next();
+  });
+}
+
+
+/* ---------------- Probes / Debug ---------------- */
 app.get('/__ok', (_req, res) => res.type('text').send('OK'));
 app.get('/__ping', (_req, res) => res.type('text').send('pong'));
 app.get('/__health', (_req, res) => res.json({ ok: true }));
 app.get('/__version', (_req, res) => res.json({ ok: true, version: '1.0.0' }));
-app.get('/__r', (_req, res) => {
-  try { return res.json({ ok: true, routes: listEndpoints ? listEndpoints(app) : [] }); }
-  catch (e) { return res.status(500).json({ ok:false, error: String(e?.message || e) }); }
+app.get('/__hello2', (_req,res)=>res.json({ ok:true, pid:process.pid, when:new Date().toISOString() }));
+
+// ---- Route lister that uses ROUTE_LOG (reliable) ----
+function _esc(s){return String(s).replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function _uniqSortRoutes(list){
+  const key = r => `${r.method} ${r.path}`;
+  const map = new Map();
+  for (const r of list) map.set(key(r), r);
+  return [...map.values()].sort((a,b)=> a.path.localeCompare(b.path) || a.method.localeCompare(b.method));
+}
+
+app.get('/__routes2', (_req, res) => {
+  const routes = _uniqSortRoutes(ROUTE_LOG);
+  res.json({ ok:true, count: routes.length, routes });
 });
 
-// ---- File storage (no DB) --------------------------------------------
+app.get('/__routes2/raw', (_req, res) => {
+  res.type('text').send(JSON.stringify(_uniqSortRoutes(ROUTE_LOG), null, 2));
+});
+
+app.get('/__routes2/html', (_req, res) => {
+  const body = '<pre style="white-space:pre-wrap">' + _esc(JSON.stringify(_uniqSortRoutes(ROUTE_LOG), null, 2)) + '</pre>';
+  res.type('html').send(body);
+});
+
+
+
+/* ---------------- File storage (no DB) ---------------- */
 const DATA_DIR = path.join(__dirname, 'data');
 const TICKETS_FILE = path.join(DATA_DIR, 'tickets.json');
 const COUNTER_FILE = path.join(DATA_DIR, 'ticket_counter.txt');
 fs.mkdirSync(DATA_DIR, { recursive: true });
 if (!fs.existsSync(TICKETS_FILE)) fs.writeFileSync(TICKETS_FILE, '[]', 'utf8');
 
-/** Read stored tickets */
-function readTickets() {
-  try { return JSON.parse(fs.readFileSync(TICKETS_FILE, 'utf8')) || []; } catch { return []; }
-}
-/** Persist tickets */
-function writeTickets(arr) {
-  try { fs.writeFileSync(TICKETS_FILE, JSON.stringify(arr, null, 2)); return true; } catch { return false; }
-}
-/** Monotonic id counter */
-function readCounter() { try { const n = parseInt(fs.readFileSync(COUNTER_FILE, 'utf8').trim(), 10); return Number.isFinite(n)&&n>0? n: 0; } catch { return 0; } }
+function readTickets(){ try { return JSON.parse(fs.readFileSync(TICKETS_FILE,'utf8')) || []; } catch { return []; } }
+function writeTickets(arr){ try { fs.writeFileSync(TICKETS_FILE, JSON.stringify(arr, null, 2)); return true; } catch { return false; } }
+function readCounter(){ try { const n = parseInt(fs.readFileSync(COUNTER_FILE,'utf8').trim(), 10); return Number.isFinite(n)&&n>0? n: 0; } catch { return 0; } }
 function writeCounter(n){ try { fs.writeFileSync(COUNTER_FILE, String(n)); } catch {} }
 let ticketCounter = readCounter();
 
-// ---- Auth (bcrypt) ----------------------------------------------------
+/* ---------------- Auth (bcrypt) ---------------- */
 const ADMIN_PASS = process.env.ADMIN_PASS || '';
 const ADMIN_PASS_HASH = process.env.ADMIN_PASS_HASH || '';
 
@@ -88,12 +132,12 @@ async function isValidAdminPassword(pw) {
 const requireAdminApi  = (req, res, next) => req.session?.isAdmin ? next() : res.status(401).json({ ok:false, error:'Unauthorized' });
 const requireAdminPage = (req, res, next) => req.session?.isAdmin ? next() : res.redirect('/admin/login');
 
-// ---- Public pages -----------------------------------------------------
+/* ---------------- Public pages ---------------- */
 app.get('/', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'lang.html')));
 app.get('/ticket-en', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'ticket-en.html')));
 app.get('/ticket-ar', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'ticket-ar.html')));
 
-// ---- Admin UI & login -------------------------------------------------
+/* ---------------- Admin UI & login ---------------- */
 app.get('/admin/login', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'admin', 'login.html')));
 
 app.post('/admin/login', async (req, res) => {
@@ -117,17 +161,17 @@ app.get('/admin', (req, res) => req.session?.isAdmin ? res.redirect('/admin/tick
 app.get('/admin/tickets', requireAdminPage, (_req, res) => res.sendFile(path.join(__dirname, 'public', 'admin', 'tickets.html')));
 app.get('/admin/dashboard', requireAdminPage, (_req, res) => res.sendFile(path.join(__dirname, 'public', 'admin', 'dashboard.html')));
 
-// ---- Rules (defaults + external w/ fallback + hot reload) -------------
+/* ---------------- Rules (defaults + external) ---------------- */
 const defaultRules = [
-  { category:'PC', keywords:['pc','computer','windows','slow','lag','hang','freeze','bsod','boot','startup','بطئ','تهنيج','يتجمد','ثقيل'], title:'General system slowness / بطء النظام العام', steps:['Restart PC','Check Task Manager','Disk Cleanup','Malware scan','Update Windows & drivers'] },
-  { category:'Network', keywords:['wifi','network','internet','dns','gateway','proxy','شبكه','انترنت','دي ان اس','بروكسي'], title:'Network issues / مشاكل الشبكة', steps:['Check cable/Wi‑Fi','release/renew','flushdns','Try other sites'] },
+  { category:'PC',      keywords:['pc','computer','windows','slow','lag','hang','freeze','bsod','boot','startup','بطئ','تهنيج','يتجمد','ثقيل'], title:'General system slowness / بطء النظام العام', steps:['Restart PC','Check Task Manager','Disk Cleanup','Malware scan','Update Windows & drivers'] },
+  { category:'Network', keywords:['wifi','network','internet','dns','gateway','proxy','شبكه','انترنت','دي ان اس','بروكسي'], title:'Network issues / مشاكل الشبكة', steps:['Check cable/Wi-Fi','release/renew','flushdns','Try other sites'] },
   { category:'Outlook', keywords:['outlook','email','pst','ost','search','send','receive','اوتلوك','البريد'], title:'Outlook issues / مشاكل أوتلوك', steps:['Restart','Check connectivity','Repair OST/PST','Recreate profile'] },
-  { category:'Excel', keywords:['excel','xlsx','formula','pivot','calc','sheet','اكسل','معادلات'], title:'Excel issues / مشاكل إكسل', steps:['Auto calc','Check formulas','Break links','Disable add‑ins / Repair Office'] }
+  { category:'Excel',   keywords:['excel','xlsx','formula','pivot','calc','sheet','اكسل','معادلات'], title:'Excel issues / مشاكل إكسل', steps:['Auto calc','Check formulas','Break links','Disable add-ins / Repair Office'] }
 ];
 
-const RULES_DIR_ENV  = process.env.RULES_DIR ? path.resolve(process.env.RULES_DIR) : null;
-const RULES_DIR_LOCAL= path.join(__dirname, 'rules');
-const RULES_DIR_CWD  = path.join(process.cwd(), 'rules');
+const RULES_DIR_ENV   = process.env.RULES_DIR ? path.resolve(process.env.RULES_DIR) : null;
+const RULES_DIR_LOCAL = path.join(__dirname, 'rules');
+const RULES_DIR_CWD   = path.join(process.cwd(), 'rules');
 
 let rules = defaultRules.slice();
 let rulesMeta = { dir: null, count: defaultRules.length, errors: [], tried: [] };
@@ -155,49 +199,29 @@ function loadAllRules() {
   console.log('⚠️  No external rules found. Using defaults only.');
   console.log('Tried rule directories:', tried);
 }
-
 loadAllRules();
 
 if (process.env.NODE_ENV !== 'production') {
   app.get('/__debug/rules', (_req, res) => {
-    res.json({
-      ok: true,
-      total: rules.length,
-      usingDir: rulesMeta.dir,
-      tried: rulesMeta.tried,
-      meta: rulesMeta,
-      sample: rules.slice(0, 3),
-    });
+    res.json({ ok:true, total: rules.length, usingDir: rulesMeta.dir, tried: rulesMeta.tried, meta: rulesMeta, sample: rules.slice(0,3) });
   });
-
-  app.post('/__debug/rules/reload', (_req, res) => {
-    loadAllRules();
-    res.json({ ok: true, reloaded: true, total: rules.length, usingDir: rulesMeta.dir });
-  });
-
-  app.get('/__debug/suggest', (req, res) => {
-    const s = computeSuggestionText(rules, req.query.text || '');
-    res.json({ ok: true, s });
-  });
+  app.post('/__debug/rules/reload', (_req, res) => { loadAllRules(); res.json({ ok:true, reloaded:true, total: rules.length, usingDir: rulesMeta.dir }); });
+  app.get('/__debug/suggest', (req, res) => { const s = computeSuggestionText(rules, req.query.text || ''); res.json({ ok:true, s }); });
 }
 
-
-
+/* ---------------- AI Suggestion API ---------------- */
 app.get('/ai-suggest', (req, res) => {
   const q = (req.query?.issue || '').toString().trim();
   const s = computeSuggestionText(rules, q);
   res.json({ ok: true, suggestions: s ? [s] : [] });
 });
-
-// POST
 app.post('/ai-suggest', (req, res) => {
   const text = (req.body?.issue || '').toString().trim();
   const s = computeSuggestionText(rules, text);
   res.json({ ok: true, suggestions: s ? [s] : [] });
 });
 
-
-// ---- Networking / LDAP helpers ---------------------------------------
+/* ---------------- Networking / LDAP helpers ---------------- */
 function clientIp(req){ const xf=req.headers['x-forwarded-for']; let ip = xf?xf.split(',')[0].trim():(req.socket?.remoteAddress||''); if (ip.startsWith('::ffff:')) ip=ip.slice(7); if (ip==='::1') ip='127.0.0.1'; return ip || '0.0.0.0'; }
 function detectClientNameFromIp(ip){
   return new Promise(resolve => {
@@ -223,7 +247,7 @@ app.get('/api/pc-name', async (req, res) => {
   } catch { res.status(200).json({ name:'Unknown', method:'error', ip: clientIp(req), ad:null }); }
 });
 
-// ---- Tickets API (admin) ---------------------------------------------
+/* ---------------- Tickets API (admin) ---------------- */
 app.get('/api/tickets', requireAdminApi, (_req, res) => res.json({ ok:true, tickets: readTickets() }));
 
 app.post('/api/tickets/:id/status', requireAdminApi, (req, res) => {
@@ -258,28 +282,139 @@ app.get('/admin/export.csv', requireAdminApi, (_req, res) => {
   res.send(csv);
 });
 
-// ---- Public ticket submit --------------------------------------------
+// ---------------- Self-service “My Tickets” (by email) ----------------
+function isEmail(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s||'').trim()); }
+function normalizeEmail(e){ return (e||'').toString().trim().toLowerCase(); }
+function sanitizeTicketForSelf(t) {
+  return {
+    id: t.id,
+    ts_local: t.ts_local || t.ts_iso || '',
+    department: t.department || '',
+    issue: t.issue || '',
+    status: t.status || 'New',
+    comment: t.comment || '',
+    ai: t.ai ? { title: t.ai.title, confidence: t.ai.confidence } : null,
+  };
+}
+
+// GET /api/my-tickets?email=you@domain
+app.get('/api/my-tickets', (req, res) => {
+  const email = normalizeEmail(req.query.email);
+  if (!isEmail(email)) return res.status(400).json({ ok:false, error:'Bad email' });
+
+  const list = readTickets()
+    .filter(t => normalizeEmail(t.email) === email)
+    .sort((a,b) => String(b.ts_iso||'').localeCompare(String(a.ts_iso||'')))
+    .map(sanitizeTicketForSelf);
+
+  res.json({ ok:true, tickets:list });
+});
+console.log('[ROUTE] GET  /api/my-tickets')
+
+// POST /api/my-tickets/:id/status  { email, resolved:boolean | status:"New|In Progress|Resolved", comment? }
+app.post('/api/my-tickets/:id/status', (req, res) => {
+  const id = Number(req.params.id);
+  const email = normalizeEmail(req.body?.email);
+  const resolved = req.body?.resolved;
+  const status = req.body?.status ? String(req.body.status) : null;
+
+  if (!isEmail(email)) return res.status(400).json({ ok:false, error:'Bad email' });
+
+  let newStatus;
+  if (typeof resolved === 'boolean') newStatus = resolved ? 'Resolved' : 'In Progress';
+  else if (status && ['New','In Progress','Resolved'].includes(status)) newStatus = status;
+  else return res.status(400).json({ ok:false, error:'Provide resolved:boolean or valid status' });
+
+  const list = readTickets();
+  const idx = list.findIndex(t => Number(t.id) === id && normalizeEmail(t.email) === email);
+  if (idx === -1) return res.status(404).json({ ok:false, error:'Not found' });
+
+  list[idx].status = newStatus;
+  if (req.body?.comment != null) list[idx].comment = String(req.body.comment);
+  list[idx].ts_updated = new Date().toISOString();
+
+  if (!writeTickets(list)) return res.status(500).json({ ok:false, error:'Write failed' });
+  res.json({ ok:true, ticket: sanitizeTicketForSelf(list[idx]) });
+});
+console.log('[ROUTE] POST /api/my-tickets/:id/status');
+
+// DELETE /api/my-tickets/:id?email=you@domain
+app.delete('/api/my-tickets/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const email = normalizeEmail(req.query.email || req.body?.email);
+  if (!isEmail(email)) return res.status(400).json({ ok:false, error:'Bad email' });
+
+  const before = readTickets();
+  const after  = before.filter(t => !(Number(t.id) === id && normalizeEmail(t.email) === email));
+  if (after.length === before.length) return res.status(404).json({ ok:false, error:'Not found' });
+
+  if (!writeTickets(after)) return res.status(500).json({ ok:false, error:'Write failed' });
+  res.json({ ok:true, removed:{ id } });
+});
+console.log('[ROUTE] DELETE /api/my-tickets/:id');
+
+/* ---------------- Public ticket submit ---------------- */
 app.post('/ticket', async (req, res) => {
   try {
     const { username, email, extension, department, issue } = req.body || {};
-    if (![username, email, extension, department, issue].every(Boolean)) return res.status(400).json({ ok:false, error:'Missing fields' });
+    if (![username, email, extension, department, issue].every(Boolean)) {
+      return res.status(400).json({ ok:false, error:'Missing fields' });
+    }
 
-//const ai = computeSuggestionText(issue); 
     const ai = computeSuggestionText(rules, issue);
     const status = (ai && ai.confidence>=0.75) ? 'AI Suggested' : 'New';
-    const ip = clientIp(req); const detected = await detectClientNameFromIp(ip); const ua = req.headers['user-agent']||'';
-    const tsIso = new Date().toISOString(); const tsLocal = new Date().toLocaleString(undefined, { hour12:false, timeZoneName:'short' });
+
+    const ip = clientIp(req);
+    const detected = await detectClientNameFromIp(ip);
+    const ua = req.headers['user-agent']||'';
+
+    const tsIso = new Date().toISOString();
+    const tsLocal = new Date().toLocaleString(undefined, { hour12:false, timeZoneName:'short' });
 
     ticketCounter += 1; writeCounter(ticketCounter);
-    const ticket = { id: ticketCounter, ts_iso: tsIso, ts_local: tsLocal, username, email, extension, department, issue, client_ip: detected.ip, client_name: detected.name, client_method: detected.method, user_agent: ua, ai: ai||null, status };
+
+    const ticket = {
+      id: ticketCounter, ts_iso: tsIso, ts_local: tsLocal,
+      username, email, extension, department, issue,
+      client_ip: detected.ip, client_name: detected.name, client_method: detected.method,
+      user_agent: ua, ai: ai||null, status
+    };
+
     const list = readTickets(); list.push(ticket); writeTickets(list);
 
     if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.EMAIL_TO){
       try {
-        const transporter = nodemailer.createTransport({ host: process.env.SMTP_HOST, port: Number(process.env.SMTP_PORT||587), secure:false, auth:{ user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }, tls:{ rejectUnauthorized:false }, connectionTimeout:6000, greetingTimeout:6000, socketTimeout:8000 });
+        const transporter = nodemailer.createTransport({
+          host: process.env.SMTP_HOST,
+          port: Number(process.env.SMTP_PORT||587),
+          secure:false,
+          auth:{ user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+          tls:{ rejectUnauthorized:false },
+          connectionTimeout:6000, greetingTimeout:6000, socketTimeout:8000
+        });
         const aiBlock = ai ? `<h3>AI Suggestion</h3><p><b>${ai.title}</b> (confidence: ${ai.confidence})</p><ol>${(ai.steps||[]).map(s=>`<li>${s}</li>`).join('')}</ol>` : '';
-        const html = `<h2>New IT Ticket</h2><ul><li><b>#:</b> ${ticket.id}</li><li><b>Submitted:</b> ${tsLocal} (${tsIso})</li><li><b>Status:</b> ${status}</li><li><b>User:</b> ${username}</li><li><b>Email:</b> ${email}</li><li><b>Ext:</b> ${extension}</li><li><b>Dept:</b> ${department}</li><li><b>Client IP:</b> ${detected.ip}</li><li><b>Detected PC:</b> ${detected.name} <i>(via ${detected.method})</i></li><li><b>User-Agent:</b> ${ua}</li></ul><p><b>Issue:</b></p><pre style="white-space:pre-wrap">${issue}</pre>${aiBlock}`;
-        await transporter.sendMail({ from: process.env.SMTP_USER, to: process.env.EMAIL_TO, subject: `Ticket #${ticket.id} – ${username} (${department})`, html });
+        const html = `<h2>New IT Ticket</h2>
+<ul>
+  <li><b>#:</b> ${ticket.id}</li>
+  <li><b>Submitted:</b> ${tsLocal} (${tsIso})</li>
+  <li><b>Status:</b> ${status}</li>
+  <li><b>User:</b> ${username}</li>
+  <li><b>Email:</b> ${email}</li>
+  <li><b>Ext:</b> ${extension}</li>
+  <li><b>Dept:</b> ${department}</li>
+  <li><b>Client IP:</b> ${detected.ip}</li>
+  <li><b>Detected PC:</b> ${detected.name} <i>(via ${detected.method})</i></li>
+  <li><b>User-Agent:</b> ${ua}</li>
+</ul>
+<p><b>Issue:</b></p>
+<pre style="white-space:pre-wrap">${issue}</pre>
+${aiBlock}`;
+        await transporter.sendMail({
+          from: process.env.SMTP_USER,
+          to: process.env.EMAIL_TO,
+          subject: `Ticket #${ticket.id} – ${username} (${department})`,
+          html
+        });
       } catch(e){ console.log('SMTP error:', e.message); }
     }
 
@@ -290,6 +425,6 @@ app.post('/ticket', async (req, res) => {
   }
 });
 
-// ---- Start ------------------------------------------------------------
+/* ---------------- Start ---------------- */
 const PORT = process.env.PORT || 5002;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

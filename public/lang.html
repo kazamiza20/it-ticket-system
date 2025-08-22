@@ -3,25 +3,50 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Choose Language</title>
-  <link rel="icon" href="navy-logo.png">
+  <title>IT Ticket – Choose Language</title>
   <style>
-    :root{--brand:#003366}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;min-height:100vh;align-items:center;justify-content:center;background:#f4f6f8}
-    .box{background:#fff;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.06);padding:28px;max-width:520px;width:92%;text-align:center}
-    img{height:72px;margin-bottom:10px}
-    h1{color:var(--brand);margin:8px 0 18px}
-    a{display:inline-block;padding:12px 18px;margin:8px;border-radius:10px;text-decoration:none;background:var(--brand);color:#fff}
+    :root { --bg:#0b0e14; --card:#141a22; --muted:#8aa1b1; --text:#e6eef5; }
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,Segoe UI,Roboto,Arial}
+    .wrap{max-width:900px;margin:40px auto;padding:0 16px}
+    h1{margin:0 0 12px}
+    p.muted{color:var(--muted);margin:0 0 20px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:800px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:18px;padding:22px;box-shadow:0 6px 24px #0008}
+    .title{display:flex;align-items:center;gap:10px;margin:0 0 10px}
+    .btn{display:inline-block;margin-top:8px;padding:10px 16px;border-radius:10px;border:1px solid #2a3f55;background:#1c2c3b;color:#e6eef5;text-decoration:none}
+    .btn:hover{filter:brightness(1.1)}
+    ul{margin:10px 0 0 18px}
+    li{margin:4px 0}
   </style>
 </head>
 <body>
-  <div class="box">
-    <img src="navy-logo.png" alt="Saudi Royal Navy"/>
-    <h1>IT Support – Language</h1>
-    <p>Select your language / اختر لغتك</p>
-    <div>
-      <a href="/ticket-en">English</a>
-      <a href="/ticket-ar">العربية</a>
+  <div class="wrap">
+    <h1>IT Ticket System</h1>
+    <p class="muted">Choose your preferred language / اختر لغتك المفضلة</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2 class="title">English</h2>
+        <p>Submit a new ticket, preview AI suggestions while typing, and manage your previous tickets (resolve, set in progress, or delete).</p>
+        <a class="btn" href="/ticket-en">Open English form</a>
+        <ul>
+          <li>AI suggestion preview</li>
+          <li>See previous tickets by email</li>
+          <li>Resolve / In Progress / Delete</li>
+        </ul>
+      </div>
+
+      <div class="card" dir="rtl" lang="ar">
+        <h2 class="title">العربية</h2>
+        <p>إرسال تذكرة جديدة، معاينة اقتراح الذكاء الاصطناعي أثناء الكتابة، وإدارة تذاكرك السابقة (تم الحل / قيد الإنجاز / حذف).</p>
+        <a class="btn" href="/ticket-ar">افتح النموذج العربي</a>
+        <ul>
+          <li>معاينة اقتراح الذكاء الاصطناعي</li>
+          <li>عرض التذاكر السابقة حسب البريد</li>
+          <li>تغيير الحالة أو الحذف</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

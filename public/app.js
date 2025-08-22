@@ -121,4 +121,138 @@
     $('btnNeedHelpAr')?.addEventListener('click', () => { const box = $('aiBoxAr'); if (box) box.hidden = true; $('statusAr').textContent = 'حسنًا — الرجاء إرسال التذكرة.'; });
     $('ticketFormAr').addEventListener('submit', (e) => { e.preventDefault(); submitTicket('ar'); });
   }
+// ================== Self-service "My Tickets" widget ==================
+(function () {
+  // Find an email input on either page
+  const emailEl = document.querySelector('#email, #emailAr, input[type="email"], input[name="email"]');
+  if (!emailEl) return;
+
+  // Create container if the page doesn't have one
+  let section = document.getElementById('myTickets');
+  if (!section) {
+    section = document.createElement('div');
+    section.id = 'myTickets';
+    section.style.marginTop = '16px';
+    section.innerHTML = `
+      <hr style="margin:16px 0;border:none;border-top:1px solid #e5e7eb;">
+      <h2 style="margin:8px 0 10px 0;font-size:18px;">My Tickets / تذاكري</h2>
+      <div id="myTicketsBody" class="muted">Enter your email to load your tickets.</div>
+    `;
+    // Append right below the form (or at end of card)
+    const form = document.getElementById('ticketForm') || document.querySelector('form');
+    (form?.parentElement || document.body).appendChild(section);
+  }
+  const body = document.getElementById('myTicketsBody');
+
+  function esc(s){ return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+  async function loadMyTickets() {
+    const email = (emailEl.value || '').trim();
+    if (!email) { body.textContent = 'Enter your email to load your tickets.'; return; }
+
+    body.textContent = 'Loading...';
+    try {
+      const res = await fetch(`/api/my-tickets?email=${encodeURIComponent(email)}`);
+      const data = await res.json();
+      if (!data.ok) { body.textContent = data.error || 'Failed to load.'; return; }
+
+      const rows = (data.tickets || []).sort((a,b) => (b.id - a.id)).map(t => {
+        const sel = ['New','In Progress','Resolved','AI Suggested','Dismissed by AI']
+          .map(s => `<option ${t.status===s?'selected':''}>${s}</option>`).join('');
+        return `
+          <tr>
+            <td>${t.id}</td>
+            <td>${esc(t.ts_local || t.ts_iso || '')}</td>
+            <td>${esc(t.department || '')}</td>
+            <td style="max-width:320px;white-space:pre-wrap">${esc(t.issue || '')}</td>
+            <td>
+              <select data-id="${t.id}" class="status">${sel}</select>
+            </td>
+            <td>
+              <button class="save" data-id="${t.id}">Save</button>
+              <button class="del"  data-id="${t.id}">Delete</button>
+            </td>
+          </tr>`;
+      }).join('');
+
+      body.innerHTML = (data.tickets?.length)
+        ? `<div style="overflow:auto">
+             <table style="width:100%;border-collapse:collapse">
+               <thead>
+                 <tr style="background:#f8fafc">
+                   <th style="text-align:left;border-top:1px solid #e5e7eb;padding:8px">ID</th>
+                   <th style="text-align:left;border-top:1px solid #e5e7eb;padding:8px">Submitted</th>
+                   <th style="text-align:left;border-top:1px solid #e5e7eb;padding:8px">Dept</th>
+                   <th style="text-align:left;border-top:1px solid #e5e7eb;padding:8px">Issue</th>
+                   <th style="text-align:left;border-top:1px solid #e5e7eb;padding:8px">Status</th>
+                   <th style="text-align:left;border-top:1px solid #e5e7eb;padding:8px">Actions</th>
+                 </tr>
+               </thead>
+               <tbody>${rows}</tbody>
+             </table>
+           </div>`
+        : 'No tickets found for this email.';
+    } catch (e) {
+      body.textContent = 'Network error.';
+    }
+  }
+
+  // Save status
+  body.addEventListener('click', async (ev) => {
+    const btn = ev.target.closest('button.save');
+    if (!btn) return;
+    const id = Number(btn.dataset.id);
+    const email = (emailEl.value || '').trim();
+    const sel = body.querySelector(`select.status[data-id="${id}"]`);
+    if (!sel) return;
+
+    btn.disabled = true; btn.textContent = 'Saving...';
+    try {
+      const res = await fetch(`/api/my-tickets/${id}/status`, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify({ email, status: sel.value })
+      });
+      const data = await res.json();
+      if (!data.ok) alert(data.error || 'Update failed');
+      else await loadMyTickets();
+    } finally {
+      btn.disabled = false; btn.textContent = 'Save';
+    }
+  });
+
+  // Delete ticket
+  body.addEventListener('click', async (ev) => {
+    const btn = ev.target.closest('button.del');
+    if (!btn) return;
+    const id = Number(btn.dataset.id);
+    const email = (emailEl.value || '').trim();
+    if (!confirm('Delete this ticket?')) return;
+
+    btn.disabled = true; btn.textContent = 'Deleting...';
+    try {
+      const res = await fetch(`/api/my-tickets/${id}?email=${encodeURIComponent(email)}`, { method:'DELETE' });
+      const data = await res.json();
+      if (!data.ok) alert(data.error || 'Delete failed');
+      else await loadMyTickets();
+    } finally {
+      btn.disabled = false; btn.textContent = 'Delete';
+    }
+  });
+
+  // Auto-load when email changes (debounced)
+  let t = null;
+  function scheduleLoad(){ clearTimeout(t); t = setTimeout(loadMyTickets, 400); }
+  emailEl.addEventListener('input', scheduleLoad);
+  emailEl.addEventListener('change', scheduleLoad);
+
+  // Also load after a successful submit (if your existing code sets a success flag)
+  document.getElementById('ticketForm')?.addEventListener('submit', () => {
+    setTimeout(loadMyTickets, 800);
+  });
+
+  // If the email is prefilled, load immediately
+  if ((emailEl.value || '').trim()) loadMyTickets();
+})();
+
 });
