@@ -1,4 +1,4 @@
-module.exports = [
+[
   {
     "category": "Keyboard",
     "subcategory": "Keys",
@@ -1253,4 +1253,4 @@ module.exports = [
       "ar"
     ]
   }
-];
+]

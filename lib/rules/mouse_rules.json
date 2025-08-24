@@ -1,4 +1,4 @@
-module.exports = [
+[
   {
     "category": "Mouse",
     "subcategory": "Functionality",
@@ -638,5 +638,4 @@ module.exports = [
       "ar"
     ]
   }
-];
-
+]

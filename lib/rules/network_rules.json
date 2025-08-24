@@ -1,4 +1,4 @@
-module.exports = [
+[
   {
     "category": "Network",
     "subcategory": "WiFi",
@@ -3042,5 +3042,4 @@ module.exports = [
       "ar"
     ]
   }
-];
-
+]

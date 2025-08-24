@@ -1,0 +1,454 @@
+[
+  {
+    "category": "Monitor",
+    "subcategory": "Detection/Signal",
+    "keywords": [
+      "no signal",
+      "monitor not detected",
+      "input not supported",
+      "hdmi no signal",
+      "displayport no signal",
+      "usb-c no display",
+      "لا يوجد إشارة",
+      "الشاشة غير مكتشفة",
+      "المدخل غير مدعوم",
+      "بدون إشارة HDMI",
+      "بدون إشارة DisplayPort",
+      "USB-C لا يعرض"
+    ],
+    "title": "No signal or monitor not detected / لا توجد إشارة أو الشاشة غير مكتشفة",
+    "steps": [
+      "1. Check power, input source (HDMI/DP/USB‑C) / تحقق من الطاقة ومصدر الإدخال (HDMI/DP/USB‑C)",
+      "2. Reseat cable; try different port/cable / أعد تركيب الكيبل؛ جرّب منفذ/كيبل آخر",
+      "3. On Windows: Win+P → Extend; Device Manager → Scan for hardware changes / في ويندوز: Win+P → توسيع؛ إدارة الأجهزة → بحث عن تغييرات",
+      "4. Update GPU driver; reboot / حدّث تعريف كرت الشاشة وأعد التشغيل"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Cables/Bandwidth",
+    "keywords": [
+      "hdmi 2.1",
+      "dp 1.4",
+      "hbr3",
+      "8k cable",
+      "4k 120hz",
+      "كابل HDMI 2.1",
+      "DP 1.4",
+      "حزمة بيانات مرتفعة",
+      "4K 120 هرتز"
+    ],
+    "title": "Wrong/low‑spec cable limits resolution/refresh / كابل غير مناسب يحد الدقة/المعدل",
+    "steps": [
+      "1. Use certified cables (HDMI 2.1 for 4K120; DP 1.4/HBR3 for 4K144) / استخدم كابلات معتمدة (HDMI 2.1 لـ4K120؛ DP 1.4 لـ4K144)",
+      "2. Avoid passive DP→HDMI for high refresh; use active adapter / تجنب محول DP→HDMI السلبي للتردد العالي؛ استخدم محولًا نشطًا",
+      "3. Shorten cable length; avoid kinks/adapters / قلّل طول الكابل وتجنب الانحناءات والمحولات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Refresh Rate",
+    "keywords": [
+      "144hz not available",
+      "165hz not showing",
+      "75hz only 60hz",
+      "variable refresh rate",
+      "vrr",
+      "معدل التحديث غير متاح",
+      "لا يظهر 144 هرتز",
+      "VRR"
+    ],
+    "title": "Cannot select high refresh rate / لا يمكن اختيار معدل تحديث عالٍ",
+    "steps": [
+      "1. Windows → Settings → Display → Advanced → Choose max Hz / ويندوز → إعدادات → عرض → متقدم → اختر أعلى هرتز",
+      "2. Use right port/cable spec (DP/HDMI as required) / استخدم المنفذ/الكابل المناسب للمواصفات",
+      "3. Disable cloning; use Extend (cloning may cap Hz) / عطّل الاستنساخ؛ استخدم التوسيع (الاستنساخ قد يحد الهرتز)",
+      "4. Update GPU/monitor firmware / حدّث تعريف كرت الشاشة وبرنامج الشاشة الثابت"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Image Quality",
+    "keywords": [
+      "flicker",
+      "artifacts",
+      "sparkles",
+      "snow",
+      "ghosting",
+      "فليكر",
+      "وميض",
+      "تشويش",
+      "أشباح"
+    ],
+    "title": "Flicker, sparkles, or artifacts / وميض أو تشويش أو تشوهات",
+    "steps": [
+      "1. Try a different cable/port; lower refresh temporarily / جرّب كابل/منفذًا آخر؛ خفّض التردد مؤقتًا",
+      "2. Disable GPU overclock/unsupported DSC / عطّل كسر السرعة أو ميزات غير مدعومة",
+      "3. Toggle Adaptive Sync/FreeSync/G‑Sync / بدّل تفعيل Adaptive Sync/FreeSync/G‑Sync",
+      "4. Check power source/EMI; avoid splitters / تحقق من مصدر الطاقة والتشويش؛ تجنب المقسمات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Color/HDR",
+    "keywords": [
+      "washed out",
+      "hdr dull",
+      "wide gamut",
+      "icc profile",
+      "srgb clamp",
+      "ألوان باهتة",
+      "HDR باهت",
+      "ملف لوني",
+      "sRGB"
+    ],
+    "title": "Colors look washed out / HDR dull / الألوان باهتة أو HDR ضعيف",
+    "steps": [
+      "1. Set correct color space (sRGB for desktop; HDR on only for HDR content) / اضبط مساحة اللون الصحيحة (sRGB لسطح المكتب؛ فعّل HDR عند الحاجة)",
+      "2. Load monitor ICC profile; disable 'sRGB clamp' if oversaturated / حمّل ملف ICC للشاشة؛ عطّل 'sRGB clamp' عند التشبع الزائد",
+      "3. Calibrate brightness/contrast/gamma / قم بالمعايرة للسطوع/التباين/جاما",
+      "4. Use 10‑bit color only if pipeline supports it / استخدم 10‑بت فقط إذا كان المسار يدعمه"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Resolution/Scaling",
+    "keywords": [
+      "blurry text",
+      "scaling",
+      "wrong resolution",
+      "dpi",
+      "نص غير واضح",
+      "تحجيم",
+      "دقة خاطئة"
+    ],
+    "title": "Blurry text or wrong resolution / نص غير واضح أو دقة خاطئة",
+    "steps": [
+      "1. Set native resolution; disable 'Display scaling' in GPU panel if needed / استخدم الدقة الأصلية؛ عطّل التحجيم في لوحة كرت الشاشة عند الحاجة",
+      "2. Windows ClearType tuner; app DPI override (Compatibility) / استخدم ClearType؛ ومعالجة DPI لكل تطبيق",
+      "3. Use integer scaling on low‑res content / استخدم التحجيم الصحيح للمحتوى منخفض الدقة"
+    ],
+    "severity": "Low",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Multi‑Monitor",
+    "keywords": [
+      "second monitor not detected",
+      "extend display",
+      "arrangement",
+      "edid",
+      "شاشة ثانية غير مكتشفة",
+      "توسيع العرض",
+      "ترتيب الشاشات"
+    ],
+    "title": "Second monitor not detected / ترتيب الشاشات / الشاشة الثانية غير مكتشفة",
+    "steps": [
+      "1. Win+P → Extend; Settings → Display → Detect / ويندوز: Win+P → توسيع؛ إعدادات العرض → اكتشاف",
+      "2. Connect monitors directly to GPU (avoid motherboard port) / أوصل الشاشات مباشرة بكرت الشاشة (وليس منفذ اللوحة الأم)",
+      "3. Power cycle displays; plug one by one / أعد تشغيل الشاشات ووصلها واحدة تلو الأخرى",
+      "4. Update GPU driver; DDU clean if persistent / حدّث التعريف؛ استخدم DDU للتنظيف عند استمرار المشكلة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "USB‑C Alt Mode",
+    "keywords": [
+      "usb-c display",
+      "alt mode",
+      "thunderbolt",
+      "power delivery",
+      "dp alt mode",
+      "USB‑C عرض",
+      "وضع بديل",
+      "ثندربولت",
+      "توصيل الطاقة"
+    ],
+    "title": "No display via USB‑C / power only / لا يوجد عرض عبر USB‑C (طاقة فقط)",
+    "steps": [
+      "1. Ensure device/port supports DP Alt Mode or Thunderbolt / تأكد أن الجهاز/المنفذ يدعم وضع DP Alt أو ثندربولت",
+      "2. Use a full‑featured USB‑C cable (e‑marker) / استخدم كابل USB‑C كامل الميزات (e‑marker)",
+      "3. On laptops, enable Display over USB‑C in BIOS / فعّل العرض عبر USB‑C من BIOS للحواسيب المحمولة",
+      "4. Try direct connection (avoid docks/adapters) / جرّب الاتصال المباشر وتجنب القواعد/المحولات"
+    ],
+    "severity": "High",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Docking/DisplayLink",
+    "keywords": [
+      "dock no display",
+      "displaylink",
+      "mst",
+      "hub",
+      "station",
+      "قاعدة توصيل",
+      "عدم وجود عرض",
+      "MST"
+    ],
+    "title": "Dock connected but no display / القاعدة متصلة بدون عرض",
+    "steps": [
+      "1. Identify dock type: Alt Mode vs DisplayLink (driver needed) / حدد نوع القاعدة: Alt Mode أم DisplayLink (يحتاج تعريف)",
+      "2. Install DisplayLink driver if applicable / ثبّت تعريف DisplayLink إن كان مناسبًا",
+      "3. Check MST chain limits; reduce monitors/refresh / تحقق من حدود MST؛ قلّل عدد الشاشات/التردد",
+      "4. Update dock firmware and laptop BIOS / حدّث برنامج القاعدة الثابت وBIOS الجهاز المحمول"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Audio over HDMI/DP",
+    "keywords": [
+      "no sound",
+      "monitor speakers",
+      "audio device",
+      "hdmi audio",
+      "dp audio",
+      "لا يوجد صوت",
+      "سماعات الشاشة",
+      "صوت HDMI/DP"
+    ],
+    "title": "No audio from monitor speakers / لا يوجد صوت من سماعات الشاشة",
+    "steps": [
+      "1. Windows sound output → select monitor (HDMI/DP) / اختر شاشة HDMI/DP كمخرج صوت في ويندوز",
+      "2. Enable monitor speakers/volume in OSD / فعّل سماعات الشاشة ومستوى الصوت من القائمة",
+      "3. Use HDMI/DP (not DVI/VGA); check GPU audio driver / استخدم HDMI/DP وليس DVI/VGA؛ تحقق من تعريف الصوت لكرت الشاشة"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "DP MST Daisy‑Chain",
+    "keywords": [
+      "daisy chain",
+      "mst",
+      "displayport hub",
+      "chain not working",
+      "ربط متسلسل",
+      "MST",
+      "موزع DisplayPort"
+    ],
+    "title": "DP MST daisy‑chain not working / الربط المتسلسل عبر DP لا يعمل",
+    "steps": [
+      "1. Enable MST in first monitor OSD; use DP 1.4 cable / فعّل MST في قائمة الشاشة الأولى؛ استخدم كابل DP 1.4",
+      "2. Stay within bandwidth (e.g., 2× 1440p60) / التزم بحدود الحزمة (مثل شاشتين 1440p60)",
+      "3. Avoid mixing HDMI in the chain / تجنب خلط HDMI داخل السلسلة",
+      "4. Update monitor firmware if available / حدّث برنامج الشاشة الثابت إن توفر"
+    ],
+    "severity": "Medium",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "HDCP/Handshake",
+    "keywords": [
+      "hdcp",
+      "handshake",
+      "black screen on app",
+      "streaming",
+      "ps5",
+      "مشاكل HDCP",
+      "مصافحة",
+      "شاشة سوداء"
+    ],
+    "title": "HDCP/handshake black screen / شاشة سوداء بسبب HDCP/المصافحة",
+    "steps": [
+      "1. Toggle HDCP on source; use certified cable / بدّل HDCP على المصدر؛ استخدم كابلًا معتمدًا",
+      "2. Power cycle chain (source → monitor) / أعد تشغيل السلسلة (المصدر → الشاشة)",
+      "3. Avoid splitters/ARC paths for testing / تجنب المقسمات/مسارات ARC أثناء الاختبار"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Burn‑in/Stuck Pixels",
+    "keywords": [
+      "image retention",
+      "burn in",
+      "oled",
+      "stuck pixel",
+      "dead pixel",
+      "احتباس صورة",
+      "احتراق",
+      "بيكسل عالق",
+      "بيكسلات ميتة"
+    ],
+    "title": "Image retention or stuck/dead pixels / احتباس صورة أو بيكسلات عالقة/ميتة",
+    "steps": [
+      "1. Run pixel refresh/panel care (OLED) / شغّل تجديد البيكسلات/العناية باللوحة (OLED)",
+      "2. Use moving screensavers; avoid static UI / استخدم شاشات توقف متحركة وتجنب الواجهات الثابتة",
+      "3. Check vendor pixel‑policy for warranty / تحقق من سياسة البائع للضمان"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "DDC/CI Control",
+    "keywords": [
+      "ddc/ci",
+      "brightness control app",
+      "monitor control",
+      "osd",
+      "تحكم سطوع عبر النظام",
+      "DDC/CI",
+      "القائمة OSD"
+    ],
+    "title": "Cannot control brightness via software (DDC/CI) / لا يمكن التحكم بالسطوع عبر البرامج",
+    "steps": [
+      "1. Enable DDC/CI in monitor OSD / فعّل DDC/CI من قائمة الشاشة",
+      "2. Use supported cable/port (some hubs block DDC) / استخدم منفذ/كابل مدعوم (بعض القواعد تمنع DDC)",
+      "3. Try a known app (e.g., Monitorian) / جرّب تطبيق تحكم معروف"
+    ],
+    "severity": "Low",
+    "confidence": 0.79,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "OSD/Power Save",
+    "keywords": [
+      "power saving",
+      "sleep",
+      "auto source",
+      "eco mode",
+      "مجموعة الطاقة",
+      "نوم الشاشة",
+      "تحديد المصدر تلقائيًا"
+    ],
+    "title": "Monitor sleeps or changes source unexpectedly / الشاشة تنام أو تغيّر المصدر تلقائيًا",
+    "steps": [
+      "1. Disable Auto Source/Auto Power Save if unwanted / عطّل اختيار المصدر/حفظ الطاقة التلقائي",
+      "2. Adjust Windows/driver power plan / اضبط خطة طاقة ويندوز/التعريف",
+      "3. Update monitor firmware / حدّث برنامج الشاشة الثابت"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "KVM/Inputs",
+    "keywords": [
+      "kvm switch",
+      "input switch",
+      "hotkey",
+      "edid emulation",
+      "مفتاح KVM",
+      "تبديل المدخل",
+      "محاكاة EDID"
+    ],
+    "title": "KVM switch issues (input/EDID) / مشاكل مفتاح KVM (المدخل/‏EDID)",
+    "steps": [
+      "1. Use KVM with EDID emulation to keep link alive / استخدم KVM يدعم محاكاة EDID للحفاظ على الاتصال",
+      "2. Set fixed input on monitor; avoid Auto / اضبط إدخالًا ثابتًا على الشاشة وتجنب التلقائي",
+      "3. Reconnect keyboard/video in correct order / أعد توصيل لوحة المفاتيح/الفيديو بالترتيب الصحيح"
+    ],
+    "severity": "Medium",
+    "confidence": 0.79,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Monitor",
+    "subcategory": "Portable Monitors",
+    "keywords": [
+      "portable monitor",
+      "usb-c power",
+      "power adapter",
+      "bus powered",
+      "شاشة محمولة",
+      "طاقة عبر USB‑C",
+      "محول طاقة"
+    ],
+    "title": "Portable monitor power/display issues / مشاكل شاشة محمولة (طاقة/عرض)",
+    "steps": [
+      "1. Provide external power if device can’t supply PD / وفر طاقة خارجية إذا كان الجهاز لا يوفّر PD كافيًا",
+      "2. Use e‑marked USB‑C cable; enable DP Alt Mode / استخدم كابل USB‑C مع علامة إلكترونية؛ فعّل DP Alt Mode",
+      "3. Reduce brightness/refresh to lower draw / خفّض السطوع/التردد لتقليل الاستهلاك"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  }
+]

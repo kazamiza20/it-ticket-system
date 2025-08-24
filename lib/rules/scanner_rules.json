@@ -1,0 +1,653 @@
+[
+  {
+    "category": "Scanner",
+    "subcategory": "Connection",
+    "keywords": [
+      "scanner not detected",
+      "cannot find scanner",
+      "usb not recognized",
+      "network scanner not found",
+      "airscan",
+      "escl",
+      "ws-discovery",
+      "bonjour",
+      "الماسح الضوئي غير مكتشف",
+      "تعذر العثور على الماسح",
+      "USB غير معروف",
+      "الماسح عبر الشبكة غير موجود"
+    ],
+    "title": "Scanner not detected (USB/Network) / تعذر اكتشاف الماسح الضوئي (USB/الشبكة)",
+    "steps": [
+      "1. Check power/cables; try another USB port / تحقق من الطاقة والكابلات؛ جرّب منفذ USB آخر",
+      "2. Add from Settings → Bluetooth & devices → Printers & scanners / الإضافة من الإعدادات → البلوتوث والأجهزة → الطابعات والماسحات",
+      "3. Ensure Windows Image Acquisition (WIA) is running / تأكد من تشغيل خدمة WIA",
+      "4. Install the vendor full driver package (not inbox) / ثبّت حزمة تعريف الشركة الكاملة (وليس تعريف ويندوز العام)",
+      "5. For network: ping the device; ensure same subnet / للشبكة: جرّب ping للجهاز وتأكد أنه على نفس الشبكة",
+      "6. Allow scanner services through firewall (WSD/AirScan) / اسمح بخدمات الماسح عبر الجدار الناري (WSD/AirScan)",
+      "7. Restart Print Spooler + WIA services / أعد تشغيل خدمتي Print Spooler وWIA"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Windows Services",
+    "keywords": [
+      "wia service stopped",
+      "windows image acquisition",
+      "no scanners were detected",
+      "wia error",
+      "خدمة WIA متوقفة",
+      "خدمة التقاط الصور",
+      "لا يوجد ماسح"
+    ],
+    "title": "WIA service stopped / خدمة WIA متوقفة",
+    "steps": [
+      "1. Open services.msc → start 'Windows Image Acquisition (WIA)' / افتح services.msc → شغّل خدمة WIA",
+      "2. Set Startup type to Automatic / اجعل نوع بدء التشغيل تلقائي",
+      "3. Restart the PC, then test Windows Scan / أعد تشغيل الجهاز ثم اختبر تطبيق Windows Scan",
+      "4. Check dependencies: Shell Hardware Detection, RPC / افحص الخدمات التابعة: Shell Hardware Detection وRPC",
+      "5. Apply Windows Updates / طبّق تحديثات ويندوز"
+    ],
+    "severity": "Medium",
+    "confidence": 0.87,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Driver (TWAIN/WIA)",
+    "keywords": [
+      "twain driver missing",
+      "twain_32",
+      "twain 32-bit 64-bit",
+      "default source",
+      "تعريف TWAIN مفقود",
+      "مجلد twain_32",
+      "اختلاف 32/64 بت"
+    ],
+    "title": "TWAIN driver missing or mismatched (32/64-bit) / تعريف TWAIN مفقود أو غير متطابق (32/64 بت)",
+    "steps": [
+      "1. Install vendor TWAIN package matching app bitness / ثبّت حزمة TWAIN من الشركة بما يوافق معمارية التطبيق",
+      "2. Verify C:\\Windows\\TWAIN_32 has the data source files / تحقق من وجود ملفات المصدر في C:\\Windows\\TWAIN_32",
+      "3. In the scanning app, select the correct TWAIN source / اختر مصدر TWAIN الصحيح داخل التطبيق",
+      "4. If app is 64-bit, use 64-bit driver (or install 32-bit app) / إذا كان التطبيق 64 بت فاستخدم تعريف 64 بت (أو ثبّت تطبيق 32 بت)"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Apps",
+    "keywords": [
+      "works in vendor app not in windows",
+      "windows scan app",
+      "microsoft store",
+      "يعمل في تطبيق الشركة وليس في ويندوز",
+      "تطبيق Windows Scan"
+    ],
+    "title": "Works in vendor app but not Windows Scan / يعمل في تطبيق الشركة وليس في Windows Scan",
+    "steps": [
+      "1. Reset Windows Scan (Apps → Installed apps → Advanced options → Reset) / أعد تهيئة تطبيق Windows Scan من الإعدادات",
+      "2. Reinstall Windows Scan from Microsoft Store / أعد تثبيت التطبيق من متجر مايكروسوفت",
+      "3. Update device drivers/firmware / حدّث تعريفات الجهاز والبرامج الثابتة",
+      "4. Test with a different Windows user profile / جرّب بحساب ويندوز مختلف"
+    ],
+    "severity": "Low",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Image Quality",
+    "keywords": [
+      "lines on scan",
+      "streaks",
+      "vertical line",
+      "dirty glass",
+      "adf glass",
+      "خطوط في المسح",
+      "لطخات",
+      "زجاج الماسح متسخ"
+    ],
+    "title": "Lines or streaks on scans (ADF glass/rollers) / خطوط على الماسحات (زجاج/بكرات ADF)",
+    "steps": [
+      "1. Clean the narrow ADF glass strip and main glass / نظّف شريط الزجاج الضيق الخاص بالـADF والزجاج الرئيسي",
+      "2. Clean/polish ADF rollers; replace if worn / نظّف/قم بتلميع بكرات ADF واستبدلها إذا كانت مستهلكة",
+      "3. Test using flatbed; compare with ADF result / اختبر عبر السطح الزجاجي وقارن مع نتيجة الـADF",
+      "4. Run scanner calibration if available / شغّل معايرة الماسح إن توفرت"
+    ],
+    "severity": "Low",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Image Quality",
+    "keywords": [
+      "skewed scans",
+      "crooked",
+      "alignment",
+      "tilted",
+      "مسح مائل",
+      "ميلان",
+      "عدم محاذاة"
+    ],
+    "title": "Skewed or crooked scans / مسح مائل أو غير مستقيم",
+    "steps": [
+      "1. Adjust paper guides snugly / اضبط أدلة الورق بإحكام",
+      "2. Fan/align pages; remove staples / صفّ الأوراق وأزل الدبّاسات",
+      "3. Clean/replace feed and separation rollers / نظّف/استبدل بكرات السحب والفصل",
+      "4. Use flatbed for delicate originals / استخدم السطح الزجاجي للمستندات الحساسة"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "ADF",
+    "keywords": [
+      "adf jam",
+      "not feeding",
+      "multiple feed",
+      "pickup roller",
+      "تعطل وحدة التغذية",
+      "لا يسحب الورق",
+      "سحب مزدوج"
+    ],
+    "title": "ADF jams or won't feed / تعطل وحدة التغذية الأوتوماتيكية أو لا تسحب الورق",
+    "steps": [
+      "1. Remove jammed sheets carefully; inspect path / أزل الأوراق العالقة بحذر وافحص مسار الورق",
+      "2. Clean pickup/separation rollers / نظّف بكرات السحب والفصل",
+      "3. Replace rollers or separation pad if worn / استبدل البكرات أو وسادة الفصل إذا كانت مستهلكة",
+      "4. Use recommended paper weight and size / استخدم وزن وحجم الورق الموصى به"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Features",
+    "keywords": [
+      "duplex scan missing",
+      "two-sided scan",
+      "مسح على الوجهين غير متاح",
+      "مسح مزدوج"
+    ],
+    "title": "Duplex scanning not available / المسح على الوجهين غير متاح",
+    "steps": [
+      "1. Confirm the model supports duplex ADF / تأكد أن الطراز يدعم الـADF المزدوج",
+      "2. Enable duplex in the app/device settings / فعّل المسح المزدوج من إعدادات التطبيق/الجهاز",
+      "3. Update driver/firmware / حدّث التعريف/البرنامج الثابت",
+      "4. Use vendor utility if app doesn't expose the option / استخدم أداة الشركة إذا لم يظهر الخيار في التطبيق"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Performance",
+    "keywords": [
+      "slow scanning",
+      "takes long",
+      "high dpi",
+      "network latency",
+      "بطء في المسح",
+      "يستغرق وقتًا طويلًا"
+    ],
+    "title": "Scanning is slow / المسح بطيء",
+    "steps": [
+      "1. Lower DPI (e.g., 200–300 for text) / خفّض دقة المسح (200–300 للنص)",
+      "2. Use grayscale/black & white instead of color / استخدم تدرج الرمادي/أبيض وأسود بدلًا من الألوان",
+      "3. Use simplex instead of duplex when possible / استخدم وجهًا واحدًا بدلًا من الوجهين إن أمكن",
+      "4. Prefer USB over Wi‑Fi for large jobs / فضّل USB بدلاً من الواي فاي للمهام الكبيرة",
+      "5. Update firmware and drivers / حدّث البرنامج الثابت والتعريفات"
+    ],
+    "severity": "Low",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "PDF/OCR",
+    "keywords": [
+      "pdf too large",
+      "big file size",
+      "compress",
+      "mrc",
+      "حجم pdf كبير",
+      "ملف ضخم",
+      "ضغط"
+    ],
+    "title": "Scanned PDF is too large / ملف PDF الناتج كبير جدًا",
+    "steps": [
+      "1. Reduce DPI (200–300 text, 150–200 photos) / خفّض الدقة (200–300 للنص، 150–200 للصور)",
+      "2. Enable 'Compact/Compressed PDF' or MRC / فعّل خيار PDF المضغوط أو تقنية MRC",
+      "3. Use grayscale/mono for text documents / استخدم تدرج الرمادي/أحادي لمستندات النص",
+      "4. Split into multiple files if needed / قسّم إلى عدة ملفات إذا لزم"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "PDF/OCR",
+    "keywords": [
+      "ocr not working",
+      "cannot search text",
+      "language pack",
+      "تعذر التعرف الضوئي على الحروف",
+      "OCR لا يعمل",
+      "لا يمكن البحث في النص"
+    ],
+    "title": "OCR not working / التعرف الضوئي على الحروف لا يعمل",
+    "steps": [
+      "1. Set DPI ≥ 300 and use clean originals / اجعل الدقة 300 على الأقل واستخدم نسخًا نظيفة",
+      "2. Install OCR language packs / ثبّت حزم لغات OCR",
+      "3. Use vendor OCR utility or Adobe Acrobat / استخدم أداة OCR من الشركة أو أدوبي أكروبات",
+      "4. Choose correct language in app settings / اختر اللغة الصحيحة في إعدادات التطبيق"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "SMB (Scan to Folder)",
+    "keywords": [
+      "scan to folder",
+      "smb share",
+      "access denied",
+      "path not found",
+      "credentials invalid",
+      "مسح إلى مجلد",
+      "مشاركة smb",
+      "تم رفض الوصول",
+      "المسار غير موجود",
+      "بيانات اعتماد غير صحيحة"
+    ],
+    "title": "Cannot scan to network folder (SMB) / تعذر المسح إلى مجلد الشبكة (SMB)",
+    "steps": [
+      "1. Test path via File Explorer with same credentials / اختبر المسار عبر مستكشف الملفات بنفس بيانات الاعتماد",
+      "2. Grant Share + NTFS permissions to a service account / امنح أذونات المشاركة وNTFS لحساب خدمة",
+      "3. Use UNC path (\\\\server\\share\\Scans) and static IP / استخدم مسار UNC وثبّت عنوان IP",
+      "4. Ensure device supports SMB v2/3; disable SMB1 / تأكد من دعم SMB v2/3 وتعطيل SMB1",
+      "5. Verify NTLM policy; avoid NTLMv1; update firmware / تحقق من سياسة NTLM وتجنّب الإصدار 1 وحدّث البرنامج الثابت"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "SMTP (Scan to Email)",
+    "keywords": [
+      "scan to email",
+      "smtp auth",
+      "office 365",
+      "tls",
+      "relay",
+      "مسح إلى البريد",
+      "بريد إلكتروني",
+      "مصادقة smtp",
+      "ترحيل البريد"
+    ],
+    "title": "Scan to Email fails (SMTP auth/relay) / تعذر المسح إلى البريد (مصادقة/ترحيل SMTP)",
+    "steps": [
+      "1. Use authenticated SMTP (port 587 TLS) or relay connector / استخدم SMTP بالمصادقة (منفذ 587 مع TLS) أو موصل ترحيل",
+      "2. If using Microsoft 365: prefer relay by IP or modern auth / مع Microsoft 365: يفضّل الترحيل عبر IP أو المصادقة الحديثة",
+      "3. Set 'From' address allowed by the server / اضبط عنوان المرسل المسموح به على الخادم",
+      "4. Check device time/certificates for TLS / تحقق من وقت الجهاز والشهادات لـTLS",
+      "5. Update device firmware for OAuth2 support if needed / حدّث البرنامج الثابت لدعم OAuth2 إذا لزم"
+    ],
+    "severity": "High",
+    "confidence": 0.89,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "SMTP (Scan to Email)",
+    "keywords": [
+      "email size limit",
+      "message too large",
+      "attachment limit",
+      "حد حجم البريد",
+      "الرسالة كبيرة جدًا",
+      "حد المرفقات"
+    ],
+    "title": "Scan to Email blocked by size limits / تم حظر المسح إلى البريد بسبب حجم المرفقات",
+    "steps": [
+      "1. Reduce DPI or pages per scan / خفّض الدقة أو عدد الصفحات لكل مسح",
+      "2. Use JPEG or compressed PDF / استخدم JPEG أو PDF مضغوط",
+      "3. Split into multiple emails / قم بالتقسيم إلى عدة رسائل",
+      "4. Check mail server/device max size settings / تحقق من إعدادات الحد الأقصى في الخادم والجهاز"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Security/TLS",
+    "keywords": [
+      "tls error",
+      "certificate error",
+      "self-signed",
+      "time skew",
+      "خطأ tls",
+      "مشكلة شهادة",
+      "توقيع ذاتي",
+      "اختلاف الوقت"
+    ],
+    "title": "TLS/certificate errors during scan to email/web / أخطاء TLS/الشهادات أثناء المسح إلى البريد/الويب",
+    "steps": [
+      "1. Verify device date/time and NTP / تحقق من وقت الجهاز وNTP",
+      "2. Install proper CA chain on device if required / ثبّت سلسلة الشهادات الصحيحة على الجهاز إن لزم",
+      "3. Use supported TLS versions/ciphers; update firmware / استخدم إصدارات/تعاريف TLS المدعومة وحدّث البرنامج الثابت",
+      "4. Consider SMTP relay without auth inside LAN / فكّر في ترحيل SMTP بدون مصادقة داخل الشبكة المحلية"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Adobe Acrobat",
+    "keywords": [
+      "adobe cannot find scanner",
+      "twain wia switch",
+      "acrobat repair",
+      "لا يمكن لأدوبي العثور على الماسح",
+      "التبديل بين TWAIN وWIA"
+    ],
+    "title": "Adobe Acrobat cannot find scanner / لا يمكن لأدوبي أكروبات العثور على الماسح",
+    "steps": [
+      "1. Update Acrobat to latest / حدّث أدوبي إلى آخر إصدار",
+      "2. Try WIA instead of TWAIN (or vice versa) / جرّب WIA بدل TWAIN أو العكس",
+      "3. Repair installation (Help → Repair) / أصلح التثبيت (مساعدة → إصلاح)",
+      "4. Run Acrobat as admin for initial detection / شغّل أدوبي كمسؤول لاكتشاف أولي"
+    ],
+    "severity": "Medium",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Image Quality",
+    "keywords": [
+      "blank scans",
+      "empty pages",
+      "contrast",
+      "face down",
+      "صفحات فارغة",
+      "مسح فارغ",
+      "التباين",
+      "واجهة المستند"
+    ],
+    "title": "Scans are blank / الصفحات الممسوحة فارغة",
+    "steps": [
+      "1. Check document orientation (face down/up) / تحقق من اتجاه المستند (للأعلى/للأسفل)",
+      "2. Reset contrast/brightness to default / أعد ضبط التباين/السطوع للوضع الافتراضي",
+      "3. Clean main glass; test flatbed vs ADF / نظّف الزجاج الرئيسي؛ اختبر السطح الزجاجي مقابل ADF",
+      "4. Update firmware and try another app / حدّث البرنامج الثابت وجرّب تطبيقًا آخر"
+    ],
+    "severity": "Low",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Color",
+    "keywords": [
+      "color inaccurate",
+      "washed out",
+      "color shift",
+      "profile",
+      "ألوان غير دقيقة",
+      "بهتان الألوان",
+      "انحراف الألوان",
+      "ملف لوني"
+    ],
+    "title": "Color inaccurate or washed out / الألوان غير دقيقة أو باهتة",
+    "steps": [
+      "1. Clean glass and calibrate / نظّف الزجاج وأجرِ المعايرة",
+      "2. Use color profile or enable color correction / استخدم ملفًا لونيًا أو فعّل تصحيح الألوان",
+      "3. Increase DPI for photos (300–600) / ارفع الدقة للصور (300–600)",
+      "4. Update driver/firmware / حدّث التعريف/البرنامج الثابت"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Push Scan to PC",
+    "keywords": [
+      "push scan",
+      "pc not listed",
+      "wsd",
+      "hp scan to computer",
+      "دفع المسح إلى الكمبيوتر",
+      "الكمبيوتر غير ظاهر",
+      "WSD"
+    ],
+    "title": "Cannot push-scan to PC (WSD/utility) / تعذر دفع المسح إلى الكمبيوتر (WSD/أداة)",
+    "steps": [
+      "1. Install full vendor suite; enable 'Scan to Computer' / ثبّت حزمة الشركة الكاملة وفعّل 'المسح إلى الكمبيوتر'",
+      "2. Ensure the PC is awake and on same network / تأكد أن الكمبيوتر مستيقظ وعلى نفس الشبكة",
+      "3. Allow the utility through Windows Firewall / اسمح للأداة عبر جدار حماية ويندوز",
+      "4. Restart vendor scan service on the PC / أعد تشغيل خدمة المسح الخاصة بالشركة على الكمبيوتر"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Remote/Desktop",
+    "keywords": [
+      "scan over rdp",
+      "vdi",
+      "usb redirect",
+      "المسح عبر سطح المكتب البعيد",
+      "VDI",
+      "إعادة توجيه USB"
+    ],
+    "title": "Cannot scan over RDP/VDI / تعذر المسح عبر RDP/VDI",
+    "steps": [
+      "1. USB scanners rarely redirect through RDP / نادرًا ما تُعاد توجيه الماسحات عبر RDP",
+      "2. Use network scanning (SMB/email) instead / استخدم المسح عبر الشبكة (SMB/البريد)",
+      "3. Consider VDI USB-redirect solutions if required / فكّر في حلول إعادة توجيه USB الخاصة بـVDI إذا لزم"
+    ],
+    "severity": "Medium",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Permissions",
+    "keywords": [
+      "access denied saving",
+      "controlled folder access",
+      "uac",
+      "limited user",
+      "تم رفض الوصول عند الحفظ",
+      "الوصول إلى المجلدات المحمية",
+      "صلاحيات محدودة"
+    ],
+    "title": "User cannot save scans due to permissions / لا يمكن للمستخدم حفظ المسحات بسبب الأذونات",
+    "steps": [
+      "1. Grant write permission to target folder / امنح إذن الكتابة للمجلد الهدف",
+      "2. Disable or allow app in Controlled Folder Access / عطّل أو اسمح للتطبيق ضمن حماية المجلدات",
+      "3. Run the scanning app as administrator for testing / شغّل تطبيق المسح كمسؤول للاختبار",
+      "4. Check antivirus/quarantine logs / افحص سجلات برنامج الحماية"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Address Book",
+    "keywords": [
+      "mfp address book",
+      "cannot edit recipients",
+      "export import",
+      "دفتر العناوين على الجهاز",
+      "تعذر تعديل المستلمين",
+      "تصدير استيراد"
+    ],
+    "title": "MFP address book missing or locked / دفتر عناوين الجهاز مفقود أو مقفول",
+    "steps": [
+      "1. Log in to device web admin with admin account / سجّل الدخول إلى لوحة إدارة الجهاز بحساب مدير",
+      "2. Export, edit, and re-import contacts / صدّر جهات الاتصال وعدّلها ثم أعد الاستيراد",
+      "3. Set permissions for user editing if supported / اضبط أذونات تحرير المستخدمين إذا كان مدعومًا"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "File Naming",
+    "keywords": [
+      "file name pattern",
+      "auto naming",
+      "prefix date time",
+      "تنسيق اسم الملف",
+      "تسمية تلقائية",
+      "بادئة التاريخ والوقت"
+    ],
+    "title": "Auto file naming not as expected / التسمية التلقائية للملفات غير كما هو متوقع",
+    "steps": [
+      "1. Configure naming pattern on device (e.g., SCAN_YYYYMMDD_HHMM) / اضبط نمط التسمية على الجهاز",
+      "2. Include date/time or user name as needed / أضف التاريخ/الوقت أو اسم المستخدم حسب الحاجة",
+      "3. Test naming with multiple jobs / اختبر النمط عبر مهام متعددة"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Firmware",
+    "keywords": [
+      "outdated firmware",
+      "update needed",
+      "bug fix",
+      "برنامج ثابت قديم",
+      "تحديث مطلوب",
+      "إصلاح أعطال"
+    ],
+    "title": "Outdated scanner/MFP firmware / برنامج الجهاز الثابت قديم",
+    "steps": [
+      "1. Check vendor site for latest firmware / تحقق من موقع الشركة لأحدث برنامج ثابت",
+      "2. Backup device config; update during maintenance window / انسخ إعدادات الجهاز وحدثه في وقت صيانة",
+      "3. Retest SMB/SMTP/OAuth features / أعد اختبار ميزات SMB/SMTP/OAuth بعد التحديث"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Scanner",
+    "subcategory": "Hardware",
+    "keywords": [
+      "error code",
+      "hardware failure",
+      "service required",
+      "كود خطأ",
+      "عطل في العتاد",
+      "بحاجة لصيانة"
+    ],
+    "title": "Hardware error or failure (refer to code) / خطأ أو عطل في العتاد (ارجع للكود)",
+    "steps": [
+      "1. Run device self-test/diagnostics / شغّل اختبار الجهاز/التشخيص",
+      "2. Look up error code in vendor manual / ابحث عن كود الخطأ في دليل الشركة",
+      "3. Escalate to vendor service if persists / صعّد إلى خدمة الشركة إذا استمر"
+    ],
+    "severity": "High",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  }
+]

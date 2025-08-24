@@ -1,5 +1,4 @@
-module.exports = [
-  // ...existing code...
+[
   {
     "category": "PC",
     "subcategory": "Boot",
@@ -3155,5 +3154,4 @@ module.exports = [
       "ar"
     ]
   }
-];
-
+]

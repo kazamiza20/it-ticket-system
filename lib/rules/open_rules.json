@@ -1,0 +1,432 @@
+[
+  {
+    "category": "Open",
+    "subcategory": "Triage",
+    "keywords": [
+      "general issue",
+      "unknown issue",
+      "misc",
+      "random",
+      "intermittent",
+      "غير معروف",
+      "مشكلة عامة",
+      "أخرى",
+      "عشوائي",
+      "متقطع"
+    ],
+    "title": "General triage / فرز مبدئي عام",
+    "steps": [
+      "1. Gather basics: device, OS/build, app version, network (LAN/Wi‑Fi/VPN) / اجمع الأساسيات: الجهاز، إصدار النظام، إصدار التطبيق، نوع الشبكة",
+      "2. Repro: exact steps + frequency + screenshots/logs / إعادة الإنتاج: خطوات دقيقة + التكرار + صور/سجلات",
+      "3. Scope: one user or many? one PC or site‑wide? / النطاق: مستخدم واحد أم عدة؟ جهاز واحد أم على مستوى الموقع؟",
+      "4. Recent changes: updates, new hardware, policy changes / التغييرات الأخيرة: تحديثات، عتاد جديد، تغييرات سياسات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Baseline",
+    "keywords": [
+      "restart",
+      "power cycle",
+      "flush",
+      "clean up",
+      "reboot",
+      "إعادة تشغيل",
+      "فصل وإعادة توصيل",
+      "تنظيف"
+    ],
+    "title": "Restart & basic cleanup / إعادة التشغيل والتنظيف الأساسي",
+    "steps": [
+      "1. Reboot device and affected peripherals / أعد تشغيل الجهاز والمعدات المتصلة",
+      "2. Power cycle: unplug 30s for monitors/phones/APs / فصل الطاقة 30 ثانية للشاشات/الهواتف/نقاط الوصول",
+      "3. Clear temp/cache of the app / امسح الملفات المؤقتة/الذاكرة المؤقتة للتطبيق",
+      "4. Retest issue / أعد الاختبار"
+    ],
+    "severity": "Low",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Updates",
+    "keywords": [
+      "update driver",
+      "update firmware",
+      "windows update",
+      "patch",
+      "security update",
+      "تحديث التعريف",
+      "تحديث البرنامج الثابت",
+      "تحديثات ويندوز",
+      "تصحيح أمني"
+    ],
+    "title": "Update OS, drivers, firmware / تحديث النظام والتعريفات والبرنامج الثابت",
+    "steps": [
+      "1. Apply Windows Updates and reboot / طبّق تحديثات ويندوز ثم أعد التشغيل",
+      "2. Update device drivers (GPU/NIC/Chipset) / حدّث تعريفات الأجهزة (بطاقة الرسوم/الشبكة/الشيبست)",
+      "3. Update peripheral firmware (printers, scanners, docks) / حدّث البرنامج الثابت للوحدات الطرفية",
+      "4. Retest and note versions / أعد الاختبار ودوّن الإصدارات"
+    ],
+    "severity": "Low",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Isolation",
+    "keywords": [
+      "safe mode",
+      "clean boot",
+      "profile issue",
+      "new user",
+      "troubleshoot",
+      "الوضع الآمن",
+      "إقلاع نظيف",
+      "مشكلة حساب",
+      "مستخدم جديد"
+    ],
+    "title": "Isolate with Safe Mode / Clean boot / العزل عبر الوضع الآمن/الإقلاع النظيف",
+    "steps": [
+      "1. Test in Safe Mode or Clean Boot / اختبر في الوضع الآمن أو الإقلاع النظيف",
+      "2. Try with a new Windows user profile / جرّب بحساب ويندوز جديد",
+      "3. Disable non‑essential startup items / عطّل عناصر بدء التشغيل غير الضرورية",
+      "4. Compare behavior vs normal mode / قارن السلوك مع الوضع العادي"
+    ],
+    "severity": "Medium",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Permissions/AV",
+    "keywords": [
+      "access denied",
+      "blocked",
+      "antivirus",
+      "controlled folder access",
+      "gpo",
+      "تم رفض الوصول",
+      "محجوب",
+      "مضاد الفيروسات",
+      "نهج المجموعة"
+    ],
+    "title": "Permissions, AV, and policy interference / الأذونات ومضاد الفيروسات والسياسات",
+    "steps": [
+      "1. Reproduce as admin; test without AV temporarily / أعد الاختبار كمسؤول؛ جرّب مؤقتًا بدون مضاد الفيروسات",
+      "2. Check Controlled Folder Access/Defender exclusions / تحقق من حماية المجلدات/استثناءات ديفندر",
+      "3. Review GPOs affecting the app/device / راجع سياسات GPO المؤثرة على التطبيق/الجهاز",
+      "4. Verify NTFS/Share permissions / تحقق من أذونات NTFS/المشاركة"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Network",
+    "keywords": [
+      "cannot connect",
+      "timeout",
+      "dns",
+      "proxy",
+      "firewall",
+      "لا يمكن الاتصال",
+      "مهلة",
+      "دي إن إس",
+      "بروكسي",
+      "جدار ناري"
+    ],
+    "title": "Basic network validation / التحقق الشبكي الأساسي",
+    "steps": [
+      "1. Test ping/trace to target; DNS resolution / اختبر ping/trace والـDNS",
+      "2. Bypass proxy/VPN; test on wired vs Wi‑Fi / تجاوز البروكسي/VPN؛ جرّب سلكيًا مقابل واي فاي",
+      "3. Check firewall/ACL ports; collect logs / تحقق من الجدار الناري/المنافذ؛ اجمع السجلات",
+      "4. Try alternate network (hotspot) for isolation / جرّب شبكة بديلة (هوتسبوت) للعزل"
+    ],
+    "severity": "Medium",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "App Reset",
+    "keywords": [
+      "app cache",
+      "reset app",
+      "profile reset",
+      "reinstall",
+      "repair",
+      "إعادة تهيئة التطبيق",
+      "ملفات تعريف التطبيق",
+      "إصلاح"
+    ],
+    "title": "Reset/repair or reinstall the app / إعادة تهيئة/إصلاح أو إعادة تثبيت التطبيق",
+    "steps": [
+      "1. Reset app from Settings → Apps → Advanced options / أعد تهيئة التطبيق من الإعدادات → التطبيقات",
+      "2. Clear app cache/profile data (backup first) / امسح ذاكرة التطبيق/بيانات الملف الشخصي (انسخ احتياطيًا)",
+      "3. Run installer → Repair or reinstall / شغّل المثبّت → إصلاح أو أعد التثبيت",
+      "4. Verify plugins/add‑ons compatibility / تحقق من توافق الإضافات/الملحقات"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Logs",
+    "keywords": [
+      "event viewer",
+      "reliability monitor",
+      "app log",
+      "windows log",
+      "dxdiag",
+      "عارض الأحداث",
+      "مراقب الموثوقية",
+      "سجل التطبيق"
+    ],
+    "title": "Collect logs & diagnostics / جمع السجلات والتشخيص",
+    "steps": [
+      "1. Event Viewer: Application/System at failure time / راقب سجلات التطبيق/النظام وقت المشكلة",
+      "2. Reliability Monitor report; capture error codes / تقرير مراقب الموثوقية؛ التقط رموز الأخطاء",
+      "3. Export app logs (if available) / صدّر سجلات التطبيق (إن توفرت)",
+      "4. Add dxdiag/system info if graphics related / أضف dxdiag/معلومات النظام عند مشاكل الرسوم"
+    ],
+    "severity": "Low",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Hardware Health",
+    "keywords": [
+      "smart",
+      "disk health",
+      "memory test",
+      "thermal",
+      "psu",
+      "صحة القرص",
+      "ذاكرة",
+      "حرارة",
+      "مزود الطاقة"
+    ],
+    "title": "Hardware health checks / فحوصات صحة العتاد",
+    "steps": [
+      "1. Check SMART status; run chkdsk if needed / تحقق من SMART؛ شغّل chkdsk عند الحاجة",
+      "2. Run memory test (Windows Memory Diagnostic) / شغّل اختبار الذاكرة",
+      "3. Monitor temps/throttling; clean dust / راقب الحرارة/الاختناق؛ نظّف الغبار",
+      "4. Swap PSU/adapter or test another outlet / بدّل مزود الطاقة/الشاحن أو جرّب مقبسًا آخر"
+    ],
+    "severity": "Medium",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Workarounds",
+    "keywords": [
+      "temporary fix",
+      "bypass",
+      "fallback",
+      "alternative",
+      "portable app",
+      "حل مؤقت",
+      "تجاوز",
+      "بديل"
+    ],
+    "title": "Provide a safe temporary workaround / توفير حل مؤقت آمن",
+    "steps": [
+      "1. Identify a safe workaround to restore service / حدد حلاً مؤقتًا آمنًا لاستعادة الخدمة",
+      "2. Document trade‑offs and risks / وثّق المزايا والعيوب والمخاطر",
+      "3. Schedule permanent fix / حدّد موعدًا للحل الدائم",
+      "4. Communicate to users and stakeholders / تواصل مع المستخدمين وأصحاب المصلحة"
+    ],
+    "severity": "Low",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Escalation",
+    "keywords": [
+      "escalate",
+      "vendor support",
+      "ticket handoff",
+      "sla",
+      "p1",
+      "تصعيد",
+      "دعم المورد",
+      "اتفاقية مستوى الخدمة"
+    ],
+    "title": "Escalation & vendor handoff / التصعيد وتسليم التذكرة للمورد",
+    "steps": [
+      "1. Collect environment, repro steps, logs, and timestamps / اجمع البيئة، خطوات الإعادة، السجلات، والتواريخ",
+      "2. Include versions, firmware, and recent changes / أدرج الإصدارات والبرامج الثابتة والتغييرات الحديثة",
+      "3. State business impact and SLA priority / وضّح تأثير العمل وأولوية SLA",
+      "4. Provide contact window and rollback plan / قدم نافذة تواصل وخطة تراجع"
+    ],
+    "severity": "High",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Templates",
+    "keywords": [
+      "template",
+      "custom",
+      "placeholder",
+      "نموذج",
+      "مخصص",
+      "قالب"
+    ],
+    "title": "TEMPLATE – App‑specific issue / قالب – مشكلة خاصة بتطبيق",
+    "steps": [
+      "1. Describe symptom and error code here / صف الأعراض ورمز الخطأ هنا",
+      "2. Environment (version/build/licensing) / البيئة (الإصدار/البناء/الترخيص)",
+      "3. Steps to repro / خطوات إعادة الإنتاج",
+      "4. Fix/Workaround steps / خطوات الإصلاح/الحل المؤقت"
+    ],
+    "severity": "Medium",
+    "confidence": 0.5,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Templates",
+    "keywords": [
+      "template",
+      "driver",
+      "hardware",
+      "قالب",
+      "تعريف",
+      "عتاد"
+    ],
+    "title": "TEMPLATE – Driver/Hardware issue / قالب – مشكلة تعريف/عتاد",
+    "steps": [
+      "1. Affected device and IDs (VID/PID) / الجهاز المتأثر والمعرّفات",
+      "2. Driver/firmware versions / إصدارات التعريف/البرنامج الثابت",
+      "3. Repro steps and scope / خطوات الإعادة والنطاق",
+      "4. Resolution or escalation notes / ملاحظات الحل أو التصعيد"
+    ],
+    "severity": "Medium",
+    "confidence": 0.5,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Templates",
+    "keywords": [
+      "template",
+      "network",
+      "policy",
+      "قالب",
+      "شبكة",
+      "سياسة"
+    ],
+    "title": "TEMPLATE – Network/Policy issue / قالب – مشكلة شبكة/سياسة",
+    "steps": [
+      "1. VLAN/route/firewall/proxy details / تفاصيل VLAN/المسار/الجدار الناري/البروكسي",
+      "2. Ports and protocols / المنافذ والبروتوكولات",
+      "3. Logs and captures / السجلات والالتقاطات",
+      "4. Fix and validation / الإصلاح والتحقق"
+    ],
+    "severity": "Medium",
+    "confidence": 0.5,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Templates",
+    "keywords": [
+      "template",
+      "security",
+      "identity",
+      "قالب",
+      "أمن",
+      "هوية"
+    ],
+    "title": "TEMPLATE – Security/Identity issue / قالب – مشكلة أمن/هوية",
+    "steps": [
+      "1. Auth flow and error / مسار المصادقة والخطأ",
+      "2. Policy/MFA/Conditional Access / السياسة/MFA/الوصول المشروط",
+      "3. Token/cert validity & time sync / صلاحية الرموز/الشهادات وتزامن الوقت",
+      "4. Fix and rollback plan / الإصلاح وخطة التراجع"
+    ],
+    "severity": "High",
+    "confidence": 0.5,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Open",
+    "subcategory": "Templates",
+    "keywords": [
+      "template",
+      "data",
+      "storage",
+      "قالب",
+      "بيانات",
+      "تخزين"
+    ],
+    "title": "TEMPLATE – Data/Storage issue / قالب – مشكلة بيانات/تخزين",
+    "steps": [
+      "1. Path/share/permissions / المسار/المشاركة/الأذونات",
+      "2. Capacity/quotas/locks / السعة/الحصص/الأقفال",
+      "3. Error codes and logs / رموز الأخطاء والسجلات",
+      "4. Resolution steps / خطوات الحل"
+    ],
+    "severity": "Medium",
+    "confidence": 0.5,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  }
+]

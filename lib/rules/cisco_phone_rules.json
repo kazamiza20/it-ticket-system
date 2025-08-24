@@ -1,0 +1,553 @@
+[
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Power/Boot",
+    "keywords": [
+      "no power",
+      "poe",
+      "power over ethernet",
+      "power cube",
+      "boot loop",
+      "لا يعمل",
+      "بدون طاقة",
+      "طاقة عبر الإيثرنت",
+      "حلقة إقلاع"
+    ],
+    "title": "Phone won’t power on or stuck booting / الهاتف لا يعمل أو عالق في الإقلاع",
+    "steps": [
+      "1. Verify PoE on switch port (show power inline) or use correct power cube / تحقق من PoE على منفذ السويتش (show power inline) أو استخدم محول الطاقة المناسب",
+      "2. Try a different port/cable; check PoE budget/class / جرّب منفذ/كيبل آخر؛ تحقق من ميزانية PoE والفئة",
+      "3. Disable errdisable (storm/guard) if port is shut / عطّل errdisable (storm/guard) إن كان المنفذ مغلقًا",
+      "4. Factory reset if boot loop persists / أعد ضبط المصنع إذا استمرت حلقة الإقلاع"
+    ],
+    "severity": "High",
+    "confidence": 0.88,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "VLAN/Voice",
+    "keywords": [
+      "voice vlan",
+      "cdp",
+      "lldp-med",
+      "configuring vlan",
+      "no dhcp",
+      "شبكة الصوت",
+      "فويز ڤلان",
+      "قيد إعداد الـVLAN",
+      "لا يوجد DHCP"
+    ],
+    "title": "Stuck on 'Configuring VLAN' / عالق على 'Configuring VLAN'",
+    "steps": [
+      "1. Ensure switch port is access data-VLAN with voice VLAN defined / تأكد أن منفذ السويتش Access مع تحديد Voice VLAN",
+      "2. Enable CDP/LLDP-MED on the switch / فعّل CDP/LLDP-MED على السويتش",
+      "3. Verify DHCP scope for voice VLAN / تحقق من نطاق DHCP لطبقة الصوت",
+      "4. Bounce the port; reboot phone / أعد تشغيل المنفذ؛ أعد تشغيل الهاتف"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "DHCP/TFTP",
+    "keywords": [
+      "option 150",
+      "tftp server",
+      "tftp timeout",
+      "dhcp option 66",
+      "cucm",
+      "خيار DHCP 150",
+      "خادم TFTP",
+      "انتهت مهلة TFTP",
+      "خيار 66"
+    ],
+    "title": "Cannot reach TFTP / missing Option 150 / تعذر الوصول إلى TFTP / خيار 150 مفقود",
+    "steps": [
+      "1. Ensure DHCP Option 150 (or 66) points to CUCM/CallManager TFTP / تأكد من أن خيار DHCP 150 (أو 66) يشير إلى خادم TFTP في CUCM",
+      "2. Ping TFTP from phone VLAN; check ACLs/firewall / جرّب ping من VLAN الهاتف؛ تحقق من ACL والجدار الناري",
+      "3. Verify TFTP service is running on CUCM / تحقق من عمل خدمة TFTP على CUCM",
+      "4. Reset phone network settings to renew DHCP / صفّر إعدادات الشبكة على الهاتف لتجديد DHCP"
+    ],
+    "severity": "High",
+    "confidence": 0.91,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Registration",
+    "keywords": [
+      "registration rejected",
+      "cm rejected",
+      "sip 403",
+      "callmanager",
+      "unprovisioned",
+      "تم رفض التسجيل",
+      "مرفوض من CM",
+      "غير مهيأ"
+    ],
+    "title": "Registration rejected / CM rejected / تم رفض التسجيل",
+    "steps": [
+      "1. Check MAC address in CUCM/CallManager and phone model / تحقق من عنوان MAC وطراز الهاتف في CUCM",
+      "2. Ensure correct device pool, phone button template, and DN assigned / تأكد من Device Pool وقالب الأزرار ورقم الامتداد",
+      "3. For SIP: verify digest/credentials and SIP security profile / لـSIP: تحقق من بيانات الاعتماد وملف الأمان",
+      "4. Reset/Restart phone from CUCM, then reboot device / أعد التعيين/التشغيل من CUCM ثم أعد تشغيل الهاتف"
+    ],
+    "severity": "High",
+    "confidence": 0.9,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Firmware",
+    "keywords": [
+      "upgrade",
+      "load",
+      "firmware mismatch",
+      "loadid",
+      "phone loads",
+      "ترقية",
+      "عدم تطابق البرنامج الثابت",
+      "حِزمة الهاتف"
+    ],
+    "title": "Firmware load mismatch or upgrade loop / عدم تطابق إصدار الهاتف أو حلقة ترقية",
+    "steps": [
+      "1. Confirm firmware load in CUCM device defaults matches model / تحقق من الإصدار الافتراضي في CUCM وفقًا للطراز",
+      "2. Upload/cop y signed firmware to TFTP and restart TFTP / ارفع البرنامج الثابت الموقّع إلى TFTP وأعد تشغيله",
+      "3. Delete old ITL/CTL if needed (secure cluster caution) / احذف ITL/CTL عند الحاجة (بحذر في التجمعات المؤمنة)",
+      "4. Reboot phone and monitor upgrade / أعد تشغيل الهاتف وراقب الترقية"
+    ],
+    "severity": "Medium",
+    "confidence": 0.85,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Security/Certificates",
+    "keywords": [
+      "itl",
+      "ctl",
+      "trust list",
+      "security error",
+      "lsc",
+      "قائمة الثقة",
+      "خطأ أمان",
+      "شهادة"
+    ],
+    "title": "ITL/CTL or certificate trust issues / مشاكل الثقة ITL/CTL أو الشهادات",
+    "steps": [
+      "1. Check if cluster is secure; ensure phone trusts TFTP/CUCM certs / تحقق إن كان التجمع مؤمنًا وتأكد من ثقة الهاتف بشهادات TFTP/CUCM",
+      "2. Use Bulk Certificate Delete (ITL/CTL) if corrupted (with change control) / استخدم حذف الشهادات ITL/CTL عند فسادها (مع ضوابط التغيير)",
+      "3. Regenerate CUCM certificates and restart services as needed / أعد إنشاء شهادات CUCM وأعد تشغيل الخدمات حسب الحاجة",
+      "4. Reboot phone to download fresh trust list / أعد تشغيل الهاتف لتنزيل قائمة ثقة جديدة"
+    ],
+    "severity": "High",
+    "confidence": 0.83,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Calling/Audio",
+    "keywords": [
+      "one-way audio",
+      "no audio",
+      "rtp",
+      "firewall",
+      "codec",
+      "صوت باتجاه واحد",
+      "لا يوجد صوت",
+      "الجدار الناري",
+      "الترميز"
+    ],
+    "title": "One‑way or no audio / صوت باتجاه واحد أو بدون صوت",
+    "steps": [
+      "1. Ensure both endpoints in same voice path/VPN; check NAT/firewall / تأكد من مسار صوتي صحيح/VPN وتحقق من NAT والجدار الناري",
+      "2. Verify RTP/UDP ports allowed and QoS / تحقق من فتح منافذ RTP/UDP وجودة الخدمة",
+      "3. Align codecs between phone and gateway/CUCM / طابق الترميزات بين الهاتف والبوابة/CUCM",
+      "4. Test with G.711 and no SRTP as a baseline / اختبر باستخدام G.711 وبدون SRTP كخط أساس"
+    ],
+    "severity": "High",
+    "confidence": 0.86,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Softkeys/Buttons",
+    "keywords": [
+      "softkey missing",
+      "transfer button",
+      "conference",
+      "button template",
+      "قائمة الأزرار",
+      "زر التحويل",
+      "زر المؤتمر",
+      "أزرار مفقودة"
+    ],
+    "title": "Softkeys missing or wrong button template / أزرار ناعمة مفقودة أو قالب أزرار خاطئ",
+    "steps": [
+      "1. Assign correct Phone Button Template in CUCM / عيّن قالب الأزرار الصحيح في CUCM",
+      "2. Apply config and reset phone / طبّق الإعدادات وأعد تشغيل الهاتف",
+      "3. Check line vs. feature button mapping / تحقق من تعيين أزرار الخط والخصائص"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Time/NTP",
+    "keywords": [
+      "wrong time",
+      "timezone",
+      "ntp",
+      "dst",
+      "local time",
+      "الوقت غير صحيح",
+      "المنطقة الزمنية",
+      "توقيت الصيف"
+    ],
+    "title": "Phone time is wrong / وقت الهاتف غير صحيح",
+    "steps": [
+      "1. Verify Date/Time Group and Device Pool / تحقق من مجموعة الوقت وتجمع الأجهزة",
+      "2. Ensure NTP source on CUCM is reachable and correct / تأكد من مصدر NTP على CUCM",
+      "3. Apply config and reset phone / طبّق الإعدادات وأعد تشغيل الهاتف"
+    ],
+    "severity": "Low",
+    "confidence": 0.84,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Directory/LDAP",
+    "keywords": [
+      "corporate directory",
+      "directory unavailable",
+      "ldap",
+      "udl",
+      "الدليل المؤسسي",
+      "الدليل غير متاح",
+      "LDAP"
+    ],
+    "title": "Corporate Directory not working / دليل المؤسسة لا يعمل",
+    "steps": [
+      "1. Verify Enterprise Parameters for directory URL/service / تحقق من بارامترات المؤسسة لعنوان خدمة الدليل",
+      "2. Check LDAP integration status and credentials / تحقق من تكامل LDAP وبيانات الاعتماد",
+      "3. Test from a browser to the directory URL / اختبر من المتصفح رابط خدمة الدليل"
+    ],
+    "severity": "Medium",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Voicemail/MWI",
+    "keywords": [
+      "mwi",
+      "message waiting indicator",
+      "voicemail",
+      "lamp not lighting",
+      "البريد الصوتي",
+      "مصباح الرسائل",
+      "لا يضيء"
+    ],
+    "title": "MWI light not working / مؤشر الرسائل لا يعمل",
+    "steps": [
+      "1. Verify MWI On/Off numbers in CUCM / تحقق من أرقام تشغيل/إيقاف MWI في CUCM",
+      "2. Ensure voicemail integration (Unity/Unity Connection) / تأكد من تكامل البريد الصوتي",
+      "3. Call MWI On/Off manually to test / اتصل بأرقام التشغيل/الإيقاف يدويًا للاختبار"
+    ],
+    "severity": "Low",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Extension Mobility",
+    "keywords": [
+      "emcc",
+      "extension mobility",
+      "login failed",
+      "user cannot login",
+      "تنقل الامتداد",
+      "فشل تسجيل الدخول",
+      "مستخدم لا يستطيع الدخول"
+    ],
+    "title": "Extension Mobility login fails / فشل تسجيل الدخول لتنقل الامتداد",
+    "steps": [
+      "1. Ensure EM service URL/subscription on phone / تأكد من عنوان خدمة EM والاشتراك على الهاتف",
+      "2. Verify user device profile and permissions / تحقق من ملف جهاز المستخدم والصلاحيات",
+      "3. Restart EM service; test again / أعد تشغيل خدمة EM ثم اختبر"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Network Port",
+    "keywords": [
+      "pc port",
+      "pass-through",
+      "speed duplex",
+      "err-disable",
+      "منفذ الكمبيوتر على الهاتف",
+      "تمرير الشبكة",
+      "السرعة/الازدواج",
+      "تعطيل المنفذ"
+    ],
+    "title": "PC port behind phone not working / منفذ الكمبيوتر خلف الهاتف لا يعمل",
+    "steps": [
+      "1. Ensure switch port is Access with voice VLAN + data VLAN / تأكد من إعداد Access مع VLAN بيانات وصوت",
+      "2. Set speed/duplex to auto on both ends / اضبط السرعة/الازدواج تلقائيًا على الطرفين",
+      "3. Clear err-disable on switch if triggered / أزل err-disable على السويتش إن حدث"
+    ],
+    "severity": "Medium",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Reset/Factory",
+    "keywords": [
+      "factory reset",
+      "erase",
+      "reset 123456789*0#",
+      "format",
+      "إعادة ضبط المصنع",
+      "مسح الإعدادات"
+    ],
+    "title": "Factory reset procedure / إجراء إعادة ضبط المصنع",
+    "steps": [
+      "1. Unplug power; hold # and plug power; release when line buttons flash / افصل الطاقة، اضغط # وأعد التوصيل، حرر عند وميض الأزرار",
+      "2. Enter 123456789*0# to confirm (may vary by model) / أدخل 123456789*0# للتأكيد (قد يختلف حسب الطراز)",
+      "3. Re-provision via DHCP/TFTP after reset / أعد الإعداد عبر DHCP/TFTP بعد الضبط"
+    ],
+    "severity": "Medium",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "QoS",
+    "keywords": [
+      "qos",
+      "dscp",
+      "priority",
+      "trust",
+      "lag",
+      "جودة الخدمة",
+      "أولوية",
+      "تأخير"
+    ],
+    "title": "Poor call quality (QoS) / جودة مكالمات سيئة (QoS)",
+    "steps": [
+      "1. Trust DSCP on access ports; use voice VLAN / فعّل Trust DSCP على المنافذ واستخدم Voice VLAN",
+      "2. Configure LLQ/PQ on WAN; prioritize RTP / فعّل أولوية RTP على الوصلة الواسعة",
+      "3. Monitor jitter/latency/packet loss / راقب التذبذب/الكمون/فقدان الحزم"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "SIP Security",
+    "keywords": [
+      "srtp",
+      "tls",
+      "sip over tls",
+      "digest",
+      "authentication",
+      "أمن SIP",
+      "تشفير",
+      "مصادقة"
+    ],
+    "title": "SIP TLS/SRTP issues / مشاكل SIP عبر TLS/‏SRTP",
+    "steps": [
+      "1. Align SIP security profiles (port 5061 TLS) / طابق ملفات أمان SIP (منفذ 5061 TLS)",
+      "2. Install/ trust required CA certs / ثبّت/ثق بشهادات CA المطلوبة",
+      "3. Test fallback to UDP/5060 for isolation / اختبر العودة لـUDP/5060 للعزل"
+    ],
+    "severity": "High",
+    "confidence": 0.81,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "802.1X",
+    "keywords": [
+      "dot1x",
+      "mab",
+      "radius",
+      "supplicant",
+      "authentication failed",
+      "فشل المصادقة",
+      "مصادقة 802.1X",
+      "MAB"
+    ],
+    "title": "802.1X/MAB authentication fails / فشل مصادقة 802.1X/MAB",
+    "steps": [
+      "1. Verify phone 802.1X credentials/cert; fallback to MAB if needed / تحقق من بيانات اعتماد 802.1X؛ استخدم MAB عند الحاجة",
+      "2. Check RADIUS policy; allow voice VLAN on success / تحقق من سياسة RADIUS؛ اسمح بـVoice VLAN عند النجاح",
+      "3. Exempt TFTP/CUCM traffic in pre-auth ACL / استثنِ حركة TFTP/CUCM في ACL قبل المصادقة"
+    ],
+    "severity": "High",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Call Features",
+    "keywords": [
+      "call forward",
+      "transfer",
+      "conference",
+      "hunt pilot",
+      "ميزات الاتصال",
+      "تحويل",
+      "مؤتمر",
+      "مجموعة الصيد"
+    ],
+    "title": "Feature not working (CFwdAll/Transfer/Conf/Hunt) / ميزة لا تعمل (تحويل/مؤتمر/مجموعة)",
+    "steps": [
+      "1. Check CSS/Partitions and line settings / تحقق من CSS/Partitions وإعدادات الخط",
+      "2. Verify feature is allowed in softkey template / تأكد من السماح بالميزة في قالب الأزرار",
+      "3. Reset phone after applying changes / أعد تشغيل الهاتف بعد تطبيق التغييرات"
+    ],
+    "severity": "Medium",
+    "confidence": 0.82,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Ringing/Answer",
+    "keywords": [
+      "phone not ringing",
+      "auto answer",
+      "ringer off",
+      "dnd",
+      "لن يرن",
+      "الرد التلقائي",
+      "عدم الإزعاج"
+    ],
+    "title": "Phone not ringing or auto-answers / الهاتف لا يرن أو يجيب تلقائيًا",
+    "steps": [
+      "1. Disable Do Not Disturb / عطّل عدم الإزعاج",
+      "2. Check Auto Answer and ring settings / تحقق من إعدادات الرد التلقائي والرنين",
+      "3. Verify line appearances/button template / تحقق من ظهور الخط/قالب الأزرار"
+    ],
+    "severity": "Low",
+    "confidence": 0.79,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "Display/Hardware",
+    "keywords": [
+      "handset mic",
+      "speaker not working",
+      "headset",
+      "port",
+      "hardware fault",
+      "الميكروفون",
+      "السماعة",
+      "عطل عتادي"
+    ],
+    "title": "Handset/speaker/headset not working / السماعة/المكبر/سماعة الرأس لا تعمل",
+    "steps": [
+      "1. Test with different handset/headset / اختبر بسماعة/سماعة رأس أخرى",
+      "2. Toggle headset/speaker buttons and volume / بدّل أزرار السماعة/المكبر ومستوى الصوت",
+      "3. Replace handset cord or phone if hardware fault / استبدل سلك السماعة أو الهاتف عند العطل"
+    ],
+    "severity": "Medium",
+    "confidence": 0.8,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  },
+  {
+    "category": "Cisco IP Phone",
+    "subcategory": "SRST",
+    "keywords": [
+      "srst",
+      "survivable",
+      "fallback",
+      "branch",
+      "site down",
+      "وضع البقاء",
+      "بديل",
+      "الفرع"
+    ],
+    "title": "SRST fallback not working / وضع SRST لا يعمل",
+    "steps": [
+      "1. Verify SRST reference on device pool / تحقق من مرجع SRST في تجمع الأجهزة",
+      "2. Check gateway config (call-manager-fallback) / تحقق من إعدادات البوابة (call-manager-fallback)",
+      "3. Ensure DN/codec available on SRST / تأكد من الأرقام/الترميزات على SRST"
+    ],
+    "severity": "High",
+    "confidence": 0.78,
+    "lang": [
+      "en",
+      "ar"
+    ]
+  }
+]

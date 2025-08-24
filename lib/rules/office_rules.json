@@ -1,4 +1,4 @@
-module.exports = [
+[
   {
     "category": "MS Office",
     "subcategory": "Word",
@@ -2422,5 +2422,4 @@ module.exports = [
       "ar"
     ]
   }
-];
-
+]
